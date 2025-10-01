@@ -1,3 +1,19 @@
 body {
   padding: 0; margin: 0;
 }
+
+/* .line_header{
+  background-color: whitesmoke;
+}
+
+.li_header {
+  color: whitesmoke;
+}
+
+.text_header_contact{
+  border-left: solid 10px whitesmoke;
+} */
+
+.button {
+  background-color: #FF9F0D;
+}
