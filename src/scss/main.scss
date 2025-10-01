@@ -1,0 +1,24 @@
+@import 'vars';
+@import 'comp';
+@import 'mixins';
+
+//BLOCK
+body{
+  background-color: black;
+  color: whitesmoke;
+}
+
+header {
+  background-image:url(../../assets/img/background_header.jpg);
+  background-repeat: none;
+}
+
+// img {
+//   // position: absolute;
+// }
+
+//TEXTS
+
+.yellow_sim {
+  color: $yellow_color;
+}
