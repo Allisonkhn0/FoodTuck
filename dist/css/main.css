@@ -6,8 +6,10 @@
 
 body {
   background-image: url(../../assets/img/background_header.jpg);
+  background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+  background-color: black;
 }
 
 .ul_list {
@@ -24,26 +26,85 @@ body {
   margin-right: 20px;
 }
 
+.text_header_contact {
+  border-left: 3px solid whitesmoke;
+  padding-left: 50px;
+}
+
+div.lorem_text {
+  margin: 30px 0 15px 0;
+  width: 400px;
+}
+
+div.about_us {
+  padding: 100px;
+}
+
+div.food_category {
+  padding: 100px;
+}
+
+div.why_us {
+  padding: 100px;
+}
+
+div.local_group {
+  width: 650px;
+}
+
 .start_text {
+  margin-top: 34px;
   text-align: center;
-  font-size: 40px;
+  font-size: 24px;
+  font-family: Helvetica;
+  font-weight: 700;
+  font-style: bold;
 }
 
-a {
-  color: rgb(207, 207, 207);
+a.nav_a {
+  font-family: Inter;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
   text-decoration: none;
+  transition: all 0.3s ease;
 }
-
-a:hover {
-  color: rgb(254, 123, 0);
+a.nav_a:hover {
+  color: #FF9F0D;
+  text-shadow: 0 0 5px #FF9F0D;
 }
-
-a:active {
+a.nav_a:active {
   color: rgb(164, 79, 0);
 }
 
-.yellow_sim {
-  color: #FF9F0D;
+h4.unusially_text {
+  font-family: Great Vibes;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 0%;
+  margin-bottom: 10px;
+}
+
+.big_text {
+  font-family: Helvetica;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 60px;
+  line-height: 68px;
+  letter-spacing: 0%;
+}
+
+p.middle_text {
+  font-family: Inter;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
 }
 
 .icon_box_clients {
@@ -56,14 +117,39 @@ a:active {
   list-style-type: none;
 }
 
+.yellow_sim {
+  color: #FF9F0D;
+}
+
+li {
+  list-style-type: none;
+}
+
+li.about_us_li {
+  margin-bottom: 20px;
+}
+
 .input_search {
   float: right;
-  margin-right: 30px;
-  background-color: rgb(255, 255, 255);
-  color: black;
-  font-size: 20px;
-  border-radius: 10px;
-  border: solid 2px #FF9F0D;
+  margin: 0 200px 0 0;
+  padding-left: 20px;
+  background-color: black;
+  width: 310px;
+  height: 54px;
+  opacity: 1;
+  border: 10px solid #FF9F0D;
+  border-radius: 27px;
+  border-width: 1px;
+}
+
+button.button_base {
+  background-color: #FF9F0D;
+  font-size: 17.5px;
+  width: 190px;
+  height: 60px;
+  opacity: 1;
+  border: none;
+  border-radius: 30px;
 }
 
 
