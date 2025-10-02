@@ -4,29 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Foodtuck Restaurant - Experiece taste and quality food">
-    <link rel="stylesheet" href="../dist/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../dist/css/main.css">
     <link rel="website icon" type="png/jpg" href="../assets/img/icon_index.jpg">
     <script src="../src/index.js" defer></script>
     <title>Foodtuck Restaurant</title>
   </head>
   <body>
-    <header>
+    <header class="header">
       <nav class="navBar">
         <!--Навигация-->
-        <span class="start_text"><span class="yellow_sim">Food</span>tuck</span>
+        <h1 class="start_text"><span class="yellow_sim">Food</span>tuck</h1>
         <div class="ellipse_header"></div> <!--Кружок под выбранной страницой-->
         <!--Нужны ссылки и пагинация-->
-        <ul>
-          <li class="navT"><a href="./pages/home.html">Home</a></li>
-          <li class="navT"><a href="./pages/menu.html">Menu</a></li>
-          <li class="navT"><a href="./pages/blog.html">Blog</a></li>
-          <li class="navT">Pages</li><!--НУЖЕН ВЫБОР СТРАНИЦЫ И ЯКОРЯ-->
-          <li class="navT"><a href="./pages/about.html">About</a></li>
-          <li class="navT"><a href="./pages/shop.html">Shop</a></li>
-          <li class="navT"><a href="./pages/contact.html">Contact</a></li>
+        <ul class="ul_list">
+          <li class="li_list"><a href="./pages/home.html">Home</a></li>
+          <li class="li_list"><a href="./pages/menu.html">Menu</a></li>
+          <li class="li_list"><a href="./pages/blog.html">Blog</a></li>
+          <li class="li_list">Pages</li><!--НУЖЕН ВЫБОР СТРАНИЦЫ И ЯКОРЯ-->
+          <li class="li_list"><a href="./pages/about.html">About</a></li>
+          <li class="li_list"><a href="./pages/shop.html">Shop</a></li>
+          <li class="li_list"><a href="./pages/contact.html">Contact</a></li>
         </ul>
 
-        <input type="text" name="seach" class="inputT" placeholder="Search..." maxlength="50">
+        <input type="text" name="seach" class="input_search" placeholder="Search..." maxlength="50">
        </nav> 
 
        <!--Изображения на header-->
@@ -140,6 +140,14 @@
         </div>
       </div>
       
+      <div class="clients">
+        <ul class="icon_box_clients">
+          <li class="card_clients">Profecional Chefs</li>
+          <li class="card_clients">Items Of Food</li>
+          <li class="card_clients">Years Of Experienced</li>
+          <li class="card_clients">Happy Customers</li>
+        </ul>
+      </div>
     </main>
   </body>
 </html>
