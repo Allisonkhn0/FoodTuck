@@ -83,6 +83,8 @@ a.nav_a {
   &:hover {
   color: $yellow_color;
   text-shadow: 0 0 5px $yellow_color;
+  font-size: 25px;
+  text-decoration: underline dashed;
 }
 
   &:active {
@@ -107,6 +109,11 @@ h4.unusially_text {
   font-size: 60px;
   line-height: 68px;
   letter-spacing: 0%;
+  transition: all 0.5s ease;
+
+  &:hover{
+    font-size: 70px;
+  }
 }
 
 p.middle_text{
@@ -116,7 +123,6 @@ p.middle_text{
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0%;
-
 }
 
 .icon_box_clients {
@@ -165,7 +171,15 @@ button.button_base {
   opacity: 1;
   border: none;
   border-radius: 30px;
+  transition: all 0.1s ease;
 
+  &:hover{
+    background-color: rgb(255, 204, 74);
+  }
+
+  &:active{
+    background-color: rgb(172, 123, 0);
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

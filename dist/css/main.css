@@ -74,6 +74,8 @@ a.nav_a {
 a.nav_a:hover {
   color: #FF9F0D;
   text-shadow: 0 0 5px #FF9F0D;
+  font-size: 25px;
+  text-decoration: underline dashed;
 }
 a.nav_a:active {
   color: rgb(164, 79, 0);
@@ -96,6 +98,10 @@ h4.unusially_text {
   font-size: 60px;
   line-height: 68px;
   letter-spacing: 0%;
+  transition: all 0.5s ease;
+}
+.big_text:hover {
+  font-size: 70px;
 }
 
 p.middle_text {
@@ -150,6 +156,13 @@ button.button_base {
   opacity: 1;
   border: none;
   border-radius: 30px;
+  transition: all 0.1s ease;
+}
+button.button_base:hover {
+  background-color: rgb(255, 204, 74);
+}
+button.button_base:active {
+  background-color: rgb(172, 123, 0);
 }
 
 
