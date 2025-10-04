@@ -32,13 +32,13 @@ button.up_button{
     height: 120px;
   }
 
-  &:hover::before {
+  &:hover::before{
     content: 'Up';  
   }
 }
 
 body{
-    background-color: black;
+  background-color: black;
 }
 
 .noimg_cont{
@@ -529,6 +529,18 @@ form.form_help{
   border-bottom: 3px solid #FF9F0D;
 }
 
+div.last_footer{
+  display: flex; 
+  align-items: center;
+  height: 100px;
+  background-color: $yellow_color;
+  width: 100%;
+}
 
+.text_last{
+  font-weight: 400;
+  font-family: Intel;
+  margin-left: 300px;
+}
 
 /*# sourceMappingURL=main.css.map */

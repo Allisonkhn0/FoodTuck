@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Foodtuck Restaurant - Experience taste and quality food">
     <link rel="stylesheet" type="text/css" href="../dist/css/main.css">
-    <link rel="icon" type="image/svg" href="../assets/img/icon_index.svg">
+    <link rel="icon" type="image/jpg" href="../assets/icons/1.jpg">
     <script src="../src/index.js" defer></script>
     <title>Foodtuck Restaurant</title>
   </head>
   <body>
-    <button class="up_button" title="Навверх" onclick="scrollUp()">
+    <button class="up_button" title="Навверх" onclick="scrollUp()" aria-label="Scroll to top">
       <span class="text_up_button"></span>
       <span class="arr_up_button">↑</span>
     </button>
     <header class="header" id="top">
   
       <div class="noimg_cont">
-        <nav class="navBar">
+        <nav class="navBar" aria-label="Main navigation">
           <!--Навигация-->
           <h1 class="start_text"><span class="yellow_sim">Food</span>tuck</h1>
           <!--Нужны ссылки и пагинация-->
@@ -162,6 +162,36 @@
             <button type="submit" class="button_help" onclick="return false">Subscribe now</button><!--Блокировка отправки до создания логики-->
           </form>
         </div>
+      </div>
+      <div class="last_footer">
+        <h5 class="text_last">Copyright © 2022 by Ayeman. All Rights Reserved.</h5>
+        <ul class="ul_last">
+            <li class="li_last">
+              <a href="#" class="footer_link" aria-label="Facebook">
+                <img src="../assets/icons/facebook.svg" alt="Error facebook.svg">
+              </a>
+            </li>
+            <li class="li_last">
+              <a href="#" class="footer_link" aria-label="Twitter">
+                <img src="../assets/icons/twitter.svg" alt="Error twitter.svg">
+              </a>
+            </li>
+            <li class="li_last">
+              <a href="#" class="footer_link" aria-label="Instagram">
+                <img src="../assets/icons/instagram.svg" alt="Error instagram.svg">
+              </a>
+            </li>
+            <li class="li_last">
+              <a href="#" class="footer_link" aria-label="YouTube">
+                <img src="../assets/icons/youtube.svg" alt="Error youtube.svg">
+              </a>
+            </li>
+            <li class="li_last">
+              <a href="#" class="footer_link" aria-label="YouTube">
+                <img src="../assets/icons/youtube.svg" alt="Error youtube.svg">
+              </a>
+            </li>
+        </ul>
       </div>
     </footer>
   </body>

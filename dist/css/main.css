@@ -472,6 +472,20 @@ form.form_help button.button_help {
   border-bottom: 3px solid #FF9F0D;
 }
 
+div.last_footer {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  background-color: #FF9F0D;
+  width: 100%;
+}
+
+.text_last {
+  font-weight: 400;
+  font-family: Intel;
+  margin-left: 300px;
+}
+
 
 
 /*# sourceMappingURL=main.css.map */
