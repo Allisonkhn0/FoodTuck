@@ -3,73 +3,64 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Foodtuck Restaurant - Experiece taste and quality food">
+    <meta name="description" content="Foodtuck Restaurant - Experience taste and quality food">
     <link rel="stylesheet" type="text/css" href="../dist/css/main.css">
-    <link rel="website icon" type="png/jpg" href="../assets/img/icon_index.jpg">
+    <link rel="icon" type="image/svg" href="../assets/img/icon_index.svg">
     <script src="../src/index.js" defer></script>
     <title>Foodtuck Restaurant</title>
   </head>
   <body>
     <header class="header">
 
+      <div class="noimg_cont">
+        <nav class="navBar">
+          <!--Навигация-->
+          <h1 class="start_text"><span class="yellow_sim">Food</span>tuck</h1>
+          <!-- <div class="ellipse_header"></div> Кружок под выбранной страницой -->
+          <!--Нужны ссылки и пагинация-->
+          <ul class="ul_list">
+            <li class="li_list"><a href="./pages/home.html" class="nav_a">Home</a></li>
+            <li class="li_list"><a href="#" class="nav_a">Menu</a></li>
+            <li class="li_list"><a href="#" class="nav_a">Blog</a></li>
+            <li class="li_list">Pages</li><!--НУЖЕН ВЫБОР СТРАНИЦЫ И ЯКОРЯ-->
+            <li class="li_list"><a href="#about_us" class="nav_a">About</a></li>
+            <li class="li_list"><a href="#food_category" class="nav_a">Shop</a></li>
+            <li class="li_list"><a href="#Contact" class="nav_a">Contact</a></li>
+          </ul>
+          <input type="text" name="seach" class="input_search" placeholder="Search..." maxlength="50">
 
-      <nav class="navBar">
+        </nav> 
+        
+        <!--Изображения на header-->
+          <img class="img_header1" src="../assets/img/img_header.svg" alt="Error imgHeader.svg">
+          <img class="img_header" src="../assets/img/imgHeader.png" alt="Error imgHeader.png">        
 
 
-        <!--Навигация-->
-        <h1 class="start_text"><span class="yellow_sim">Food</span>tuck</h1>
-        <!-- <div class="ellipse_header"></div> Кружок под выбранной страницой -->
-        <!--Нужны ссылки и пагинация-->
-        <ul class="ul_list">
-          <li class="li_list"><a href="./pages/home.html" class="nav_a">Home</a></li>
-          <li class="li_list"><a href="#" class="nav_a">Menu</a></li>
-          <li class="li_list"><a href="#" class="nav_a">Blog</a></li>
-          <li class="li_list">Pages</li><!--НУЖЕН ВЫБОР СТРАНИЦЫ И ЯКОРЯ-->
-          <li class="li_list"><a href="#about_us" class="nav_a">About</a></li>
-          <li class="li_list"><a href="#food_category" class="nav_a">Shop</a></li>
-          <li class="li_list"><a href="#Contact" class="nav_a">Contact</a></li>
-        </ul>
-        <input type="text" name="seach" class="input_search" placeholder="Search..." maxlength="50">
-
-
-       </nav> 
-
-
-       <!--Изображения на header-->
-       <!-- <img src="../assets/img/imgHeader1.png" alt="Ошибка изображения...">
-       <div class="image_header">
-        <img src="../assets/img/imgHeader2.png" alt="Ошибка изображения...">
-        <img src="../assets/img/imgHeader3.png" alt="Ошибка изображения...">
-        <img src="../assets/img/imgHeader4.png" alt="Ошибка изображения...">
-        <img src="../assets/img/imgHeader5.png" alt="Ошибка изображения...">
-        <div class="ellipse_header_1"></div>
-        <img src="../assets/img/imgHeader.png" alt="Ошибка изображения...">
-       </div> -->
-
-          <div class="social_icons">
-            <p>T</p>
-            <p>B</p>
-            <p>P</p>
-          </div>
-       <div class="text_header_contact" id="Contact"><!--КОНТАКТ-->
-          <div class="line_header"></div><div class="line_header"></div>
-          <div class="local_group">
-            <h4 class="unusially_text">Its Quick & Amusing!</h4>
-            <span class="big_text">
-              <span class="yellow_sim">Th</span>e
-              Art of speed <br> food Quality
-            </span>
-            <div class="lorem_text">
-              <p class="middle_text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Varius sed pharetra dictum neque massa congue
-              </p>              
+            <div class="social_icons">
+              <a href="#" aria-label="Our Twitter profile">T</a> <!-- Лучше SVG/иконка -->
+              <a href="#" aria-label="Our Facebook profile">B</a> <!-- Лучше SVG/иконка -->
+              <a href="#" aria-label="Our Pinterest profile">P</a> <!-- Лучше SVG/иконка -->
             </div>
+        <div class="text_header_contact" id="Contact"><!--КОНТАКТ-->
+            <img class="line1" src="../assets/img/line1.jpg" alt="Error line">
+            <img class="line2" src="../assets/img/line1.jpg" alt="Error line">
+            <div class="local_group">
+              <h4 class="unusially_text">Its Quick & Amusing!</h4>
+              <span class="big_text">
+                <span class="yellow_sim">Th</span>e
+                Art of speed <br> food Quality
+              </span>
+              <div class="lorem_text">
+                <p class="middle_text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Varius sed pharetra dictum neque massa congue
+                </p>              
+              </div>
+              <a href="./pages/menu.html" class="button_base">See Menu</a>
+            </div>
+        </div>
+      </div>
 
-            <a href="./pages/menu.html"><button class="button_base" type="button">See Menu</button></a><!--ЗАМЕТЬ-->
-
-          </div>
-       </div>
 
 
     </header>
@@ -97,11 +88,11 @@
 
 
           <ul style="margin-top: 25px; ">
-            <li class="about_us_li">✔ Lacus nisi, et ac dapibus sit eu velit in consequat.</li>
-            <li class="about_us_li">✔ Quisque diam pellentesque bibendum non dui volutpat fringilla</li>
-            <li class="about_us_li">✔ Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+            <li class="about_us_li"> Lacus nisi, et ac dapibus sit eu velit in consequat.</li>
+            <li class="about_us_li"> Quisque diam pellentesque bibendum non dui volutpat fringilla</li>
+            <li class="about_us_li"> Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
           </ul>
-          <a href="#"><button class="button_base" type="button">Read more</button></a><!--ЗАМЕТЬ!!!-->
+          <a href="#" class="button_base">Read more</a>
         </div>
       </div>
       <div class="food_category" id="food_category">

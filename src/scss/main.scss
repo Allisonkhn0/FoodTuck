@@ -3,39 +3,110 @@
 @import '_comp';
 
 
-//BLOCK
-
 * {
   margin: 0;
   padding: 0;
   color: whitesmoke;
 }
 
-body {
+body{
+    background-color: black;
+}
+
+.noimg_cont{
+  height: 100%;
+  opacity: 1;
+}
+
+header{ 
+  display: grid;
   background-image: url(../../assets/img/background_header.jpg);
   background-position: center;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-color: black;
+  height: 750px;
+}
+
+
+// НАВИГАЦИЯ
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 50px;
+}
+
+.start_text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 0;
+  font-size: 24px;
+  font-family: Helvetica;
+  font-weight: 700;
 }
 
 .ul_list {
   display: flex;
-  justify-content: center;
-  position: absolute;
-  top: 30px;
-  margin: 50px;
+  justify-content: flex-start;
+  position: static;
+  margin: 0;
+  gap: 30px;
 }
 
 .li_list {
   list-style-type: none;
-  display: inline;
-  margin-right: 20px;
+  margin-right: 0;
+}
+
+.input_search {
+  transform: none;
+  padding-left: 20px;
+  background-color: black;
+  width: 310px;
+  height: 54px;
+  border: 1px solid $yellow_color;
+  border-radius: 27px;
+  margin-left: auto;
+}
+
+//ИЗОБРАЖЕНИЯ
+img.img_header{
+  position: absolute;
+  top: 580px;
+  left: 700px;
+  width: 26px;
+  height: 22px;
+  z-index: 1000;
+}
+
+img.img_header1 {
+  position: absolute;
+  width: 878px;
+  height: 670px;
+  top: 50px;
+  left: 600px;
+  z-index: 1000;
+}
+
+// ГЛАВНАЯ СЕКЦИЯ
+
+img.line1{
+  position: absolute;
+  top: -100px;
+  left: -5px;
+}
+
+img.line2{
+  position: absolute;
+  top: 195px;
+  left: -5px;
 }
 
 .text_header_contact {
-  border-left: 3px solid whitesmoke;
   padding-left: 50px;
+  margin: 100px 0 0 50px;
+  position: relative;
 }
 
 div.lorem_text{
@@ -43,49 +114,52 @@ div.lorem_text{
   width: 400px;
 }
 
+// СЕКЦИИ
 div.about_us {
-  padding: 100px;
+  background-color: black;
+  padding: 100px 50px;
 }
 
 div.food_category {
-  padding: 100px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 100px 50px;
+  background: rgba(0,0,0,0.8);
 }
 
 div.why_us{
-  padding: 100px;
+  padding: 100px 50px;
+  background: rgba(0,0,0,0.8);
 }
 
 div.local_group{
   width: 650px;
 }
 
-//TEXT
-
+// ТЕКСТ
 .start_text {
-  margin-top: 34px;
   text-align: center;
+  margin-top: -50px;
   font-size: 24px;
   font-family: Helvetica;
   font-weight: 700;
-  font-style: bold;
 }
 
 a.nav_a {
   font-family: Inter;
   font-weight: 400;
-  font-style: Regular;
   font-size: 16px;
   line-height: 24px;
-  letter-spacing: 0%;
   text-decoration: none;
   transition: all 0.3s ease;
 
   &:hover {
-  color: $yellow_color;
-  text-shadow: 0 0 5px $yellow_color;
-  font-size: 25px;
-  text-decoration: underline dashed;
-}
+    color: $yellow_color;
+    text-shadow: 0 0 5px $yellow_color;
+    font-size: 17px;
+    text-decoration: underline dashed;
+  }
 
   &:active {
     color: rgb(164, 79, 0);
@@ -95,44 +169,48 @@ a.nav_a {
 h4.unusially_text {
   font-family: Great Vibes;
   font-weight: 400;
-  font-style: Regular;
   font-size: 32px;
   line-height: 40px;
-  letter-spacing: 0%;
   margin-bottom: 10px;
 }
 
 .big_text{
   font-family: Helvetica;
   font-weight: 700;
-  font-style: Bold;
-  font-size: 60px;
-  line-height: 68px;
-  letter-spacing: 0%;
+  font-size: 48px;
+  line-height: 1.2;
   transition: all 0.5s ease;
 
   &:hover{
-    font-size: 70px;
+    font-size: 52px;
   }
 }
 
 p.middle_text{
   font-family: Inter;
   font-weight: 400;
-  font-style: Regular;
   font-size: 16px;
   line-height: 24px;
-  letter-spacing: 0%;
 }
 
+// КЛИЕНТЫ
 .icon_box_clients {
   text-align: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 50px;
 }
 
 .card_clients {
-  display: inline;
-  margin-right: 40px;
+  display: block;
   list-style-type: none;
+  background: rgba(255,255,255,0.1);
+  padding: 30px 20px;
+  border-radius: 10px;
+  text-align: center;
 }
 
 .yellow_sim {
@@ -145,40 +223,98 @@ li {
 
 li.about_us_li{
   margin-bottom: 20px;
+  position: relative;
+  padding-left: 25px;
+  
+  &:before {
+    content: "✔";
+    color: $yellow_color;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+  }
 }
 
-//OTHER
-
 .input_search {
-  float: right;
-  margin: 0 200px 0 0;
+  transform: none;
   padding-left: 20px;
   background-color: black;
   width: 310px;
   height: 54px;
-  opacity: 1;
-  border: 10px solid $yellow_color;
+  border: 1px solid $yellow_color;
   border-radius: 27px;
-  border-width: 1px;
-
+  margin-left: auto;
 }
 
-button.button_base {
-  background-color: $yellow_color;
-  font-size: 17.5px;
-  width: 190px;
-  height: 60px;
-  opacity: 1;
-  border: none;
-  border-radius: 30px;
-  transition: all 0.1s ease;
-
-  &:hover{
-    background-color: rgb(255, 204, 74);
+// СОЦИАЛЬНЫЕ ИКОНКИ
+.social_icons {
+  position: absolute;
+  top: 280px;
+  left: 42.5px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  
+  p {
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    
+    &:hover {
+      background: $yellow_color;
+      color: black;
+    }
   }
+}
 
-  &:active{
-    background-color: rgb(172, 123, 0);
+// WHY US
+.icon_box ul {
+  display: flex;
+  gap: 40px;
+  margin: 30px 0;
+}
+
+.icon_box li {
+  font-size: 18px;
+  font-weight: 600;
+  position: relative;
+  padding-right: 20px;
+}
+
+.sq {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background: $yellow_color;
+  border-radius: 50%;
+}
+
+.years_block {
+  background: $yellow_color;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 200px;
+  color: black;
+  
+  p:first-child {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  
+  p {
+    margin-bottom: 5px;
+    color: black;
   }
 }
 
