@@ -10,13 +10,16 @@
     <title>Foodtuck Restaurant</title>
   </head>
   <body>
-    <header class="header">
-
+    <button class="up_button" title="Навверх" onclick="scrollUp()">
+      <span class="text_up_button"></span>
+      <span class="arr_up_button">↑</span>
+    </button>
+    <header class="header" id="top">
+  
       <div class="noimg_cont">
         <nav class="navBar">
           <!--Навигация-->
           <h1 class="start_text"><span class="yellow_sim">Food</span>tuck</h1>
-          <!-- <div class="ellipse_header"></div> Кружок под выбранной страницой -->
           <!--Нужны ссылки и пагинация-->
           <ul class="ul_list">
             <li class="li_list"><a href="./pages/home.html" class="nav_a">Home</a></li>
@@ -56,7 +59,7 @@
                   Varius sed pharetra dictum neque massa congue
                 </p>              
               </div>
-              <a href="./pages/menu.html" class="button_base">See Menu</a>
+              <a href="./pages/menu.html" class="button_base"title='Переход на страничку с меню'>See Menu</a>
             </div>
         </div>
       </div>
@@ -92,7 +95,7 @@
             <li class="about_us_li"> Quisque diam pellentesque bibendum non dui volutpat fringilla</li>
             <li class="about_us_li"> Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
           </ul>
-          <a href="#" class="button_base">Read more</a>
+          <a href="#" class="button_base" title="Подробнее о нас">Read more</a>
         </div>
       </div>
       <div class="food_category" id="food_category">
@@ -156,5 +159,6 @@
         </ul>
       </div>
     </main>
+    <a href="#top">Mabey up?</a>
   </body>
 </html>

@@ -3,6 +3,31 @@
   margin: 0;
   padding: 0;
   color: whitesmoke;
+  text-shadow: 0 0 0.5px whitesmoke, 0 0 2px whitesmoke;
+  letter-spacing: 0.5px;
+}
+
+button.up_button {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background-color: #FF9F0D;
+  padding-bottom: 8px;
+  font-size: 35px;
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 1000px;
+  z-index: 9999;
+  transition: all 0.3s ease;
+}
+button.up_button:hover {
+  transform: translateY(-10px);
+  transition: all 0.2s ease;
+  height: 120px;
+}
+button.up_button:hover::before {
+  content: "Up";
 }
 
 body {
@@ -30,16 +55,6 @@ header {
   padding: 20px 50px;
 }
 
-.start_text {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-top: 0;
-  font-size: 24px;
-  font-family: Helvetica;
-  font-weight: 700;
-}
-
 .ul_list {
   display: flex;
   justify-content: flex-start;
@@ -53,24 +68,13 @@ header {
   margin-right: 0;
 }
 
-.input_search {
-  transform: none;
-  padding-left: 20px;
-  background-color: black;
-  width: 310px;
-  height: 54px;
-  border: 1px solid #FF9F0D;
-  border-radius: 27px;
-  margin-left: auto;
-}
-
 img.img_header {
   position: absolute;
   top: 580px;
   left: 700px;
   width: 26px;
   height: 22px;
-  z-index: 1000;
+  z-index: 100;
 }
 
 img.img_header1 {
@@ -79,7 +83,7 @@ img.img_header1 {
   height: 670px;
   top: 50px;
   left: 600px;
-  z-index: 1000;
+  z-index: 100;
 }
 
 img.line1 {
@@ -128,11 +132,17 @@ div.local_group {
 }
 
 .start_text {
-  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   margin-top: -50px;
   font-size: 24px;
   font-family: Helvetica;
   font-weight: 700;
+  transition: all 0.3s ease;
+}
+.start_text:hover {
+  font-size: 34px;
 }
 
 a.nav_a {
@@ -146,7 +156,7 @@ a.nav_a {
 a.nav_a:hover {
   color: #FF9F0D;
   text-shadow: 0 0 5px #FF9F0D;
-  font-size: 17px;
+  font-size: 19px;
   text-decoration: underline dashed;
 }
 a.nav_a:active {
@@ -220,7 +230,6 @@ li.about_us_li:before {
 }
 
 .input_search {
-  transform: none;
   padding-left: 20px;
   background-color: black;
   width: 310px;
@@ -228,6 +237,14 @@ li.about_us_li:before {
   border: 1px solid #FF9F0D;
   border-radius: 27px;
   margin-left: auto;
+  text-shadow: none;
+  z-index: 1000;
+  font-size: 27px;
+  transition: all 0.3s ease;
+}
+.input_search:hover {
+  width: 330px;
+  height: 57px;
 }
 
 .social_icons {
@@ -294,6 +311,34 @@ li.about_us_li:before {
 .years_block p {
   margin-bottom: 5px;
   color: black;
+}
+
+.button_base {
+  width: 250px;
+  height: 75px;
+  background-color: #FF9F0D;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: aliceblue;
+  border: none;
+  border-radius: 24px;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+.button_base:hover {
+  background-color: rgb(255, 191, 0);
+  transform: translateY(-2.5px);
+  box-shadow: 3px 3px 5px rgba(245, 245, 245, 0.396), 1px 3px 3.5px rgba(245, 245, 245, 0.4), 1px 3px 3.5px rgba(245, 245, 245, 0.382), 1px 3px 3.5px rgba(245, 245, 245, 0.403), 1px 3px 3.5px rgba(245, 245, 245, 0.407);
+  font-size: 28px;
+}
+.button_base:active {
+  transition: all 0.1s ease;
+  background-color: rgb(155, 106, 0);
+  color: rgb(194, 200, 206);
+  transform: translateY(2.5px);
+  box-shadow: none;
 }
 
 
