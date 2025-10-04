@@ -233,6 +233,7 @@ p.middle_text {
 }
 
 div.clients {
+  margin-top: 75px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -408,6 +409,67 @@ li.about_us_li:before {
   color: rgb(194, 200, 206);
   transform: translateY(2.5px);
   box-shadow: none;
+}
+
+div.need_support {
+  margin-top: 75px;
+  text-align: left;
+  padding: 50px 250px 0 300px;
+}
+div.need_support h3.need_support_text {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+div.need_support p.need_support_text1 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+form.form_help {
+  align-items: center;
+  position: relative;
+  top: -60px;
+  float: right;
+  font-weight: 700;
+}
+form.form_help:hover input.input_help {
+  font-size: 22px;
+  background-color: #ff9900;
+}
+form.form_help:hover input.input_help:hover {
+  background-color: #ff9900;
+  box-shadow: 0 0 3px rgb(255, 166, 0), 0 0 3px rgb(255, 166, 0), 0 0 3px rgb(255, 166, 0);
+}
+form.form_help:hover button.button_help {
+  background-color: rgb(230, 230, 230);
+  font-size: 22px;
+}
+form.form_help:hover button.button_help:hover {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 3px wheat, 0 0 3px wheat, 0 0 3px wheat;
+}
+form.form_help input.input_help {
+  background-color: #FF9F0D;
+  font-size: 20px;
+  border: none;
+  width: 296px;
+  height: 56px;
+  transition: all 0.3s ease;
+}
+form.form_help button.button_help {
+  width: 163px;
+  height: 56px;
+  font-size: 20px;
+  border: none;
+  background-color: rgb(228, 227, 227);
+  color: #FF9F0D;
+  transition: all 0.3s ease;
+}
+
+.help_container {
+  padding-bottom: 50px;
+  border-bottom: 3px solid #FF9F0D;
 }
 
 

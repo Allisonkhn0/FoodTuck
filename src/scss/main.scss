@@ -257,6 +257,7 @@ p.middle_text{
 
 // КЛИЕНТЫ
 div.clients{
+  margin-top: 75px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -450,5 +451,84 @@ li.about_us_li{
     box-shadow: none;
   }
 }
+
+//FOOTER
+div.need_support {
+  margin-top: 75px;
+  text-align: left;
+  padding: 50px 250px 0 300px;
+
+  h3.need_support_text{
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 24px;
+  }
+
+  p.need_support_text1{
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
+
+form.form_help{
+  align-items: center;
+  position: relative;
+  top: -60px;
+  float: right;
+  font-weight: 700;
+
+  &:hover{
+
+    input.input_help{
+      font-size: 22px;
+      background-color: #ff9900;
+
+      &:hover {
+        background-color: #ff9900;
+        box-shadow: 0 0 3px rgb(255, 166, 0),
+        0 0 3px rgb(255, 166, 0),
+        0 0 3px rgb(255, 166, 0);
+      }
+    }
+
+    button.button_help {
+      background-color: rgb(230, 230, 230);
+      font-size: 22px;
+
+      &:hover {
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0 0 3px wheat,
+        0 0 3px wheat,
+        0 0 3px wheat;
+      }
+    }
+  }  
+
+  input.input_help{
+    background-color: $yellow_color;
+    font-size: 20px;
+    border: none;
+    width: 296px;
+    height: 56px;
+    transition: all 0.3s ease;
+  }
+
+  button.button_help{
+    width: 163px;
+    height: 56px;
+    font-size: 20px;
+    border: none;
+    background-color: rgb(228, 227, 227);
+    color: $yellow_color;
+    transition: all 0.3s ease;
+  }  
+}
+
+.help_container{
+  padding-bottom: 50px;
+  border-bottom: 3px solid #FF9F0D;
+}
+
+
 
 /*# sourceMappingURL=main.css.map */
