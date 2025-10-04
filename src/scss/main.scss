@@ -55,7 +55,6 @@ header{
   height: 750px;
 }
 
-
 // НАВИГАЦИЯ
 .navBar {
   display: flex;
@@ -77,6 +76,10 @@ header{
   margin-right: 0;
 }
 
+.li_list1 {
+  list-style-type: none;
+  margin-right: 0;
+}
 
 //ИЗОБРАЖЕНИЯ
 img.img_header{
@@ -97,7 +100,36 @@ img.img_header1 {
   z-index: 100;
 }
 
-// ГЛАВНАЯ СЕКЦИЯ
+img.img_about_us {
+  position: absolute;
+  width: 660px;
+  height: 550px;
+  top: 868px;
+  right: 100px;
+  z-index: 100;
+}
+
+img.food_category_other{
+  width: 305px;
+  height: 328px;
+  position: relative;
+  left: -500px;
+  top: 51px;
+}
+
+img.food_category{
+  width: 1014px;
+  height: 328px;
+  position: relative;
+  top: -280px;
+}
+
+img.img_why_us{
+  position: absolute;
+  height: 716px;
+  top: 2170px;
+  left: 90px;
+}
 
 img.line1{
   position: absolute;
@@ -110,6 +142,10 @@ img.line2{
   top: 195px;
   left: -5px;
 }
+
+// ГЛАВНАЯ СЕКЦИЯ
+
+
 
 .text_header_contact {
   padding-left: 50px;
@@ -130,20 +166,31 @@ div.about_us {
 
 div.food_category {
   display: flex;
+  position: relative;
+  top: -50px;
   justify-content: center;
   text-align: center;
   padding: 100px 50px;
   background: rgba(0,0,0,0.8);
+  height: 500px;
 }
 
 div.why_us{
   padding: 100px 50px;
   background: rgba(0,0,0,0.8);
+  position: relative;
+  left: 820px;
+  top: -50px;
+  width: 0;
 }
 
 div.local_group{
   width: 650px;
 }
+
+
+
+
 
 // ТЕКСТ
 .start_text {
@@ -209,6 +256,17 @@ p.middle_text{
 }
 
 // КЛИЕНТЫ
+div.clients{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../../assets/img/img-clients.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 369px;
+}
+
 .icon_box_clients {
   text-align: center;
   display: grid;
@@ -220,12 +278,12 @@ p.middle_text{
 }
 
 .card_clients {
-  display: block;
-  list-style-type: none;
-  background: rgba(255,255,255,0.1);
-  padding: 30px 20px;
-  border-radius: 10px;
-  text-align: center;
+  font-weight: 700;
+  font-size: 24px;
+
+  p {
+    font-size: 40px;
+  }
 }
 
 .yellow_sim {
@@ -312,46 +370,64 @@ li.about_us_li{
 
 .sq {
   position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 8px;
-  height: 8px;
+  top: -100px;
+  width: 102px;
+  height: 100px;
   background: $yellow_color;
-  border-radius: 50%;
+}
+
+.pre_years_block{
+  background-color: $yellow_color;
+  width: 374px;
+  height: 92px;
+  border-radius: 6px;
 }
 
 .years_block {
-  background: $yellow_color;
+  background: white;
   padding: 30px;
-  border-radius: 10px;
+  border-radius: 6px;
   text-align: center;
-  max-width: 200px;
+  width: 300px;
+  height: 32px;
   color: black;
-  
-  p:first-child {
-    font-size: 36px;
-    font-weight: 700;
-    margin-bottom: 5px;
-  }
-  
+  float: right;
+
   p {
-    margin-bottom: 5px;
+    position: relative;
+    top: -10px;
+    font-size: 24px;
     color: black;
+    text-align: left;
+  }  
+
+  p:first-child {
+    font-size: 40px;
+    font-weight: 900;
+    float: left;
+    color: $yellow_color;
+    margin-right: 30px;
+  }
+
+  p:last-child {
+    font-size: 24px;
+    font-weight: 700;
+    color: black;    
   }
 }
 
+
 .button_base{
-  width: 250px;
-  height: 75px;
+  width: 190px;
+  height: 60px;
   background-color: $yellow_color;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 24px;
+  font-size: 20px;
   color: aliceblue;
   border: none;
-  border-radius: 24px;
+  border-radius: 30px;
   text-decoration: none;
   transition: all 0.15s ease;
 
@@ -363,7 +439,7 @@ li.about_us_li{
     1px 3px 3.5px rgba(245, 245, 245, 0.382),
     1px 3px 3.5px rgba(245, 245, 245, 0.403),
     1px 3px 3.5px rgba(245, 245, 245, 0.407);
-    font-size: 28px;
+    font-size: 25px;
   }
 
   &:active{
