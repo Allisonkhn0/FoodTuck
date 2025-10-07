@@ -4,81 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Foodtuck Restaurant - Experience taste and quality food">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../dist/css/main.css">
     <link rel="icon" type="image/jpg" href="../assets/icons/1.jpg">
     <script src="../src/index.js" defer></script>
     <title>Foodtuck Restaurant</title>
   </head>
   <body>
-    <button class="up_button" title="Навверх" onclick="scrollUp()" aria-label="Scroll to top">
-      <span class="text_up_button"></span>
-      <span class="arr_up_button">↑</span>
+    <button class="button-up" title="Навверх" onclick="scrollUp()" aria-label="Scroll to top">
+      <span class="button-up__text"></span>
+      <span class="button-up__arrow">↑</span>
     </button>
+    
     <header class="header" id="top">
-  
-      <div class="noimg_cont">
-        <nav class="navBar" aria-label="Main navigation">
-          <!--Навигация-->
-          <h1 class="start_text"><span class="yellow_sim">Food</span>tuck</h1>
-          <!--Нужны ссылки и пагинация-->
-          <ul class="ul_list">
-            <li class="li_list"><a href="#" class="nav_a">Home</a></li>
-            <li class="li_list"><a href="#" class="nav_a">Menu</a></li>
-            <li class="li_list"><a href="#" class="nav_a">Blog</a></li>
-            <li class="li_list">Pages</li><!--НУЖЕН ВЫБОР СТРАНИЦЫ И ЯКОРЯ-->
-            <li class="li_list"><a href="#about_us" class="nav_a">About</a></li>
-            <li class="li_list"><a href="#food_category" class="nav_a">Shop</a></li>
-            <li class="li_list"><a href="#Contact" class="nav_a">Contact</a></li>
+      <div class="header__container">
+        <nav class="nav" aria-label="Main navigation">
+          <h1 class="nav__logo"><span class="nav__logo--highlight">Food</span>tuck</h1>
+          <ul class="nav__list">
+            <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Menu</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Blog</a></li>
+            <li class="nav__item nav__item--dropdown">Pages</li>
+            <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+            <li class="nav__item"><a href="#shop" class="nav__link">Shop</a></li>
+            <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
           </ul>
-          <input type="text" name="seach" class="input_search" placeholder="Search..." maxlength="50">
-
+          <input type="text" name="search" class="nav__search" placeholder="Search..." maxlength="50">
         </nav> 
         
-        <!--Изображения на header-->
-          <img class="img_header1" src="../assets/img/img_header.svg" alt="Error imgHeader.svg">
-          <img class="img_header" src="../assets/img/imgHeader.png" alt="Error imgHeader.png">        
+        <div class="header__content">
+          <img class="header__decor header__decor--shape" src="../assets/img/img_header.svg" alt="Decorative shape">
+          <img class="header__decor header__decor--plant" src="../assets/img/img_header_plant.png" alt="Decorative plant">        
 
-
-            <div class="social_icons">
-              <a href="#" aria-label="Our Twitter profile">T</a> <!-- Лучше SVG/иконка -->
-              <a href="#" aria-label="Our Facebook profile">B</a> <!-- Лучше SVG/иконка -->
-              <a href="#" aria-label="Our Pinterest profile">P</a> <!-- Лучше SVG/иконка -->
+          <div class="social">
+            <a href="#" class="social__link" aria-label="Our Twitter profile"></a>
+            <a href="#" class="social__link" aria-label="Our Facebook profile"></a>
+            <a href="#" class="social__link" aria-label="Our Pinterest profile">P</a>
+          </div>
+          
+          <div class="header__text" id="contact">
+            <div class="header__lines">
+              <img class="header__line" src="../assets/img/line1.jpg" alt="Decorative line">
+              <img class="header__line" src="../assets/img/line1.jpg" alt="Decorative line">            
             </div>
-        <div class="text_header_contact" id="Contact"><!--КОНТАКТ-->
-            <img class="line1" src="../assets/img/line1.jpg" alt="Error line">
-            <img class="line2" src="../assets/img/line1.jpg" alt="Error line">
-            <div class="local_group">
-              <h4 class="unusially_text">Its Quick & Amusing!</h4>
-              <span class="big_text">
-                <span class="yellow_sim">Th</span>e
+            <div class="header__info">
+              <h4 class="header__subtitle">Its Quick & Amusing!</h4>
+              <span class="header__title">
+                <span class="header__title--highlight">Th</span>e
                 Art of speed <br> food Quality
               </span>
-              <div class="lorem_text">
-                <p class="middle_text">
+              <div class="header__description">
+                <p class="header__text-content">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Varius sed pharetra dictum neque massa congue
                 </p>              
               </div>
-              <a href="./pages/menu.html" class="button_base" title='Переход на страничку с меню'>See Menu</a>
+              <a href="./pages/menu.html" class="button button--primary" title='Переход на страничку с меню'>See Menu</a>
             </div>
+          </div>
         </div>
       </div>
-
-
-
     </header>
+    
     <main>
-
-
-      <div class="about_us" id="about_us"> <!--О НАС-->
-        <div class="local_group">
-          <h4 class="unusially_text">About us</h4>
-          <p class="big_text">
-            <span class="yellow_sim">We</span>
+      <section class="about" id="about">
+        <div class="about__container">
+          <h4 class="section__subtitle">About us</h4>
+          <p class="section__title">
+            <span class="section__title--highlight">We</span>
             Create the best foody product
           </p>
-          <div class="lorem_text">
-            <p class="middle_text">
+          <div class="section__description">
+            <p class="section__text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Quisque diam pellentesque bibendum non dui volutpat fringilla bibendum.
               Urna, elit augue urna, vitae feugiat pretium donec id elementum.
@@ -86,112 +85,129 @@
             </p>            
           </div>
 
-          <ul style="margin-top: 25px; ">
-            <li class="about_us_li"> Lacus nisi, et ac dapibus sit eu velit in consequat.</li>
-            <li class="about_us_li"> Quisque diam pellentesque bibendum non dui volutpat fringilla</li>
-            <li class="about_us_li"> Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+          <ul class="about__list">
+            <li class="about__item"> Lacus nisi, et ac dapibus sit eu velit in consequat.</li>
+            <li class="about__item"> Quisque diam pellentesque bibendum non dui volutpat fringilla</li>
+            <li class="about__item"> Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
           </ul>
-          <a href="#" class="button_base" title="Подробнее о нас">Read more</a>
-
-          <img class="img_about_us" src="../assets/img/about_us.jpg" alt="Error about_us.jpg">
+          <a href="#" class="button button--primary" title="Подробнее о нас">Read more</a>
+          
+          <div class="about__gallery">
+            <img class="about__image" src="../assets/img/img_about_us1.jpg" alt="Restaurant interior">
+            <img class="about__image" src="../assets/img/img_about_us3.jpg" alt="Chef preparing food">              
+            <img class="about__image" src="../assets/img/img_about_us2.jpg" alt="Delicious dish">
+          </div>
         </div>
-      </div>
-      <div class="food_category" id="food_category"><!--FOOD CATEGORY-->
-        <div class="local_group">
-          <h4 class="unusially_text">Food Category</h4>
-          <p class="big_text">
-            <span class="yellow_sim">Ch</span>oose
+      </section>
+      
+      <section class="food-category" id="shop">
+        <div class="food-category__container">
+          <h4 class="section__subtitle">Food Category</h4>
+          <p class="section__title">
+            <span class="section__title--highlight">Ch</span>oose
             Food Iteam
           </p>
-            <img class="food_category_other" src="../assets/img/food_category_other.jpg" alt="Error food_category_other.jpg">
-            <img class="food_category" src="../assets/img/food_category.jpg" alt="Error food_category.jpg">
-            <img class="food_category_other1" src="../assets/img/img_food_category2.png" alt="Error food_category_other.png">     
-            <!--Не забудь добавить надписи!-->
+          <div class="food-category__gallery">
+            <img class="food-category__image" src="../assets/img/img_food_category1.jpg" alt="Pizza category">
+            <img class="food-category__image" src="../assets/img/img_burger_all.jpg" alt="Burger category">
+            <img class="food-category__image" src="../assets/img/img_food_category3.jpg" alt="Salad category">
+            <img class="food-category__image" src="../assets/img/img_food_category4.jpg" alt="Dessert category">
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div class="why_us">
-        <div class="local_group">
-          <h4 class="unusially_text">Why us</h4>
-          <span class="big_text">
-            <span class="yellow_sim">Ex</span>ra
+      <section class="why-us">
+        <div class="why-us__container">
+          <h4 class="section__subtitle">Why us</h4>
+          <span class="section__title">
+            <span class="section__title--highlight">Ex</span>ra
             ordinary taste And Experienced 
           </span>
-          <div class="lorem_text">
-            <p class="middle_text">
+          <div class="section__description">
+            <p class="section__text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Quisque diam pellentesque bibendum non dui volutpat fringilla bibendum.
               Urna, elit augue urna, vitae feugiat pretium donec id elementum.
               Ultrices mattis sed vitae mus risus. Lacus nisi, et ac dapibus sit eu velit in consequat.
             </p>            
           </div>
-          <div class="icon_box">
-            <ul>
-              <li class="li_list1">Fast Food <div class="sq"></div></li>
-              <li class="li_list1">Lunch <div class="sq"></div></li>
-              <li class="li_list1">Dinner <div class="sq"></div></li>
+          <div class="why-us__categories">
+            <ul class="why-us__list">
+              <li class="why-us__item">Fast Food <div class="why-us__marker"></div></li>
+              <li class="why-us__item">Lunch <div class="why-us__marker"></div></li>
+              <li class="why-us__item">Dinner <div class="why-us__marker"></div></li>
             </ul>
           </div>
-          <div class="pre_years_block">
-            <div class="years_block">
-              <p>30+</p>
-              <p>Years of</p>
-              <p>Experienced</p>
+          <div class="why-us__experience">
+            <div class="why-us__stats">
+              <p class="why-us__number">30+</p>
+              <p class="why-us__label">Years of</p>
+              <p class="why-us__label">Experienced</p>
             </div>
           </div>
         </div>
-      </div>
-      <img class="img_why_us" src="../assets/img/why_us.jpg" alt="Error why_us.jpg">
+      </section>
       
-      <div class="clients">
-        <ul class="icon_box_clients">
-          <li class="card_clients">Profecional Chefs<p>420</p></li>
-          <li class="card_clients">Items Of Food<p>320</p></li>
-          <li class="card_clients">Years Of Experienced<p>30+</p></li>
-          <li class="card_clients">Happy Customers<p>220</p></li>
+      <section class="stats">
+        <ul class="stats__list">
+          <li class="stats__item">
+            <p class="stats__title">Profecional Chefs</p>
+            <p class="stats__number">420</p>
+          </li>
+          <li class="stats__item">
+            <p class="stats__title">Items Of Food</p>
+            <p class="stats__number">320</p>
+          </li>
+          <li class="stats__item">
+            <p class="stats__title">Years Of Experienced</p>
+            <p class="stats__number">30+</p>
+          </li>
+          <li class="stats__item">
+            <p class="stats__title">Happy Customers</p>
+            <p class="stats__number">220</p>
+          </li>
         </ul>
-      </div>
+      </section>
     </main>
-    <footer>
-      <div class="need_support">
-        <div class="help_container">
-          <h3 class="need_support_text"><span class="yellow_sim">St</span>ill You Need Our Support ?</h3>
-          <p class="need_support_text1">Don’t wait make a smart & logical quote here. Its pretty easy.</p> 
+    
+    <footer class="footer">
+      <div class="footer__support">
+        <div class="footer__container">
+          <h3 class="footer__title">
+            <span class="footer__title--highlight">St</span>ill You Need Our Support ?
+          </h3>
+          <p class="footer__subtitle">Don’t wait make a smart & logical quote here. Its pretty easy.</p> 
           
-          <form class="form_help">
-            <input type="email" name="email_help" placeholder="Enter Your Email" minlength="6" maxlength="50" class="input_help">
-            <button type="submit" class="button_help" onclick="return false">Subscribe now</button><!--Блокировка отправки до создания логики-->
+          <form class="footer__form">
+            <input type="email" name="email" placeholder="Enter Your Email" minlength="6" maxlength="50" class="footer__input">
+            <button type="submit" class="button button--secondary">Subscribe now</button>
           </form>
         </div>
       </div>
-      <div class="last_footer">
-        <h5 class="text_last">Copyright © 2022 by Ayeman. All Rights Reserved.</h5>
-        <ul class="ul_last">
-            <li class="li_last">
-              <a href="#" class="footer_link" aria-label="Facebook">
-                <img src="../assets/icons/facebook.svg" alt="Error facebook.svg">
-              </a>
-            </li>
-            <li class="li_last">
-              <a href="#" class="footer_link" aria-label="Twitter">
-                <img src="../assets/icons/twitter.svg" alt="Error twitter.svg">
-              </a>
-            </li>
-            <li class="li_last">
-              <a href="#" class="footer_link" aria-label="Instagram">
-                <img src="../assets/icons/instagram.svg" alt="Error instagram.svg">
-              </a>
-            </li>
-            <li class="li_last">
-              <a href="#" class="footer_link" aria-label="YouTube">
-                <img src="../assets/icons/youtube.svg" alt="Error youtube.svg">
-              </a>
-            </li>
-            <li class="li_last">
-              <a href="#" class="footer_link" aria-label="YouTube">
-                <img src="../assets/icons/youtube.svg" alt="Error youtube.svg">
-              </a>
-            </li>
+      
+      <div class="footer__bottom">
+        <p class="footer__copyright">Copyright © 2022 by Ayeman. All Rights Reserved.</p>
+        <ul class="footer__social">
+          <li class="footer__social-item">
+            <a href="#" class="footer__social-link" aria-label="Facebook">
+              <img src="../assets/icons/facebook.svg" alt="Facebook icon">
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a href="#" class="footer__social-link" aria-label="Twitter">
+              <img src="../assets/icons/twitter.svg" alt="Twitter icon">
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a href="#" class="footer__social-link" aria-label="Instagram">
+              <img src="../assets/icons/instagram.svg" alt="Instagram icon">
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a href="#" class="footer__social-link" aria-label="YouTube">
+              <img src="../assets/icons/youtube.svg" alt="YouTube icon">
+            </a>
+          </li>
         </ul>
       </div>
     </footer>
