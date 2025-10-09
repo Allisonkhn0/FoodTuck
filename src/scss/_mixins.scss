@@ -1,0 +1,27 @@
+@mixin button-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  text-align: center;
+  
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+@mixin button-variant($bg, $color: white, $hover-bg: darken($bg, 10%)) {
+  background: $bg;
+  color: $color;
+  
+  &:hover:not(:disabled) {
+    background: $hover-bg;
+  }
+}

@@ -4,6 +4,7 @@
 
 
 
+
 * {
   margin: 0;
   padding: 0;
@@ -22,7 +23,9 @@ li {
   list-style-type: none;
 }
 
-
+a {
+  text-decoration: none;
+}
 
 
 // ПЕРЕИСПОЛЬЗОВАННОЕ
@@ -50,7 +53,7 @@ li {
 }
 
 .section__text {
-  font-family: Inter;
+  font-family: $standart_font;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -73,7 +76,6 @@ li {
   color: aliceblue;
   border: none;
   border-radius: 30px;
-  text-decoration: none;
   transition: all 0.15s ease;
 
   &:hover {
@@ -117,8 +119,9 @@ li {
 }
 
 .header__content {
-  display: inline-flex;
-  gap: 30px;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 98px;
 }
 
 .about {
@@ -192,11 +195,10 @@ li {
 }
 
 .nav__link {
-  font-family: Inter;
+  font-family: $standart_font;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  text-decoration: none;
   transition: all 0.3s ease;
 
   &:hover {
@@ -211,6 +213,41 @@ li {
   }
 }
 
+.header__subtitle{
+  font-family: Great Vibes;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 32px;
+  color: $yellow_color;
+  line-height: 40px;
+  letter-spacing: 0%;
+}
+
+.header__title{
+  font-family: Helvetica;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 60px;
+  line-height: 68px;
+  letter-spacing: 0%;
+}
+
+.header__title--highlight{
+  color: $yellow_color;
+}
+
+
+.header__text-content{
+  font-family: $standart_font;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+}
+
+
+
 .footer__title {
   font-size: 32px;
   font-weight: 700;
@@ -224,7 +261,7 @@ li {
 
 .footer__copyright {
   font-weight: 400;
-  font-family: Intel;
+  font-family: $standart_font;
   margin-left: 300px;
 }
 
@@ -285,28 +322,24 @@ li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 50px;
+  padding: 20px 150px;
 }
 
 .nav__list {
   display: flex;
   justify-content: flex-start;
   position: static;
-  gap: 30px;
+  gap: 32px;
 }
 
-.nav__item {
-  list-style-type: none;
-}
-
-.why-us__item {
-  list-style-type: none;
+.nav__list .nav__item {
+  font-family: $standart_font;
 }
 
 .header__decor--plant {
   position: absolute;
-  top: 500px;
-  left: 970px;
+  top: 565px;
+  left: 810px;
   width: 26px;
   height: 22px;
   z-index: 1;
@@ -317,11 +350,8 @@ li {
 }
 
 .header__decor--shape {
-  position: absolute;
-  width: 624px;
-  height: 633px;
-  top: 50px;
-  left: 900px;
+  width: 800px;
+  height: 600px;
   z-index: 1;
   max-width: 100%;
 }
@@ -332,7 +362,7 @@ li {
   width: 660px;
   height: 330px;
   top: 1070px;
-  left: 960px;
+  left: 750px;
   opacity: 1;
   border-radius: 6px;
 }
@@ -343,7 +373,7 @@ li {
   width: 322px;
   height: 194px;
   top: 1416px;
-  left: 1298px;
+  left: 1118px;
   opacity: 1;
   border-radius: 6px;
 }
@@ -354,7 +384,7 @@ li {
   width: 322px;
   height: 194px;
   top: 1416px;
-  left: 960px;
+  left: 750px;
   opacity: 1;
   border-radius: 6px;
 }
@@ -383,13 +413,13 @@ li {
   left: 90px;
 }
 
-.header__line:first-child {
+.header__lines .header__line:first-child {
   position: absolute;
   top: -100px;
   left: -5px;
 }
 
-.header__line:last-child {
+.header__lines .header__line:last-child {
   position: absolute;
   top: 195px;
   left: -5px;
@@ -423,7 +453,6 @@ li {
 }
 
 .nav__search {
-  padding-left: 26px;
   background-color: black;
   width: 310px;
   height: 54px;
@@ -438,6 +467,7 @@ li {
   &::placeholder{
     font-weight: 400;
     font-style: Regular;
+    color: whitesmoke;
     font-size: 16px;
     padding: 14px 218px 16px 26px;
     line-height: 24px;
@@ -452,13 +482,19 @@ li {
   }
 }
 
+.header__social{
+  position: relative;
+  top: 100px;
+  right: 32px;
+}
+
 .social {
-  position: absolute;
-  top: 280px;
-  left: 42.5px;
   display: flex;
   flex-direction: column;
   gap: 15px;
+  position: relative;
+  top: 90px;
+  right: 10px;
   
   p {
     width: 40px;
@@ -481,7 +517,6 @@ li {
 .why-us__list {
   display: flex;
   gap: 40px;
-  margin: 30px 0;
 }
 
 .why-us__list .why-us__item {
@@ -549,10 +584,10 @@ li {
   &:hover {
     .footer__input {
       font-size: 22px;
-      background-color: #ff9900;
+      background-color: $yellow_color;
 
       &:hover {
-        background-color: #ff9900;
+        background-color: $yellow_color;
         box-shadow: 0 0 3px rgb(255, 166, 0),
         0 0 3px rgb(255, 166, 0),
         0 0 3px rgb(255, 166, 0);
@@ -595,7 +630,7 @@ li {
 
 .footer__container {
   padding-bottom: 50px;
-  border-bottom: 3px solid #FF9F0D;
+  border-bottom: 3px solid  $yellow_color;
 }
 
 // // АДАПТИВНОСТЬ 

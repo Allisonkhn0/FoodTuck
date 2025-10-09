@@ -17,6 +17,10 @@ li {
   list-style-type: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 .section__subtitle {
   font-family: Great Vibes;
   font-weight: 400;
@@ -63,7 +67,6 @@ li {
   color: aliceblue;
   border: none;
   border-radius: 30px;
-  text-decoration: none;
   transition: all 0.15s ease;
 }
 .button:hover {
@@ -96,8 +99,9 @@ li {
 }
 
 .header__content {
-  display: inline-flex;
-  gap: 30px;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 98px;
 }
 
 .about {
@@ -170,7 +174,6 @@ li {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  text-decoration: none;
   transition: all 0.3s ease;
 }
 .nav__link:hover {
@@ -181,6 +184,38 @@ li {
 }
 .nav__link:active {
   color: rgb(164, 79, 0);
+}
+
+.header__subtitle {
+  font-family: Great Vibes;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 32px;
+  color: #FF9F0D;
+  line-height: 40px;
+  letter-spacing: 0%;
+}
+
+.header__title {
+  font-family: Helvetica;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 60px;
+  line-height: 68px;
+  letter-spacing: 0%;
+}
+
+.header__title--highlight {
+  color: #FF9F0D;
+}
+
+.header__text-content {
+  font-family: Inter;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
 }
 
 .footer__title {
@@ -196,7 +231,7 @@ li {
 
 .footer__copyright {
   font-weight: 400;
-  font-family: Intel;
+  font-family: Inter;
   margin-left: 300px;
 }
 
@@ -247,28 +282,24 @@ li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 50px;
+  padding: 20px 150px;
 }
 
 .nav__list {
   display: flex;
   justify-content: flex-start;
   position: static;
-  gap: 30px;
+  gap: 32px;
 }
 
-.nav__item {
-  list-style-type: none;
-}
-
-.why-us__item {
-  list-style-type: none;
+.nav__list .nav__item {
+  font-family: Inter;
 }
 
 .header__decor--plant {
   position: absolute;
-  top: 500px;
-  left: 970px;
+  top: 565px;
+  left: 810px;
   width: 26px;
   height: 22px;
   z-index: 1;
@@ -280,11 +311,8 @@ li {
 }
 
 .header__decor--shape {
-  position: absolute;
-  width: 624px;
-  height: 633px;
-  top: 50px;
-  left: 900px;
+  width: 800px;
+  height: 600px;
   z-index: 1;
   max-width: 100%;
 }
@@ -295,7 +323,7 @@ li {
   width: 660px;
   height: 330px;
   top: 1070px;
-  left: 960px;
+  left: 750px;
   opacity: 1;
   border-radius: 6px;
 }
@@ -306,7 +334,7 @@ li {
   width: 322px;
   height: 194px;
   top: 1416px;
-  left: 1298px;
+  left: 1118px;
   opacity: 1;
   border-radius: 6px;
 }
@@ -317,7 +345,7 @@ li {
   width: 322px;
   height: 194px;
   top: 1416px;
-  left: 960px;
+  left: 750px;
   opacity: 1;
   border-radius: 6px;
 }
@@ -346,13 +374,13 @@ li {
   left: 90px;
 }
 
-.header__line:first-child {
+.header__lines .header__line:first-child {
   position: absolute;
   top: -100px;
   left: -5px;
 }
 
-.header__line:last-child {
+.header__lines .header__line:last-child {
   position: absolute;
   top: 195px;
   left: -5px;
@@ -386,7 +414,6 @@ li {
 }
 
 .nav__search {
-  padding-left: 26px;
   background-color: black;
   width: 310px;
   height: 54px;
@@ -401,6 +428,7 @@ li {
 .nav__search::placeholder {
   font-weight: 400;
   font-style: Regular;
+  color: whitesmoke;
   font-size: 16px;
   padding: 14px 218px 16px 26px;
   line-height: 24px;
@@ -411,13 +439,19 @@ li {
   height: 57px;
 }
 
+.header__social {
+  position: relative;
+  top: 100px;
+  right: 32px;
+}
+
 .social {
-  position: absolute;
-  top: 280px;
-  left: 42.5px;
   display: flex;
   flex-direction: column;
   gap: 15px;
+  position: relative;
+  top: 90px;
+  right: 10px;
 }
 .social p {
   width: 40px;
@@ -438,7 +472,6 @@ li {
 .why-us__list {
   display: flex;
   gap: 40px;
-  margin: 30px 0;
 }
 
 .why-us__list .why-us__item {
@@ -502,10 +535,10 @@ li {
 }
 .footer__form:hover .footer__input {
   font-size: 22px;
-  background-color: #ff9900;
+  background-color: #FF9F0D;
 }
 .footer__form:hover .footer__input:hover {
-  background-color: #ff9900;
+  background-color: #FF9F0D;
   box-shadow: 0 0 3px rgb(255, 166, 0), 0 0 3px rgb(255, 166, 0), 0 0 3px rgb(255, 166, 0);
 }
 .footer__form:hover .button--secondary {
