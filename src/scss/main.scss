@@ -220,7 +220,7 @@ a {
 // ===== HEADER =====
 .header { 
   display: grid;
-  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("../../assets/img/background_header.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("../../assets/img/header/background_header.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -531,7 +531,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(../../assets/img/img_clients.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(../../assets/img/background/img_clients.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -555,6 +555,34 @@ a {
   p {
     font-size: 40px;
   }
+}
+
+// ===== CHOOSE PICK SECTION =====
+.choose-pick__container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.choose-pick__nav ul {
+  display: inline-flex;
+  gap: 100px;
+}
+
+.choose-pick__container .choose-pick__li{
+  font-family: $standart_font;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.choose-pick__container--lower{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 // ===== FOOTER =====
