@@ -13,6 +13,11 @@ body {
   position: relative;
 }
 
+::selection {
+  background-color: #FF9F0D;
+  color: white;
+}
+
 section {
   margin-bottom: 100px;
 }
@@ -297,6 +302,7 @@ a {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  width: 20px;
   position: relative;
   top: 90px;
   right: 10px;
@@ -323,6 +329,10 @@ a {
   background-color: black;
   margin-left: 240px;
   padding: 100px 50px;
+}
+
+.about__list {
+  margin-top: 30px;
 }
 
 .about__container {
@@ -711,6 +721,100 @@ a {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0%;
+}
+
+.recom__container {
+  display: flex;
+  justify-content: center;
+}
+
+.recom-wrap {
+  width: 1273px;
+  height: 770px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 123px;
+}
+
+.recom__container-block-info {
+  width: 100%;
+  text-align: start;
+}
+
+.recom__block {
+  width: 868px;
+  height: 450px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.recom__block img:first-child {
+  position: absolute;
+  top: -75px;
+  border-radius: 100%;
+  width: 133px;
+}
+
+.recom__block p {
+  color: #000;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  font-family: Helvetica;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0%;
+}
+
+.recom__block-text {
+  width: 695px;
+  margin: 16px 0;
+}
+.recom__block-text p {
+  font-family: Helvetica;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 0%;
+  color: #4F4F4F;
+  text-align: center;
+}
+
+.recom__block span {
+  font-family: Helvetica;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color: #828282;
+}
+
+.swipe-block {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 56px;
+}
+
+.recom-circle {
+  width: 16px;
+  height: 16px;
+  background-color: rgba(255, 158, 13, 0.1882352941);
+  border: none;
+  border-radius: 100%;
+}
+.recom-circle:first-child {
+  background-color: #FF9F0D;
 }
 
 .footer__support {
