@@ -67,6 +67,29 @@ a {
   color: #FF9F0D;
 }
 
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  border: 1px solid #FF9F0D;
+  border-radius: 25px;
+  width: 155px;
+  height: 50px;
+  padding: 13px;
+  margin-top: 56px;
+}
+
+.btn a {
+  font-family: Inter;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+}
+
 .button {
   width: 190px;
   height: 60px;
@@ -262,10 +285,18 @@ a {
   letter-spacing: 0%;
 }
 
+.header-img {
+  position: relative;
+}
+
 .header__decor--plant {
   width: 26px;
   height: 22px;
+  max-width: 100%;
   z-index: 1;
+  position: absolute;
+  top: 475px;
+  right: 675px;
 }
 @media (max-width: 1200px) {
   .header__decor--plant {
@@ -700,29 +731,6 @@ a {
   color: black;
 }
 
-.chef__button-container {
-  display: flex;
-  justify-content: center;
-}
-
-.chef__button {
-  border: 1px solid #FF9F0D;
-  border-radius: 25px;
-  width: 155px;
-  height: 50px;
-  padding: 13px;
-  margin-top: 56px;
-}
-
-.chef__button a {
-  font-family: Inter;
-  font-weight: 400;
-  font-style: Regular;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0%;
-}
-
 .recom__container {
   display: flex;
   justify-content: center;
@@ -815,6 +823,49 @@ a {
 }
 .recom-circle:first-child {
   background-color: #FF9F0D;
+}
+
+.progress__container {
+  max-height: 558px;
+  height: 558px;
+  padding: 112px 299px 113px 914px;
+  background-image: url(../../assets/img/background/img_restaurant_progress.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: end;
+}
+
+.progress__block-text {
+  width: 900px;
+}
+
+.progress__buttons-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  width: 500px;
+  float: right;
+}
+.progress__buttons-container img {
+  position: relative;
+  bottom: -27.5px;
+}
+.progress__buttons-container span {
+  font-family: Inter;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  position: relative;
+  bottom: -27.5px;
+}
+
+.progress__buttons-container img {
+  width: 60px;
+  height: 60px;
 }
 
 .footer__support {
