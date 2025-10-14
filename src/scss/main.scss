@@ -888,7 +888,7 @@ a {
 }
 
 .progress__block-text{
-  width: 900px;
+  width: 950px;
 }
 
 .progress__buttons-container{
@@ -920,17 +920,61 @@ a {
   height: 60px;
 }
 
+// ===== BLOG SECTION =====
+.blog__container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
 
+.blog__cards {
+  display: flex;
+  gap: 26px;
+}
 
+.blog__card{
+  width: 424px;
+  height: 569px;
+  border: 1px solid #fff;
 
+  img {
+    width: 423px;
+    height: 349px;
+    object-position: center;
+    object-fit: cover;
+  }
+}
 
+.blog__card-info {
+  padding: 30px 43px;
+  width: 100%;
+  text-align: start;
 
+  p{
+    font-family: Helvetica;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 23px;
+    line-height: 32px;
+    letter-spacing: 0%;
+    margin-top: 16px;
+  }
+}
 
+.blog__card--lower{
+  display: flex;
+  gap: 176px;
+  margin-top: 32px;
+}
 
-
-
-
-
+.blog__icons{
+  img{
+    width: 20px;
+    height: 20px;
+  }
+}
 
 
 // ===== FOOTER =====
@@ -950,12 +994,17 @@ a {
 }
 
 .footer__title {
-  font-size: 32px;
+  font-family: Helvetica;
   font-weight: 700;
-  margin-bottom: 24px;
+  font-style: Bold;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 0%;
+  margin-bottom: 17px;
 }
 
 .footer__subtitle {
+  font-family: $standart_font;
   font-size: 16px;
   font-weight: 400;
 }
@@ -964,6 +1013,11 @@ a {
   display: flex;
   float: right;
   font-weight: 700;
+
+  input::placeholder{
+    color: #fff;
+    padding-left: 20px;
+  }
 
   &:hover {
     .footer__input {
