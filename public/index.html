@@ -16,7 +16,7 @@
     <!--/FONTS-->
 
     <link rel="stylesheet" type="text/css" href="../dist/css/main.css">
-    <link rel="icon" type="image/jpg" href="../assets/icons/1.jpg">
+    <link rel="icon" type="image/jpg" href="../assets/icons/fartuk_icon.svg">
     <title>Foodtuck Restaurant</title>
   </head>
   <body>
@@ -27,41 +27,47 @@
     
     <header class="header" id="top">
       <div class="header__container">
+        <h1 class="nav__logo"><span class="nav__logo--highlight">Food</span>tuck</h1>
         <nav class="nav" aria-label="Main navigation">
-          <h1 class="nav__logo"><span class="nav__logo--highlight">Food</span>tuck</h1>
-          <ul class="nav__list">
+            <!-- <button class="nav__burger" aria-label="Toggle menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button> -->
+
+          <ul>
             <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
-            <li class="nav__item"><a href="./pages/menu.html" class="nav__link">Menu</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Blog</a></li>
+            <li class="nav__item"><a href="#menu" class="nav__link">Menu</a></li>
+            <li class="nav__item"><a href="#blog" class="nav__link">Blog</a></li>
             <li class="nav__item nav__item--dropdown">Pages</li>
             <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
             <li class="nav__item"><a href="#shop" class="nav__link">Shop</a></li>
             <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
           </ul>
-          <input type="text" name="search" class="nav__search" placeholder="Search..." maxlength="50">
+          <div class="nav__search-container">
+            <input type="text" name="search" class="nav__search" placeholder="Search..." maxlength="50">
+            <img src="../assets/icons/Handbag.svg" alt="Handbag icon">
+          </div>
+          
         </nav> 
         
-        <div class="header__content">
+        <div class="header__content"  id="contact">
           <div class="header-img">
             <img class="header__decor header__decor--shape" src="../assets/img/header/img_header.svg" alt="Decorative shape">
             <img class="header__decor header__decor--plant" src="../assets/img/plants/img_header_plant.png" alt="Decorative plant">
           </div>        
           
 
-          <div class="header__text" id="contact">
-
-
-            <div class="header__social">
-              <div class="social">
-                <a href="#" class="social__link" aria-label="Our Twitter profile">Fa</a>
-                <a href="#" class="social__link" aria-label="Our Facebook profile"><span class="header__title--highlight">Tw</span></a>
-                <a href="#" class="social__link" aria-label="Our Pinterest profile">Pi</a>
-              </div>
+          <div class="header__text">
               <div class="header__lines">
                 <img class="header__line" src="../assets/img/another/line1.jpg" alt="Decorative line">
+                  <div class="social">
+                    <a href="#" class="social__link" aria-label="Our Facebook profile"><img src="../assets/icons/facebookIcon.svg" alt="facebook"></a>
+                    <a href="#" class="social__link" aria-label="Our Twitter profile"><img src="../assets/icons/twitterBird.svg" alt="twitter"></a>
+                    <a href="#" class="social__link" aria-label="Our Pinterest profile"><img src="../assets/icons/pinterestIcon.svg" alt="pix"></a>
+                  </div>                
                 <img class="header__line" src="../assets/img/another/line1.jpg" alt="Decorative line">            
               </div>              
-            </div>
 
             <div class="header__info">
               <h4 class="header__subtitle">Its Quick & Amusing!</h4>
@@ -75,7 +81,7 @@
                   Varius sed pharetra dictum neque massa congue
                 </p>              
               </div>
-              <a href="./pages/menu.html" class="button button--primary" title='Переход на страничку с меню'>See Menu</a>
+              <a href="./pages/menu.html" class="button" title='Переход на страничку с меню'>See Menu</a>
             </div>
           </div>
         </div>
@@ -85,39 +91,45 @@
     <main>
       <section class="about" id="about">
         <div class="about__container">
-          <h4 class="section__subtitle">About us</h4>
-          <p class="section__title">
-            <span class="section__title--highlight">We</span>
-            Create the best foody product
-          </p>
-          <div class="section__description">
-            <p class="section__text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Quisque diam pellentesque bibendum non dui volutpat fringilla bibendum.
-              Urna, elit augue urna, vitae feugiat pretium donec id elementum.
-              Ultrices mattis sed vitae mus risus. Lacus nisi, et ac dapibus sit eu velit in consequat.
-            </p>            
+          <div class="about__text">
+            <h4 class="section__subtitle">About us</h4>
+            <div class="about__gap-text">
+              <p class="section__title">
+                <span class="section__title--highlight">We</span>
+                Create the best foody product
+              </p>
+              <div class="section__description">
+                <p class="section__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Quisque diam pellentesque bibendum non dui volutpat fringilla bibendum.
+                  Urna, elit augue urna, vitae feugiat pretium donec id elementum.
+                  Ultrices mattis sed vitae mus risus. Lacus nisi, et ac dapibus sit eu velit in consequat.
+                </p>            
+              </div>
+
+              <ul class="about__list">
+                <li class="about__item"> Lacus nisi, et ac dapibus sit eu velit in consequat.</li>
+                <li class="about__item"> Quisque diam pellentesque bibendum non dui volutpat fringilla</li>
+                <li class="about__item"> Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+              </ul>              
+            </div>
+            <a href="#" class="button button--primary" title="Подробнее о нас">Read more</a>
           </div>
 
-          <ul class="about__list">
-            <li class="about__item"> Lacus nisi, et ac dapibus sit eu velit in consequat.</li>
-            <li class="about__item"> Quisque diam pellentesque bibendum non dui volutpat fringilla</li>
-            <li class="about__item"> Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-          </ul>
-          <a href="#" class="button button--primary" title="Подробнее о нас">Read more</a>
-          
           <div class="about__gallery">
             <img class="about__image" src="../assets/img/about_us/img_about_us1.jpg" alt="Restaurant interior">
-            <img class="about__image" src="../assets/img/all/img_two_burgers_all.jpg" alt="Chef preparing food">              
-            <img class="about__image" src="../assets/img/about_us/img_about_us2.jpg" alt="Delicious dish">
+            <div class="about__galery--lower">
+              <img class="about__image" src="../assets/img/all/img_two_burgers_all.jpg" alt="Chef preparing food">              
+              <img class="about__image" src="../assets/img/about_us/img_about_us2.jpg" alt="Delicious dish">              
+            </div>
           </div>
         </div>
       </section>
       
       <section class="food-category" id="shop">
         <div class="food-category__container">
-          <h4 class="section__subtitle">Food Category</h4>
-          <p class="section__title">
+          <h4 class="food-category__subtitle section__subtitle" style="text-align: center;">Food Category</h4>
+          <p class="food-category__title section__title" style="text-align: center;">
             <span class="section__title--highlight">Ch</span>oose
             Food Iteam
           </p>
@@ -134,9 +146,9 @@
         <div class="why-us__container">
           <img class="why-us__image" src="../assets/img/another/why_us.jpg" alt="Images of why-us">
           <div class="why-us__info">
-            <h4 class="section__subtitle">Why us</h4>
+            <h4 class="section__subtitle">Why Choose us</h4>
             <span class="section__title">
-              <span class="section__title--highlight">Ex</span>ra
+              <span class="section__title--highlight">Ex</span>ta
               ordinary taste And Experienced 
             </span>
             <div class="section__description">
@@ -155,8 +167,10 @@
             <div class="why-us__experience">
               <div class="why-us__stats">
                 <p class="why-us__number">30+</p>
+                <div class="why-us__experience-label">
                 <p class="why-us__label">Years of</p>
-                <p class="why-us__label">Experienced</p>
+                <p class="why-us__label">Experienced</p>                  
+                </div>
               </div>
             </div>            
           </div>
@@ -167,18 +181,22 @@
         <div class="stats">
           <ul class="stats__list">
             <li class="stats__item">
+              <img src="../assets/icons/burger_icon.svg" alt="burger">
               <p class="stats__title">Profecional Chefs</p>
               <p class="stats__number">420</p>
             </li>
             <li class="stats__item">
+              <img src="../assets/icons/fartuk_icon.svg" alt="fartuk">
               <p class="stats__title">Items Of Food</p>
               <p class="stats__number">320</p>
             </li>
             <li class="stats__item">
+              <img src="../assets/icons/pork_icon.svg" alt="pork">
               <p class="stats__title">Years Of Experienced</p>
               <p class="stats__number">30+</p>
             </li>
             <li class="stats__item">
+              <img src="../assets/icons/pizza_icon.svg" alt="pizza">
               <p class="stats__title">Happy Customers</p>
               <p class="stats__number">220</p>
             </li>
@@ -187,25 +205,25 @@
 
       </section>
 
-      <section>
+      <section id="menu">
         <div class="choose-pick__container">
           <div class="choose-pick__container--upper">
             <div class="choose-pick__info">
-              <h4 class="section__subtitle">Choose & pick</h4>
-              <p class="section__title">
+              <h4 class="choose-pick__subtitle section__subtitle">Choose & pick</h4>
+              <p class="choose-pick__title section__title">
                 <span class="section__title--highlight">Fr</span>om
                 Our Menu
               </p>            
             </div>
             <div class="choose-pick__nav">
               <ul>
-                <li class="choose-pick__li">Breakfast</li>
-                <li class="choose-pick__li">Lunch</li>
-                <li class="choose-pick__li">Dinner</li>
-                <li class="choose-pick__li">Dessert</li>
-                <li class="choose-pick__li">Drink</li>
-                <li class="choose-pick__li">Snack</li>
-                <li class="choose-pick__li">Suops</li>
+                <li class="choose-pick__li"><a href="#">Breakfast</a></li>
+                <li class="choose-pick__li"><a href="#">Lunch</a></li>
+                <li class="choose-pick__li"><a href="#">Dinner</a></li>
+                <li class="choose-pick__li"><a href="#">Dessert</a></li>
+                <li class="choose-pick__li"><a href="#">Drink</a></li>
+                <li class="choose-pick__li"><a href="#">Snack</a></li>
+                <li class="choose-pick__li"><a href="#">Suops</a></li>
               </ul>
             </div>            
           </div>
@@ -305,8 +323,8 @@
       <section>
         <div class="chef__container">
           <div class="choose-pick__info">
-            <h4 class="section__subtitle">Chef</h4>
-            <p class="section__title">
+            <h4 class="chef__subtitle section__subtitle">Chef</h4>
+            <p class="chef__title section__title">
               <span class="section__title--highlight">Me</span>et
               Our Chef
             </p>            
@@ -351,8 +369,8 @@
         <div class="recom__container">
           <div class="recom-wrap">
             <div class="recom__container-block-info">
-              <h4 class="section__subtitle">Testimonials</h4>
-              <p class="section__title">What our client are saying</p>
+              <h4 class="recom__subtitle section__subtitle">Testimonials</h4>
+              <p class="recom__title section__title">What our client are saying</p>
             </div> 
             <div class="recom__block">
               <img src="../assets/img/recom/img_recom.jpg" alt="Man's photography">
@@ -383,38 +401,40 @@
 
       <section>
         <div class="progress__container">
-          <div class="progress__block-text">
-            <h4 class="section__subtitle">Restaurant Active Process</h4>
-            <p class="section__title">
-              <span class="section__title--highlight">We</span>
-              Document Every Food Bean Process untile it is saved
-            </p>
-            <div class="section__description">
-              <p class="section__text">
-                Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit.
-                Quisque diam pellentesque bibendum non dui volutpat fringilla bibendum.
-                Urna, elit augue urna, 
-              </p>            
-            </div>
-            <div class="progress__buttons-container">
-              <div class="btn-container">
-                <div class="btn" style="text-align: center; width: 190px; height: 60px;">
-                  <a href="#">See More</a>
-                </div>
+          <div class="progress__block">
+            <div class="progress__block-text">
+              <h4 class="progress__subtitle section__subtitle">Restaurant Active Process</h4>
+              <p class="progress__title section__title">
+                <span class="section__title--highlight">We</span>
+                Document Every Food Bean Process untile it is saved
+              </p>
+              <div class="section__description">
+                <p class="section__text">
+                  Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit.
+                  Quisque diam pellentesque bibendum non dui volutpat fringilla bibendum.
+                  Urna, elit augue urna, 
+                </p>            
               </div>
-              <a href="#"><img src="../assets/img/another/Play.png" alt="Play button"></a>
-              <span>Play Video</span>
-            </div>
+              <div class="progress__buttons-container">
+                <div class="btn-container">
+                  <div class="progress__button btn" style="text-align: center; width: 190px; height: 60px;">
+                    <a href="#">See More</a>
+                  </div>
+                </div>
+                <a href="#"><img src="../assets/img/another/Play.png" alt="Play button"></a>
+                <span>Play Video</span>
+              </div>
+            </div>            
           </div>
         </div>
       </section>
 
-      <section>
+      <section id="blog">
         <div class="blog__container">
           <div class="blog__info-block">
-            <h4 class="section__subtitle">Blog Post</h4>
-            <p class="section__title">
+            <h4 class="blog__subtitle section__subtitle">Blog Post</h4>
+            <p class="blog__title section__title">
             <span class="section__title--highlight">La</span>test
             News & Blog
           </p>
@@ -485,36 +505,73 @@
               <p class="footer__subtitle">Don’t wait make a smart & logical quote here. Its pretty easy.</p>           
             </div>
             <form class="footer__form">
-              <input type="email" name="email" placeholder="Enter Your Email" minlength="6" maxlength="50" class="footer__input">
-              <button type="submit" onclick="return false"  class="button button--secondary">Subscribe now</button><!--Return false до появления логики отправки!-->
+              <input type="email" ame="email" placeholder="Enter Your Email" minlength="6" maxlength="50" class="footer__input">
+              <button type="submit" onclick="return false"  class="button--secondary footer-help__button">Subscribe now</button><!--Return false до появления логики отправки!-->
             </form>
           </div>
         </div>        
       </section>
 
-      
+      <section>
+        <div class="footer__main">
+          <div class="footer__info-cards">
+            <div class="footer-card">
+              <h4>About Us.</h4>
+            </div>
+            <div class="footer-card">
+              <h4>Useful Links</h4>
+            </div>
+            <div class="footer-card">
+              <h4>Help?</h4>
+            </div>
+            <div class="footer-card">
+              <h4>Recent Post</h4>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
+
       <div class="footer__bottom">
         <p class="footer__copyright">Copyright © 2022 by Ayeman. All Rights Reserved.</p>
         <ul class="footer__social">
           <li class="footer__social-item">
-            <a href="#" class="footer__social-link" aria-label="Facebook">
-              <img src="../assets/icons/facebook.svg" alt="Facebook icon">
-            </a>
+            <div class="footer-social__container-item">
+              <a href="#" class="footer__social-link" aria-label="Facebook">
+                <img src="../assets/icons/facebook.svg" alt="Facebook icon">
+              </a>              
+            </div>
           </li>
           <li class="footer__social-item">
-            <a href="#" class="footer__social-link" aria-label="Twitter">
-              <img src="../assets/icons/twitter.svg" alt="Twitter icon">
-            </a>
+            <div class="footer-social__container-item">
+              <a href="#" class="footer__social-link" aria-label="Twitter">
+                <img src="../assets/icons/twitter.svg" alt="Twitter icon">
+              </a>              
+            </div>
           </li>
           <li class="footer__social-item">
-            <a href="#" class="footer__social-link" aria-label="Instagram">
-              <img src="../assets/icons/instagram.svg" alt="Instagram icon">
-            </a>
+            <div class="footer-social__container-item">
+              <a href="#" class="footer__social-link" aria-label="Instagram">
+                <img src="../assets/icons/instagram.svg" alt="Instagram icon">
+              </a>              
+            </div>
           </li>
           <li class="footer__social-item">
+            <div class="footer-social__container-item">
             <a href="#" class="footer__social-link" aria-label="YouTube">
               <img src="../assets/icons/youtube.svg" alt="YouTube icon">
             </a>
+            </div>
+          </li>
+          <li class="footer__social-item">
+            <div class="footer-social__container-item">
+              <a href="#" class="footer__social-link" aria-label="YouTube">
+                <img src="../assets/icons/pix.svg" alt="YouTube icon">
+              </a>              
+            </div>
           </li>
         </ul>
       </div>
