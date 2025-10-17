@@ -40,7 +40,7 @@
             <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
             <li class="nav__item"><a href="#menu" class="nav__link">Menu</a></li>
             <li class="nav__item"><a href="#blog" class="nav__link">Blog</a></li>
-            <li class="nav__item nav__item--dropdown">Pages</li>
+            <li class="nav__item nav__item--dropdown nav__link">Pages</li>
             <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
             <li class="nav__item"><a href="#shop" class="nav__link">Shop</a></li>
             <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
@@ -144,10 +144,11 @@
             <img class="food-category__image" src="../assets/img/food_category/img_food_category3.jpg" alt="Dessert category">
           </div>
         </div>
+        <img src="../assets/img/plants/img_plant.png" alt="Plant" class="food-category__img-plant">
       </section>
 
       <!--WHY US SECTION-->
-      <section>
+      <section class="why-us">
         <div class="why-us__container">
           <img class="why-us__image" src="../assets/img/another/why_us.jpg" alt="Images of why-us">
           <div class="why-us__info">
@@ -165,9 +166,9 @@
               </p>            
             </div>
             <ul class="why-us__list">
-              <li class="why-us__item"><span>Fast Food</span> <div class="sq"><img src="../assets/icons/Cookie.png" alt="Nice Cookie"></div></li>
-              <li class="why-us__item"><span>Lunch</span> <div class="sq"><img src="../assets/icons/Hamburger.png" alt="Yammu Hamburger"></div></li>
-              <li class="why-us__item"><span>Dinner</span> <div class="sq"><img src="../assets/icons/Wine.png" alt="Tasty Wine"></div></li>
+              <li class="why-us__item"><span class="p--standart">Fast Food</span> <div class="sq"><img src="../assets/icons/Cookie.png" alt="Nice Cookie"></div></li>
+              <li class="why-us__item"><span class="p--standart">Lunch</span> <div class="sq"><img src="../assets/icons/Hamburger.png" alt="Yammu Hamburger"></div></li>
+              <li class="why-us__item"><span class="p--standart">Dinner</span> <div class="sq"><img src="../assets/icons/Wine.png" alt="Tasty Wine"></div></li>
             </ul>
             <div class="why-us__experience">
               <div class="why-us__stats">
@@ -187,24 +188,24 @@
         <div class="stats">
           <ul class="stats__list">
             <li class="stats__item">
-              <img src="../assets/icons/burger_icon.svg" alt="burger">
-              <p class="stats__title">Profecional Chefs</p>
-              <p class="stats__number">420</p>
+              <img src="../assets/icons/fartuk_icon.svg" alt="burger">
+              <p class="stats__title p--bold">Profecional Chefs</p>
+              <p class="stats__number p--bold">420</p>
             </li>
             <li class="stats__item">
-              <img src="../assets/icons/fartuk_icon.svg" alt="fartuk">
-              <p class="stats__title">Items Of Food</p>
-              <p class="stats__number">320</p>
+              <img src="../assets/icons/burger_icon.svg" alt="fartuk">
+              <p class="stats__title p--bold">Items Of Food</p>
+              <p class="stats__number p--bold">320</p>
             </li>
             <li class="stats__item">
               <img src="../assets/icons/pork_icon.svg" alt="pork">
-              <p class="stats__title">Years Of Experienced</p>
-              <p class="stats__number">30+</p>
+              <p class="stats__title p--bold">Years Of Experienced</p>
+              <p class="stats__number p--bold">30+</p>
             </li>
             <li class="stats__item">
               <img src="../assets/icons/pizza_icon.svg" alt="pizza">
-              <p class="stats__title">Happy Customers</p>
-              <p class="stats__number">220</p>
+              <p class="stats__title p--bold">Happy Customers</p>
+              <p class="stats__number p--bold">220</p>
             </li>
           </ul>          
         </div>
@@ -237,7 +238,6 @@
           <div class="choose-pick__container--lower">
             <div class="choose-pick__img-container">
               <img src="../assets/img/choose_pick/img_choose_pick.png" alt="Choose pick food">
-              <img src="../assets/img/plants/img_plant.jpg" alt="Choose pick plant">
             </div>
             <div class="choose-pick__list">
               <ul class="ul">
@@ -370,6 +370,7 @@
           <div class="btn-container">
             <div class="btn"><a href="#">See More</a></div>
           </div>
+          <img src="../assets/img/plants/img_plant.png" alt="Plant" class="chef__img-plant">
         </div>
       </section>
 
@@ -399,6 +400,7 @@
               <span>Food Specialist</span>
             </div>           
           </div>
+          <img src="../assets/img/plants/img_plant_recom.png" alt="Plant" class="recom__img-plant">
         </div>
         <div class="swipe-block">
           <div class="recom-circle"></div>
@@ -409,7 +411,7 @@
       </section>
 
       <!--PROGRESS SECTION-->
-      <section>
+      <section class="progress">
         <div class="progress__container">
           <div class="progress__block">
             <div class="progress__block-text">
@@ -429,7 +431,7 @@
               <div class="progress__buttons-container">
                 <div class="btn-container">
                   <div class="progress__button btn" style="text-align: center; width: 190px; height: 60px;">
-                    <a href="#">See More</a>
+                    <a href="#" class="progress__button-text">See More</a>
                   </div>
                 </div>
                 <a href="#"><img src="../assets/img/another/Play.png" alt="Play button"></a>
@@ -541,7 +543,8 @@
                 <div class="footer__sq sq"><img src="../assets/icons/ClockClockwise.svg" alt="Clock"></div>
                 <div class="footer-card__text--bottom">
                   <h6 class="p--standart">Opening Houres</h6>
-
+                  <span class="p--standart footer-card__text-time">Mon - Sat(8.00 - 6.00)</span>
+                  <span class="p--standart footer-card__text-time">Sunday - Closed</span>
                 </div>
               </div>
             </div>
@@ -605,6 +608,7 @@
 
 
       <!--FOOTER BOTTOM SECTION-->
+      <div class="img__footer-container"><img src="../assets/img/plants/img_plant_footer.png" alt="Plant"></div>
       <div class="footer__bottom">
         <p class="footer__copyright">Copyright © 2022 by Ayeman. All Rights Reserved.</p>
         <ul class="footer__social">

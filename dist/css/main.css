@@ -9,12 +9,6 @@
 
 body {
   background-color: black;
-  width: 100%;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
 ::selection {
@@ -62,11 +56,11 @@ a {
 }
 
 .section__title {
-  font-family: Helvetica;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-style: Bold;
   font-size: 48px;
-  line-height: 68px;
+  line-height: 56px;
   letter-spacing: 0%;
   transition: all 0.3s ease;
 }
@@ -98,6 +92,7 @@ a {
   height: 50px;
   padding: 13px;
   margin-top: 56px;
+  transition: all 0.1s ease;
 }
 .btn a {
   font-family: Inter;
@@ -106,6 +101,17 @@ a {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0%;
+  transition: all 0.1s ease;
+}
+.btn:hover {
+  background-color: rgba(18, 18, 18, 0.6666666667);
+  box-shadow: 0 0 10px #FF9F0D;
+}
+.btn:hover a {
+  font-size: 19px;
+}
+.btn:active {
+  background-color: #000000;
 }
 
 .button {
@@ -122,10 +128,10 @@ a {
   transition: all 0.15s ease;
 }
 .button:hover {
-  background-color: rgb(255, 191, 0);
+  background-color: #fda31b;
   transform: translateY(-2.5px);
-  box-shadow: 3px 3px 5px rgba(245, 245, 245, 0.396), 1px 3px 3.5px rgba(245, 245, 245, 0.4), 1px 3px 3.5px rgba(245, 245, 245, 0.382), 1px 3px 3.5px rgba(245, 245, 245, 0.403), 1px 3px 3.5px rgba(245, 245, 245, 0.407);
-  font-size: 25px;
+  box-shadow: 0 0 10px rgb(245, 245, 245);
+  font-size: 23px;
 }
 .button:active {
   transition: all 0.1s ease;
@@ -155,8 +161,9 @@ a {
   font-size: 35px;
   width: 60px;
   height: 60px;
-  border: none;
-  border-radius: 1000px;
+  border: 2px solid whitesmoke;
+  box-shadow: 0 0 7px wheat;
+  border-radius: 100px;
   z-index: 11;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -181,11 +188,11 @@ a {
 
 .nav {
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
   flex-direction: row;
-  gap: 32px;
-  padding: 20px 5%;
+  gap: 25%;
+  padding: 93px 5%;
   position: relative;
 }
 .nav ul {
@@ -209,16 +216,11 @@ a {
 .nav__logo {
   position: absolute;
   left: 50%;
-  top: 10px;
+  top: 45px;
   transform: translateX(-50%);
   font-size: 24px;
-  font-family: Helvetica;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
-  text-align: center;
-  transition: all 0.3s ease;
-}
-.nav__logo:hover {
-  font-size: 34px;
 }
 
 .nav__link {
@@ -246,7 +248,7 @@ a {
 }
 
 .nav__search {
-  background-color: black;
+  background: none;
   width: 310px;
   height: 54px;
   color: #FF9F0D;
@@ -289,8 +291,7 @@ a {
 }
 
 .header {
-  height: 800px;
-  width: 99vw;
+  height: 950px;
   display: grid;
   background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("../../assets/img/header/background_header.jpg");
   background-position: center;
@@ -347,7 +348,7 @@ a {
 }
 
 .header__title {
-  font-family: Helvetica;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-style: Bold;
   font-size: 60px;
@@ -388,14 +389,12 @@ a {
 }
 
 .about {
+  position: relative;
   max-height: 562px;
   height: 562px;
-  width: 1320px;
+  max-width: 100vw;
   background-color: black;
   margin: 120px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .about__gap-text {
@@ -411,6 +410,9 @@ a {
 .about__container {
   display: flex;
   flex-direction: row;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-100%);
   width: 650px;
   gap: 98px;
 }
@@ -467,6 +469,7 @@ a {
 
 .food-category__container {
   width: 650px;
+  position: relative;
 }
 
 .food-category__subtitle {
@@ -490,8 +493,20 @@ a {
   flex-shrink: 0;
 }
 
+.food-category__img-plant {
+  position: absolute;
+  top: 250px;
+  right: 0;
+  transform: scale(-1, 1);
+}
+
+.why-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .why-us__container {
-  width: 100%;
   display: flex;
   padding: 100px 50px;
   gap: 136px;
@@ -514,10 +529,10 @@ a {
 .why-us__list .why-us__item {
   display: flex;
   flex-direction: column-reverse;
+  gap: 8px;
 }
 .why-us__list .why-us__item span {
   font-size: 18px;
-  font-weight: 600;
   text-align: center;
 }
 
@@ -550,7 +565,7 @@ a {
 .why-us__stats .why-us__number {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 48px;
-  font-weight: 900;
+  font-weight: 700;
   float: left;
   color: #FF9F0D;
   margin-right: 30px;
@@ -572,7 +587,6 @@ a {
 
 .why-us__image {
   width: 700px;
-  margin-left: 200px;
 }
 
 .stats {
@@ -589,20 +603,39 @@ a {
 
 .stats__list {
   text-align: center;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  gap: 162px;
+  max-width: 1920px;
   margin: 0 auto;
-  padding: 0 50px;
 }
-
-.stats__item {
+.stats__list .stats__item {
   font-weight: 700;
   font-size: 24px;
+  width: 257px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
 }
-.stats__item p {
+.stats__list .stats__item img {
+  width: 120px;
+  height: 120px;
+}
+.stats__list .stats__item .stats__title {
+  font-size: 24px;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 32px;
+}
+.stats__list .stats__item .stats__number {
   font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 48px;
+  letter-spacing: 0%;
+  color: #fff;
 }
 
 .choose-pick__container {
@@ -717,6 +750,13 @@ a {
 
 .chef__container {
   text-align: center;
+  position: relative;
+}
+
+.chef__img-plant {
+  position: absolute;
+  top: 175px;
+  left: -25px;
 }
 
 .chef-container__img-block {
@@ -768,6 +808,7 @@ a {
 .recom__container {
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
 .recom-wrap {
@@ -856,18 +897,31 @@ a {
   background-color: #FF9F0D;
 }
 
+.recom__img-plant {
+  position: absolute;
+  top: 250px;
+  right: 425px;
+}
+
+.progress {
+  background-image: url(../../assets/img/background/img_restaurant_progress.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.progress__block-text {
+  width: 726px;
+  height: 100%;
+}
+
 .progress__container {
   display: flex;
   align-items: center;
   justify-content: end;
   max-width: 1920px;
-  width: 100vw;
+  width: 99vw;
   height: 558px;
-  padding: 112px 270px 113px 914px;
-  background-image: url(../../assets/img/background/img_restaurant_progress.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   text-align: end;
 }
 
@@ -903,7 +957,14 @@ a {
   position: relative;
   bottom: -27.5px;
 }
-.progress__buttons-container .progress__button > a {
+
+.progress__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress__button-text {
   font-size: 20px;
 }
 
@@ -946,7 +1007,7 @@ a {
   text-align: start;
 }
 .blog__card-info p {
-  font-family: Helvetica;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 23px;
   line-height: 32px;
   margin-top: 16px;
@@ -980,7 +1041,7 @@ a {
 }
 
 .footer__title {
-  font-family: Helvetica;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-style: Bold;
   font-size: 32px;
@@ -1042,7 +1103,6 @@ a {
 .footer__copyright {
   font-weight: 400;
   font-family: Inter;
-  margin-left: 300px;
 }
 
 .footer__social {
@@ -1066,26 +1126,27 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: -333px;
 }
 
 .footer__info-cards {
   display: flex;
   justify-content: center;
   align-items: center;
+  align-items: start;
   flex-direction: row;
-  gap: 133px;
 }
 
 .footer-card {
   display: flex;
   justify-content: center;
   align-items: center;
-  align-items: center;
+  align-items: start;
   flex-direction: column;
   width: 330px;
 }
 .footer-card:first-child {
-  align-items: start;
+  margin-right: 133px;
 }
 .footer-card h4 {
   margin-bottom: 24px;
@@ -1102,6 +1163,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  align-items: start;
   flex-direction: column;
   gap: 30px;
 }
@@ -1161,6 +1223,7 @@ a {
 .footer__block-card img {
   width: 56px;
   height: 47px;
+  object-fit: cover;
 }
 
 .footer-block__card-text {
@@ -1169,6 +1232,25 @@ a {
   align-items: center;
   align-items: start;
   flex-direction: column;
+}
+.footer-block__card-text span:first-child {
+  color: #4F4F4F;
+}
+
+.footer-card__text-time {
+  font-size: 14px;
+  font-weight: 250;
+  line-height: 22px;
+}
+
+.img__footer-container {
+  display: flex;
+  justify-content: end;
+  height: 306px;
+  z-index: 30;
+}
+.img__footer-container img {
+  position: absolute;
 }
 
 /*# sourceMappingURL=main.css.map */
