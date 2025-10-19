@@ -26,68 +26,73 @@
     </button>
     
     <!--HEADER-->
-    <header class="header" id="top">
-      <div class="header__container">
-        <h1 class="nav__logo"><span class="nav__logo--highlight">Food</span>tuck</h1>
-        <nav class="nav" aria-label="Main navigation">
-            <!-- <button class="nav__burger" aria-label="Toggle menu">
+    <div class="image__background">
+      <header class="header" id="top">
+        <div class="header__container">
+          <h1 class="nav__logo"><span class="nav__logo--highlight">Food</span>tuck</h1>
+          <nav class="nav" aria-label="Main navigation">
+<!-- 
+          <button class="nav__burger" id="navClose" aria-label="Toggle menu">
               <span></span>
               <span></span>
               <span></span>
-            </button> -->
+          </button> -->
 
-          <ul>
-            <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
-            <li class="nav__item"><a href="#menu" class="nav__link">Menu</a></li>
-            <li class="nav__item"><a href="#blog" class="nav__link">Blog</a></li>
-            <li class="nav__item nav__item--dropdown nav__link">Pages</li>
-            <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-            <li class="nav__item"><a href="#shop" class="nav__link">Shop</a></li>
-            <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-          </ul>
+            <ul>
+              <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+              <li class="nav__item"><a href="#menu" class="nav__link">Menu</a></li>
+              <li class="nav__item"><a href="#blog" class="nav__link">Blog</a></li>
+              <li class="nav__item nav__item--dropdown nav__link">Pages</li>
+              <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+              <li class="nav__item"><a href="./pages/shop.html" target="_blank" class="nav__link">Shop</a></li>
+              <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+            </ul>
 
-          <div class="nav__search-container">
-            <input type="text" name="search" class="nav__search" placeholder="Search..." maxlength="50">
-            <img src="../assets/icons/Handbag.svg" alt="Handbag icon">
-          </div>
-          
-        </nav> 
-        
-        <div class="header__content"  id="contact">
-          <div class="header-img">
-            <img class="header__decor header__decor--shape" src="../assets/img/header/img_header1.png" alt="Decorative shape">
-          </div>        
-          
+            <div class="nav__search-container">
+              <input type="text" name="search" class="nav__search" placeholder="Search..." maxlength="50">
+              <a href="./pages/shop.html"><img src="../assets/icons/Handbag.svg" alt="Handbag icon"></a>
+            </div>
+          </nav> 
+      </header>           
 
-          <div class="header__text">
-              <div class="header__lines">
-                <img class="header__line" src="../assets/img/another/line1.jpg" alt="Decorative line">
-                  <div class="social">
-                    <a href="#" class="social__link" aria-label="Our Facebook profile"><img src="../assets/icons/facebookIcon.svg" alt="facebook"></a>
-                    <a href="#" class="social__link" aria-label="Our Twitter profile"><img src="../assets/icons/twitterBird.svg" alt="twitter"></a>
-                    <a href="#" class="social__link" aria-label="Our Pinterest profile"><img src="../assets/icons/pinterestIcon.svg" alt="pix"></a>
-                  </div>                
-                <img class="header__line" src="../assets/img/another/line1.jpg" alt="Decorative line">            
-              </div>              
+          <div class="header__content"  id="contact">
+            <div class="header-img">
+              <img class="header__decor header__decor--shape" src="../assets/img/header/img_header1.png" alt="Decorative shape">
+            </div>        
+            
 
-            <div class="header__info">
-              <h4 class="header__subtitle">Its Quick & Amusing!</h4>
-              <span class="header__title">
-                <span class="header__title--highlight">Th</span>e
-                Art of speed <br> food Quality
-              </span>
-              <div class="header__description">
-                <p class="header__text-content">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Varius sed pharetra dictum neque massa congue
-                </p>              
+            <div class="header__text">
+                <div class="header__lines">
+                  <img class="header__line" src="../assets/img/another/line1.jpg" alt="Decorative line">
+                    <div class="social">
+                      <a href="#" class="social__link" aria-label="Our Facebook profile"><img src="../assets/icons/facebookIcon.svg" alt="facebook"></a>
+                      <a href="#" class="social__link" aria-label="Our Twitter profile"><img src="../assets/icons/twitterBird.svg" alt="twitter"></a>
+                      <a href="#" class="social__link" aria-label="Our Pinterest profile"><img src="../assets/icons/pinterestIcon.svg" alt="pix"></a>
+                    </div>                
+                  <img class="header__line" src="../assets/img/another/line1.jpg" alt="Decorative line">            
+                </div>              
+
+              <div class="header__info">
+                <h4 class="header__subtitle">Its Quick & Amusing!</h4>
+                <span class="header__title">
+                  <span class="header__title--highlight">Th</span>e
+                  Art of speed <br> food Quality
+                </span>
+                <div class="header__description">
+                  <p class="header__text-content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Varius sed pharetra dictum neque massa congue
+                  </p>              
+                </div>
+                <div class="button">
+                  <a href="#menu"  title='Переход на страничку с меню'>See Menu</a>
+                </div>
               </div>
-              <a href="./pages/menu.html" class="button" title='Переход на страничку с меню'>See Menu</a>
             </div>
           </div>
-        </div>
-      </div>
-    </header>
+    </div>
+    </div>
+
     
     <!--MAIN-->
     <main>
@@ -130,7 +135,7 @@
       </section>
       
       <!--FOOD CATEGORY SECTION-->
-      <section class="food-category" id="shop">
+      <section class="food-category">
         <div class="food-category__container">
           <h4 class="food-category__subtitle section__subtitle" style="text-align: center;">Food Category</h4>
           <p class="food-category__title section__title" style="text-align: center;">
@@ -246,7 +251,7 @@
                     <img src="../assets/img/choose_pick/img_choose_pick1.jpg" alt="first card food">
                     <div class="block-list__text">
                       <span>Lettuce Leaf</span>
-                      <p class="p--standart">Lacus nisi, et ac dapibus velit in consequat.</p>
+                      <p>Lacus nisi, et ac dapibus velit in consequat.</p>
                       <span class="section__title--highlight">12.5$</span>
                     </div>
                   </div>
@@ -386,7 +391,7 @@
               <img src="../assets/img/recom/img_recom.jpg" alt="Man's photography">
               <img src="../assets/img/recom/img_recom_two_nines.png" alt="Two nine numders" style="width: 75px;">
               <div class="recom__block-text">
-                <p class="p--standart">
+                <p class="recom__block-label p--standart">
                   Lorem ipsum dolor sit amet,
                   consectetur adipiscing elit.
                   Quisque diam pellentesque bibendum non dui volutpat fringilla bibendum.
@@ -396,8 +401,8 @@
                 </p>
               </div>
               <img src="../assets/img/recom/img_recom_stars.png" alt="Stars rang">
-              <p class="p--bold">Alamin Hasan</p>
-              <span>Food Specialist</span>
+              <p class="recom-name p--bold">Alamin Hasan</p>
+              <span class="specialist">Food Specialist</span>
             </div>           
           </div>
           <img src="../assets/img/plants/img_plant_recom.png" alt="Plant" class="recom__img-plant">
@@ -420,8 +425,8 @@
                 <span class="section__title--highlight">We</span>
                 Document Every Food Bean Process untile it is saved
               </p>
-              <div class="section__description">
-                <p class="section__text">
+              <div class="progress__section-description section__description">
+                <p class="progress__section-text section__text">
                   Lorem ipsum dolor sit amet,
                   consectetur adipiscing elit.
                   Quisque diam pellentesque bibendum non dui volutpat fringilla bibendum.
@@ -510,31 +515,29 @@
     <footer class="footer">
 
       <!--SUPPORT SECTION-->
-      <section>
-        <div class="footer__support">
-          <div class="footer__container">
-            <div class="footer-text">
-              <h3 class="footer__title">
-                <span class="footer__title--highlight">St</span>ill You Need Our Support ?
-              </h3>
+      <section class="footer__support">
+        <div class="footer__container">
+          <div class="footer-text">
+            <h3 class="footer__title">
+              <span class="footer__title--highlight">St</span>ill You Need Our Support ?
+            </h3>
               <p class="footer__subtitle">Don’t wait make a smart & logical quote here. Its pretty easy.</p>           
-            </div>
-            <form class="footer__form">
-              <input type="email" ame="email" placeholder="Enter Your Email" minlength="6" maxlength="50" class="footer__input">
-              <button type="submit" onclick="return false"  class="button--secondary footer-help__button">Subscribe now</button><!--Return false до появления логики отправки!-->
-            </form>
           </div>
-        </div>        
+          <form class="footer__form">
+            <input type="email" placeholder="Enter Your Email" minlength="6" maxlength="50" class="footer__input">
+            <button type="submit" onclick="return false"  class="button--secondary footer-help__button">Subscribe now</button><!--Return false до появления логики отправки!-->
+          </form>
+        </div>    
       </section>
 
       <!--FOOTER MAIN SECTION-->
-      <section>
+      <section class="last-section">
         <div class="footer__main">
           <div class="footer__info-cards">
             <div class="footer-card">
               <h4 class="p--bold">About Us.</h4>
               <p class="p--standart">
-                orporate clients and leisure travelers has
+                Orporate clients and leisure travelers has
                 been relying on Groundlink for dependab
                 safe, and professional chauffeured car
                 service in major cities across World.
@@ -604,46 +607,51 @@
         </div>
       </section>
 
-
-
-
       <!--FOOTER BOTTOM SECTION-->
       <div class="img__footer-container"><img src="../assets/img/plants/img_plant_footer.png" alt="Plant"></div>
       <div class="footer__bottom">
         <p class="footer__copyright">Copyright © 2022 by Ayeman. All Rights Reserved.</p>
         <ul class="footer__social">
           <li class="footer__social-item">
+
             <div class="footer-social__container-item">
               <a href="#" class="footer__social-link" aria-label="Facebook">
                 <img src="../assets/icons/facebook.svg" alt="Facebook icon">
               </a>              
             </div>
+
           </li>
           <li class="footer__social-item">
+
             <div class="footer-social__container-item">
               <a href="#" class="footer__social-link" aria-label="Twitter">
                 <img src="../assets/icons/twitter.svg" alt="Twitter icon">
               </a>              
             </div>
+
           </li>
           <li class="footer__social-item">
+
             <div class="footer-social__container-item">
               <a href="#" class="footer__social-link" aria-label="Instagram">
                 <img src="../assets/icons/instagram.svg" alt="Instagram icon">
               </a>              
             </div>
+
           </li>
           <li class="footer__social-item">
+
             <div class="footer-social__container-item">
             <a href="#" class="footer__social-link" aria-label="YouTube">
               <img src="../assets/icons/youtube.svg" alt="YouTube icon">
             </a>
             </div>
+            
           </li>
           <li class="footer__social-item">
             <div class="footer-social__container-item">
-              <a href="#" class="footer__social-link" aria-label="YouTube">
-                <img src="../assets/icons/pix.svg" alt="YouTube icon">
+              <a href="#" class="footer__social-link" aria-label="Pinterest">
+                <img src="../assets/icons/pinterest.svg" alt="Pinterest icon">
               </a>              
             </div>
           </li>
@@ -651,6 +659,6 @@
       </div>
     </footer>
     <script src="../src/index.js"></script>
-    <noscript>The Website needs JavaScript algoritms...Please, turn on JavaScript, Thank you</noscript>
+    <noscript>It looks like you have javascript disabled. Please enable it. Thank you</noscript>
   </body>
 </html>

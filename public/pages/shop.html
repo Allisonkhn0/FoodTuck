@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Foodtuck Restaurant - Experience taste and quality food">
+
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!---->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!--/FONTS-->
+
+    <link rel="stylesheet" type="text/css" href="../../dist/css/main.css">
+    <link rel="icon" type="image/jpg" href="../../assets/icons/burger_icon.svg">
+    <title>Foodtuck Shop</title>
+  </head>
+  <body>
+    <button class="button-up" title="Навверх" onclick="scrollUp()" aria-label="Scroll to top">
+      <span class="button-up__text"></span>
+      <span class="button-up__arrow">↑</span>
+    </button>
+
+    <!--HEADER-->
+    <header>
+      <div class="header__container">
+        <nav class="nav">
+          <div class="nav__container">
+            <h1 class="S_nav__logo"><span class="nav__logo--highlight">Food</span>tuck</h1>            
+            <ul>
+              <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+              <li class="nav__item"><a href="#menu" class="nav__link">Menu</a></li>
+              <li class="nav__item"><a href="#blog" class="nav__link">Blog</a></li>
+              <li class="nav__item nav__item--dropdown nav__link">Pages</li>
+              <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+              <li class="nav__item"><a href="./pages/shop.html" target="_blank" class="nav__link">Shop</a></li>
+              <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+          </ul>
+
+          </div>
+        </nav>
+
+
+
+      </div>
+    </header>
+
+
+    <!--FOOTER-->
+    <footer class="footer">
+
+      <!--SUPPORT SECTION-->
+      <section>
+        <div class="footer__support">
+          <div class="footer__container">
+            <div class="footer-text">
+              <h3 class="footer__title">
+                <span class="footer__title--highlight">St</span>ill You Need Our Support ?
+              </h3>
+              <p class="footer__subtitle">Don’t wait make a smart & logical quote here. Its pretty easy.</p>           
+            </div>
+            <form class="footer__form">
+              <input type="email" ame="email" placeholder="Enter Your Email" minlength="6" maxlength="50" class="footer__input">
+              <button type="submit" onclick="return false"  class="button--secondary footer-help__button">Subscribe now</button><!--Return false до появления логики отправки!-->
+            </form>
+          </div>
+        </div>        
+      </section>
+
+      <!--FOOTER MAIN SECTION-->
+      <section>
+        <div class="footer__main">
+          <div class="footer__info-cards">
+            <div class="footer-card">
+              <h4 class="p--bold">About Us.</h4>
+              <p class="p--standart">
+                orporate clients and leisure travelers has
+                been relying on Groundlink for dependab
+                safe, and professional chauffeured car
+                service in major cities across World.
+              </p>
+              <div class="footer-card--bottom">
+                <div class="footer__sq sq"><img src="../../assets/icons/ClockClockwise.svg" alt="Clock"></div>
+                <div class="footer-card__text--bottom">
+                  <h6 class="p--standart">Opening Houres</h6>
+                  <span class="p--standart footer-card__text-time">Mon - Sat(8.00 - 6.00)</span>
+                  <span class="p--standart footer-card__text-time">Sunday - Closed</span>
+                </div>
+              </div>
+            </div>
+            <div class="footer-card">
+              <h4 class="p--bold">Useful Links</h4>
+              <ul>
+                <li class="p--standart"><a href="#">About</a></li>
+                <li class="p--standart"><a href="#">News</a></li>
+                <li class="p--standart"><a href="#">Partners</a></li>
+                <li class="p--standart"><a href="#">Team</a></li>
+                <li class="p--standart"><a href="#">Menu</a></li>
+                <li class="p--standart"><a href="#">Contacts</a></li>
+              </ul>
+            </div>
+            <div class="footer-card">
+              <h4  class="p--bold">Help?</h4>
+              <ul>
+                <li class="p--standart"><a href="#">FAQ</a></li>
+                <li class="p--standart"><a href="#">Term & conditions</a></li>
+                <li class="p--standart"><a href="#">Reporting</a></li>
+                <li class="p--standart"><a href="#">Documentation</a></li>
+                <li class="p--standart"><a href="#">Support Policy</a></li>
+                <li class="p--standart"><a href="#">Privacy</a></li>
+              </ul>
+            </div>
+            <div class="footer-card">
+              <h4  class="p--bold">Recent Post</h4>
+              <div class="footer-card__block-cards">
+                <div class="footer__block-card">
+                  <img src="../../assets/img/footer/img_footer1.jpg" alt="mini card footer">
+                  <div class="footer-block__card-text">
+                    <span class="p--standart">20 Feb 2022</span>
+                    <span class="p--standart">Keep Your Business </span>                    
+                  </div>
+                </div>
+              </div>
+              <div class="footer-card__block-cards">
+                <div class="footer__block-card">
+                  <img src="../../assets/img/footer/img_footer2.jpg" alt="mini card footer">
+                  <div class="footer-block__card-text">
+                    <span class="p--standart">20 Feb 2022</span>
+                    <span class="p--standart">Keep Your Business </span>                    
+                  </div>
+                </div>
+              </div>
+              <div class="footer-card__block-cards">
+                <div class="footer__block-card">
+                  <img src="../../assets/img/footer/img_footer3.jpg" alt="mini card footer">
+                  <div class="footer-block__card-text">
+                    <span class="p--standart">20 Feb 2022</span>
+                    <span class="p--standart">Keep Your Business </span>                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
+      <!--FOOTER BOTTOM SECTION-->
+      <div class="img__footer-container"><img src="../../assets/img/plants/img_plant_footer.png" alt="Plant"></div>
+      <div class="shop-footer__bottom footer__bottom">
+        <p class="footer__copyright">Copyright © 2022 by Ayeman. All Rights Reserved.</p>
+        <ul class="footer__social">
+          <li class="footer__social-item">
+            <div class="footer-social__container-item">
+              <a href="#" class="footer__social-link" aria-label="Facebook">
+                <img src="../../assets/icons/facebook.svg" alt="Facebook icon">
+              </a>              
+            </div>
+          </li>
+          <li class="footer__social-item">
+            <div class="footer-social__container-item">
+              <a href="#" class="footer__social-link" aria-label="Twitter">
+                <img src="../../assets/icons/twitter.svg" alt="Twitter icon">
+              </a>              
+            </div>
+          </li>
+          <li class="footer__social-item">
+            <div class="footer-social__container-item">
+              <a href="#" class="footer__social-link" aria-label="Instagram">
+                <img src="../../assets/icons/instagram.svg" alt="Instagram icon">
+              </a>              
+            </div>
+          </li>
+          <li class="footer__social-item">
+            <div class="footer-social__container-item">
+            <a href="#" class="footer__social-link" aria-label="YouTube">
+              <img src="../../assets/icons/youtube.svg" alt="YouTube icon">
+            </a>
+            </div>
+          </li>
+          <li class="footer__social-item">
+            <div class="footer-social__container-item">
+              <a href="#" class="footer__social-link" aria-label="Pinterest">
+                <img src="../../assets/icons/pinterest.svg" alt="Pinterest icon">
+              </a>              
+            </div>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script src="../../src/index.js"></script>
+    <noscript>It looks like you have javascript disabled. Please enable it. Thank you</noscript>
+  </body>
+</html>
