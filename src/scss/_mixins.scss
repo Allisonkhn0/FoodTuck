@@ -40,3 +40,19 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+@mixin standartText{
+  font-family: $standart_font;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@mixin boldText{
+  font-family: $another_font;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 20px;
+  line-height: 28px;
+}

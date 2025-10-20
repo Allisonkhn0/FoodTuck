@@ -30,7 +30,7 @@
       <div class="S_header__container">
         <nav class="S_nav">
           <div class="S_nav__container">
-            <h1 class="S_nav__logo nav__logo"><span class="nav__logo--highlight">Food</span>tuck</h1>            
+            <h1 class="S_nav__logo nav__logo"><a href="../index.html"><span class="nav__logo--highlight">Food</span>tuck</a></h1>            
             <ul>
               <li class="nav__item"><a href="../index.html" class="nav__link section__title--highlight">Home</a></li>
               <li class="nav__item"><a href="#menu" class="nav__link">Menu</a></li>
@@ -41,9 +41,9 @@
               <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
           </ul>
           <div class="icon__container">
-            <img src="../../assets/icons/Group.png" alt="Icon">
-            <img src="../../assets/icons/User.svg" alt="Icon">
-            <img src="../../assets/icons/Handbag.svg" alt="Icon">
+            <a href="#"><img src="../../assets/icons/Group.png" alt="Icon"></a>
+            <a href="#"><img src="../../assets/icons/User.svg" alt="Icon"></a>
+            <a href="./shop.html"><img src="../../assets/icons/Handbag.svg" alt="Icon"></a>
           </div>
           </div>
         </nav>
@@ -57,9 +57,146 @@
         </div>
       </div>
     </header>
-    <main class="S_main">
-      куку
-    </main>
+    <div class="S_container">
+      <aside class="S_aside">
+
+        <form class="S_aside__form">
+          <input type="text" placeholder="Search Product" maxlength="25">
+          <button type="submit"><img src="../../assets/icons/Group.png" alt="icon"></button>          
+        </form>
+
+        <div class="filter-category">
+          <h3 class="S_h3">Categoty</h3>
+          <ul>
+            <li><input type="checkbox" name="input_for_Sandwitch"><span>Sandwitch</span></li>
+            <li><input type="checkbox" name="input_for_Burger"><span>Burger</span></li>
+            <li><input type="checkbox" name="input_for_ChickenChup"><span>Chicken Chup</span></li>
+            <li><input type="checkbox" name="input_for_Drink"><span>Drink</span></li>
+            <li><input type="checkbox" name="input_for_Pizza"><span>Pizza</span></li>
+            <li><input type="checkbox" name="input_for_Thi"><span>Thi</span></li>
+            <li><input type="checkbox" name="input_for_NonVeg"><span>Non Veg</span></li>
+            <li><input type="checkbox" name="input_for_Uncategorized"><span>Uncategorized</span></li>
+          </ul>
+        </div>
+
+        <img style="width: 248px; height: 286px;" src="../../assets/img/shop/Banner.png" alt="Banner">
+
+        <div class="filter-price">
+          <h3 class="S_h3">Filter By Price</h3>
+          <span>----------------------------------------</span>
+          <div class="filter-price__text">
+            <span>From $0 to $8000</span><span>Filter</span>
+          </div>
+        </div>
+
+        <div class="latest-products">
+          <h3 class="S_h3">Latest Products</h3>
+
+          <div class="latest-products__cards">
+            <div class="latest-products__card">
+              <img src="../../assets/img/shop/img_latest.png" alt="photo of food">
+              <div class="latest-products__text">
+                <span>Pizza</span>
+                <img src="../../assets/icons/two_stars.svg" alt="two stars">
+                <span>$35.00</span>
+              </div>
+            </div>
+            <div class="latest-products__card">
+              <img src="../../assets/img/shop/img_latest.png" alt="photo of food">
+              <div class="latest-products__text">
+                <span>Cupchake</span>
+                <img src="../../assets/icons/two_stars.svg" alt="two stars">
+                <span>$35.00</span>
+              </div>
+            </div>
+            <div class="latest-products__card">
+              <img src="../../assets/img/shop/img_latest.png" alt="photo of food">
+              <div class="latest-products__text">
+                <span>Cookies</span>
+                <img src="../../assets/icons/two_stars.svg" alt="two stars">
+                <span>$35.00</span>
+              </div>
+            </div>
+            <div class="latest-products__card">
+              <img src="../../assets/img/shop/img_latest.png" alt="photo of food">
+              <div class="latest-products__text">
+                <span>Burger</span>
+                <img src="../../assets/icons/two_stars.svg" alt="two stars">
+                <span>$35.00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-tags">
+          <h3 class="S_h3">Product Tags</h3>
+          <ul>
+            <li>Services</li>
+            <li>Our Menu</li>
+            <li>Pizza</li>
+            <li>Cupcake</li>
+            <li style="color: #FF9F0D;">Burger</li>
+            <li>Cookies</li>
+            <li>Our Shop</li>
+            <li>Tandoori Chicken</li>
+          </ul>
+        </div>
+      </aside>
+
+      <main class="S_main">
+        <div class="sort__form">
+          <div class="sort__form-block">
+            <span>Sort By :</span>
+            <div class="select__container">
+              <select>
+                <optgroup label="Choose ones">
+                  <option>Newest</option>
+                  <option>*</option>
+                  <option>*</option>
+                </optgroup>
+              </select>
+            </div>
+          </div>
+          <div class="sort__form-block">
+            <span>Show :</span>
+            <div class="select__container">
+              <select>
+                <optgroup label="Choose ones">
+                  <option>Default</option>
+                  <option>*</option>
+                  <option>*</option>
+                </optgroup>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!--MAIN PART-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--/MAIN PART-->
+
+        <div class="pag_panel">
+          <button><img src="../../assets/icons/back_two_icon.svg" alt=""></button>
+          <button>1</button>
+          <button>2</button>
+          <button>3</button>
+          <button><img src="../../assets/icons/next_two_icon.svg" alt=""></button>
+        </div>
+      </main>
+    </div>
 
     <!--FOOTER-->
     <footer class="footer">

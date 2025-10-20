@@ -36,7 +36,15 @@
               <li class="nav__item"><a href="#menu" class="nav__link">Menu</a></li>
               <li class="nav__item"><a href="#blog" class="nav__link">Blog</a></li>
               <li class="nav__item"><a href="#" class="nav__link">Pages</a></li>
-              <li class="nav__item nav__item--dropdown nav__link"><div style="display: flex">About<img src="../assets/icons/arrow_one_down.svg" alt="arrow down"></div></li>
+              <li>
+                <select style="background-color: #000; width: 57px;">
+                  <optgroup label="About...">
+                    <option class="nav__item nav__link" value="*">About</option>
+                    <option class="nav__item nav__link" value="*">*</option>
+                    <option class="nav__item nav__link" value="*">*</option>
+                  </optgroup>
+                </select>
+              </li>
               <li class="nav__item"><a href="./pages/shop.html" target="_blank" class="nav__link">Shop</a></li>
               <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
             </ul>
