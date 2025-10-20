@@ -2,6 +2,7 @@
 * {
   margin: 0;
   padding: 0;
+  border: none;
   letter-spacing: 0.5px;
   box-sizing: border-box;
   color: white;
@@ -155,7 +156,7 @@ html, body {
   border: 2px solid whitesmoke;
   box-shadow: 0 0 7px wheat;
   border-radius: 100px;
-  z-index: 11;
+  z-index: 1001;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -257,18 +258,18 @@ html, body {
   transform: translateY(-50%);
   width: 24px;
   height: 24px;
-  background-image: url("../../assets/icons/Group.png");
-  background-size: contain;
-  background-repeat: no-repeat;
+  background: url("../../assets/icons/Group.png");
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   filter: invert(1) brightness(2);
 }
 
 .image__background {
   background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("../../assets/img/header/background_header.jpg");
   background-position: center;
-  background-size: cover;
   background-repeat: no-repeat;
+  background-size: cover;
   padding-bottom: 106px;
 }
 
@@ -396,7 +397,17 @@ html, body {
 
 @media (min-width: 2000px) {
   .about__container {
-    padding-left: 20%;
+    padding-left: 500px;
+  }
+}
+@media (min-width: 1900px) {
+  .about__container {
+    padding-left: 400px;
+  }
+}
+@media (min-width: 1800px) {
+  .about__container {
+    padding-left: 300px;
   }
 }
 .about__item {
@@ -909,7 +920,7 @@ html, body {
 }
 
 .progress {
-  background-image: url(../../assets/img/background/img_restaurant_progress.jpg);
+  background: url(../../assets/img/background/img_restaurant_progress.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1033,6 +1044,10 @@ html, body {
   height: 20px;
 }
 
+.footer {
+  position: relative;
+}
+
 .footer__support {
   margin-top: 75px;
   text-align: left;
@@ -1044,6 +1059,7 @@ html, body {
   justify-content: center;
   align-items: center;
   padding-bottom: 50px;
+  gap: 253px;
   border-bottom: 3px solid #FF9F0D;
 }
 
@@ -1201,14 +1217,16 @@ html, body {
   line-height: 22px;
 }
 
-.img__footer-container {
-  display: flex;
-  justify-content: end;
+.img__footer {
+  position: absolute;
   height: 306px;
   z-index: 30;
+  bottom: 0;
+  right: 0;
 }
-.img__footer-container img {
-  position: absolute;
+
+.footer__main {
+  margin-bottom: 46px;
 }
 
 .footer__bottom {
@@ -1244,10 +1262,103 @@ html, body {
   transition: all 0.1s ease;
 }
 
+.S_nav__logo {
+  position: static;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.S_nav__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000;
+  padding: 29px 300px;
+  height: 90px;
+}
+.S_nav__container ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+
+.icon__container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.icon__container img {
+  width: 24px;
+  height: 24px;
+}
+
+.S__header {
+  height: 410px;
+  background: url("../../assets/img/background/shop_header_bachground.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.S_header__block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 108px 44.2%;
+}
+.S_header__block h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 48px;
+  line-height: 56px;
+}
+
+.S_block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.S_p {
+  font-size: 20px;
+}
+
+.S_main {
+  color: #000 !important;
+  background-color: #fff;
+  padding: 120px 31.25%;
+}
+
 .shop-footer__bottom {
   background-color: #4F4F4F;
 }
 
+@media (max-width: 1920px) {
+  .S_header__block h2 {
+    font-size: 38px;
+  }
+}
+@media (max-width: 1550px) {
+  .S_header__block h2 {
+    font-size: 33px;
+  }
+}
+@media (max-width: 1350px) {
+  .S_main {
+    padding: 120px 20%;
+  }
+  .S_header__block h2 {
+    font-size: 26px;
+    line-height: 28px;
+  }
+}
 @media (max-width: 1820px) {
   .header__content {
     gap: 50px;
@@ -1434,9 +1545,6 @@ html, body {
   .footer__bottom {
     gap: 200px;
   }
-  .footer__main {
-    margin-bottom: -250px;
-  }
   .footer-card {
     width: 300px;
   }
@@ -1505,9 +1613,6 @@ html, body {
   }
   .footer__subtitle {
     font-size: 14px;
-  }
-  .img__footer-container {
-    display: none;
   }
   .about__gallery {
     display: none;
@@ -1655,6 +1760,9 @@ html, body {
   }
 }
 @media (max-width: 967px) {
+  .img__footer {
+    display: none;
+  }
   .button-up {
     width: 40px;
     height: 40px;
@@ -1942,7 +2050,6 @@ html, body {
   .choose-pick__block-list {
     width: 100%;
   }
-  /* Базовые корректировки */
   * {
     max-width: 100vw;
     overflow-x: hidden;
@@ -1955,7 +2062,6 @@ html, body {
     margin-bottom: 30px;
     padding: 10px 5px;
   }
-  /* Навигация - полная переработка */
   .nav {
     padding: 20px 10px;
     flex-direction: column;
@@ -1986,7 +2092,6 @@ html, body {
   .nav__search::placeholder {
     font-size: 12px;
   }
-  /* Хедер - упрощение */
   .image__background {
     padding-bottom: 30px;
   }
@@ -2067,11 +2172,9 @@ html, body {
     font-size: 12px;
     margin-bottom: 8px;
   }
-  /* Food Category - скрываем */
   .food-category {
     display: none;
   }
-  /* Why Us Section */
   .why-us__container {
     padding: 20px 10px;
     gap: 30px;
@@ -2116,7 +2219,6 @@ html, body {
     font-size: 16px !important;
     margin-top: -5px;
   }
-  /* Stats Section */
   .stats {
     height: auto;
     padding: 20px 0;
@@ -2138,7 +2240,6 @@ html, body {
   .stats__list .stats__item .stats__number {
     font-size: 24px;
   }
-  /* Choose Pick Section */
   .choose-pick__container--upper {
     width: 100%;
   }
@@ -2177,7 +2278,6 @@ html, body {
   .choose-pick__block-list p {
     font-size: 11px;
   }
-  /* Chef Section */
   .chef-container__img-block {
     flex-direction: column;
     gap: 15px;
@@ -2194,7 +2294,6 @@ html, body {
   .chef-card__block-text span {
     font-size: 11px;
   }
-  /* Recom Section */
   .recom-wrap {
     width: 100%;
     height: auto;
@@ -2214,7 +2313,6 @@ html, body {
   .recom__block-text p {
     font-size: 14px;
   }
-  /* Progress Section */
   .progress__container {
     height: auto;
     padding: 20px 10px;
@@ -2234,7 +2332,6 @@ html, body {
   .progress__buttons-container span {
     position: static;
   }
-  /* Blog Section */
   .blog__cards {
     flex-direction: column;
     gap: 15px;
@@ -2253,7 +2350,6 @@ html, body {
     gap: 50px;
     margin-top: 15px;
   }
-  /* Footer */
   .footer__support {
     margin-top: 30px;
     padding: 20px 10px;
@@ -2307,23 +2403,12 @@ html, body {
   .footer__copyright {
     font-size: 12px;
   }
-  /* Кнопка "Наверх" */
-  .button-up {
-    bottom: 20px;
-    right: 20px;
-    width: 40px;
-    height: 40px;
-    font-size: 18px;
-  }
-  /* Скрываем декоративные элементы */
   .header-img,
   .food-category__img-plant,
   .chef__img-plant,
-  .recom__img-plant,
-  .img__footer-container {
+  .recom__img-plant {
     display: none;
   }
-  /* Улучшаем читаемость текста */
   .p--standart {
     font-size: 12px;
     line-height: 18px;

@@ -6,8 +6,7 @@
 
 // ===== БАЗОВЫЕ СТИЛИ =====
 * {
-  margin: 0;
-  padding: 0;
+  @include MPnone;
   letter-spacing: 0.5px;
   box-sizing: border-box;
   color: white;  
@@ -161,7 +160,7 @@ html, body {
   border: 2px solid whitesmoke;
   box-shadow: 0 0 7px wheat;
   border-radius: 100px;
-  z-index: 11;
+  z-index: 1001;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -260,20 +259,14 @@ html, body {
     transform: translateY(-50%);
     width: 24px;
     height: 24px;
-    background-image: url('../../assets/icons/Group.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    @include backgroundImage(url('../../assets/icons/Group.png'));
     filter: invert(1) brightness(2);
   }
 }
 
 // ===== HEADER =====
 .image__background{
-  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("../../assets/img/header/background_header.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  @include backgroundImage(url("../../assets/img/header/background_header.jpg"), linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)));
   padding-bottom: 106px;
 }
 
@@ -401,7 +394,19 @@ html, body {
 
 @media (min-width: 2000px) {
   .about__container{
-    padding-left: 20%;
+    padding-left: 500px;
+  }
+}
+
+@media (min-width: 1900px) {
+  .about__container{
+    padding-left: 400px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .about__container{
+    padding-left: 300px;
   }
 }
 
@@ -602,10 +607,7 @@ html, body {
 .stats {
   margin-top: 75px;
   @include flex-center;
-  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(../../assets/img/background/img_clients.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  @include backgroundImage(url(../../assets/img/background/img_clients.jpg), linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)));
   height: 369px;
 }
 
@@ -937,10 +939,7 @@ html, body {
 
 // ===== PROGRESS SECTION =====
 .progress{
-  background-image: url(../../assets/img/background/img_restaurant_progress.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;  
+  @include backgroundImage(url(../../assets/img/background/img_restaurant_progress.jpg));
 }
 
 .progress__block-text{
@@ -1065,6 +1064,10 @@ html, body {
 
 
 // ===== FOOTER =====
+.footer{
+  position: relative;
+}
+
 .footer__support {
   margin-top: 75px;
   text-align: left;
@@ -1074,6 +1077,7 @@ html, body {
 .footer__container {
   @include flex-center;
   padding-bottom: 50px;
+  gap: 253px;
   border-bottom: 3px solid  $yellow_color;
 }
 
@@ -1225,18 +1229,19 @@ html, body {
   line-height: 22px;
 }
 
-.img__footer-container{
-  display: flex;
-  justify-content: end;
+// ===== FOOTER BOTTOM ===== 
+.img__footer{
+  position: absolute;
   height: 306px;
   z-index: 30;
-
-  img{
-    position: absolute;
-  }
+  bottom: 0;
+  right: 0;
 }
 
-// ===== FOOTER BOTTOM ===== 
+.footer__main{
+  margin-bottom: 46px;
+}
+
 .footer__bottom {
   @include flex-center;
   gap: 696px;
@@ -1264,14 +1269,134 @@ html, body {
   transition: all 0.1s ease;
 }
 
+
+
+// ========= SHOP PAGE ==========
+
+// ===== NAV =====
+.S_nav__logo{
+  position: static;
+  @include MPnone;
+}
+
+.S_nav__container{
+  @include flex-center;
+  justify-content: space-between;
+  background-color: #000;
+  padding: 29px 300px;
+  height: 90px;
+
+  ul{
+    @include flex-center;
+    gap: 32px;
+  }
+}
+
+.icon__container{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  img{
+  width: 24px;
+  height: 24px;
+  }
+}
+
+
+// ===== HEADER =====
+.S__header{
+  height: 410px;
+  @include backgroundImage(url('../../assets/img/background/shop_header_bachground.jpg'));
+}
+
+.S_header__block{
+  @include flex-center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 108px 44.2%;
+
+  h2{
+    font-family: $another_font;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 48px;
+    line-height: 56px;
+  }
+}
+
+.S_block{
+  @include flex-center;
+  gap: 8px;
+}
+
+.S_p{
+  font-size: 20px;
+}
+
+// ===== MAIN =====
+.S_main{
+  color: #000 !important;
+  background-color: #fff;
+  padding: 120px 31.25%;
+}
+
+// ===== FOOTER =====
 .shop-footer__bottom{
   background-color: #4F4F4F;
 }
 
 
+// ===== АДАПТИВНОСТЬ SHOP =====
 
 
-// ===== АДАПТИВНОСТЬ =====
+@media (max-width: 1920px) {
+  .S_header__block{
+    h2{
+      font-size: 38px;
+    }
+  }
+}
+
+
+@media (max-width: 1550px) {
+  .S_header__block{
+    h2{
+      font-size: 33px;
+    }
+  }
+}
+
+@media (max-width: 1350px) {
+  .S_main{
+    padding: 120px 20%;
+  }
+
+  .S_header__block{
+    h2{
+      font-size: 26px;
+      line-height: 28px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ===== АДАПТИВНОСТЬ MAIN =====
 
 @media (max-width: 1820px) {
 
@@ -1513,10 +1638,6 @@ html, body {
     gap: 200px;
   }
 
-  .footer__main{
-    margin-bottom: -250px;
-  }
-
   .footer-card{
     width: 300px;
 
@@ -1604,10 +1725,6 @@ html, body {
 
   .footer__subtitle{
     font-size: 14px;
-  }
-
-  .img__footer-container{
-    display: none;
   }
 
   .about__gallery{
@@ -1790,6 +1907,10 @@ html, body {
 }
 
 @media (max-width: 967px) {
+
+  .img__footer{
+    display: none;
+  }
 
   .button-up{
     width: 40px;
@@ -2154,7 +2275,6 @@ html, body {
     width: 100%;
   }
 
-  /* Базовые корректировки */
   * {
     max-width: 100vw;
     overflow-x: hidden;
@@ -2170,7 +2290,6 @@ html, body {
     padding: 10px 5px;
   }
   
-  /* Навигация - полная переработка */
   .nav {
     padding: 20px 10px;
     flex-direction: column;
@@ -2207,7 +2326,6 @@ html, body {
     }
   }
   
-  /* Хедер - упрощение */
   .image__background {
     padding-bottom: 30px;
   }
@@ -2307,12 +2425,10 @@ html, body {
     margin-bottom: 8px;
   }
   
-  /* Food Category - скрываем */
   .food-category {
     display: none;
   }
   
-  /* Why Us Section */
   .why-us__container {
     padding: 20px 10px;
     gap: 30px;
@@ -2368,7 +2484,6 @@ html, body {
     }
   }
   
-  /* Stats Section */
   .stats {
     height: auto;
     padding: 20px 0;
@@ -2396,7 +2511,6 @@ html, body {
     }
   }
   
-  /* Choose Pick Section */
   .choose-pick__container--upper {
     width: 100%;
   }
@@ -2446,7 +2560,6 @@ html, body {
     }
   }
   
-  /* Chef Section */
   .chef-container__img-block {
     flex-direction: column;
     gap: 15px;
@@ -2467,7 +2580,6 @@ html, body {
     }
   }
   
-  /* Recom Section */
   .recom-wrap {
     width: 100%;
     height: auto;
@@ -2492,7 +2604,6 @@ html, body {
     }
   }
   
-  /* Progress Section */
   .progress__container {
     height: auto;
     padding: 20px 10px;
@@ -2517,7 +2628,6 @@ html, body {
     }
   }
   
-  /* Blog Section */
   .blog__cards {
     flex-direction: column;
     gap: 15px;
@@ -2541,7 +2651,6 @@ html, body {
     margin-top: 15px;
   }
   
-  /* Footer */
   .footer__support {
     margin-top: 30px;
     padding: 20px 10px;
@@ -2608,25 +2717,13 @@ html, body {
     font-size: 12px;
   }
   
-  /* Кнопка "Наверх" */
-  .button-up {
-    bottom: 20px;
-    right: 20px;
-    width: 40px;
-    height: 40px;
-    font-size: 18px;
-  }
-  
-  /* Скрываем декоративные элементы */
   .header-img,
   .food-category__img-plant,
   .chef__img-plant,
-  .recom__img-plant,
-  .img__footer-container {
+  .recom__img-plant{
     display: none;
   }
   
-  /* Улучшаем читаемость текста */
   .p--standart {
     font-size: 12px;
     line-height: 18px;

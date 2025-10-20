@@ -17,14 +17,6 @@
   }
 }
 
-@mixin button-variant($bg, $color: white, $hover-bg: darken($bg, 10%)) {
-  background: $bg;
-  color: $color;
-  
-  &:hover:not(:disabled) {
-    background: $hover-bg;
-  }
-}
 
 @mixin flex-center {
   display: flex;
@@ -32,8 +24,19 @@
   align-items: center;
 }
 
-@mixin responsive($breakpoint) {
-  @media (max-width: $breakpoint) {
-    @content;
+@mixin MPnone{
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+@mixin backgroundImage($background, $gradient: null) {
+  @if $gradient {
+    background: $gradient, $background;
+  } @else {
+    background: $background;
   }
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
