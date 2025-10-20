@@ -21,7 +21,6 @@
   </head>
   <body>
     <button class="button-up" title="Навверх" onclick="scrollUp()" aria-label="Scroll to top">
-      <span class="button-up__text"></span>
       <span class="button-up__arrow">↑</span>
     </button>
     
@@ -29,21 +28,15 @@
     <div class="image__background">
       <header class="header" id="top">
         <div class="header__container">
-          <h1 class="nav__logo"><span class="nav__logo--highlight">Food</span>tuck</h1>
+          <button class="burger" id="navClose" aria-label="Toggle menu">☰</button>
+          <h1 class="nav__logo"><span class="nav__logo--highlight">Food</span>tuck</h1>            
           <nav class="nav" aria-label="Main navigation">
-<!-- 
-          <button class="nav__burger" id="navClose" aria-label="Toggle menu">
-              <span></span>
-              <span></span>
-              <span></span>
-          </button> -->
-
-            <ul>
+            <ul class="list">
               <li class="nav__item"><a href="./index.html" class="nav__link">Home</a></li>
               <li class="nav__item"><a href="#menu" class="nav__link">Menu</a></li>
               <li class="nav__item"><a href="#blog" class="nav__link">Blog</a></li>
               <li class="nav__item"><a href="#" class="nav__link">Pages</a></li>
-              <li class="nav__item nav__item--dropdown nav__link">About<img src="../assets/icons/arrow_one_down.svg" alt="arrow down"></li>
+              <li class="nav__item nav__item--dropdown nav__link"><div style="display: flex">About<img src="../assets/icons/arrow_one_down.svg" alt="arrow down"></div></li>
               <li class="nav__item"><a href="./pages/shop.html" target="_blank" class="nav__link">Shop</a></li>
               <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
             </ul>

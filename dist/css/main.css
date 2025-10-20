@@ -1907,25 +1907,13 @@ html, body {
     height: 25px;
   }
   .button-up {
-    bottom: 75px;
+    bottom: 20px;
     right: 25px;
   }
 }
 @media (max-width: 480px) {
-  .nav {
-    padding-top: 100px;
-  }
-  .nav__logo {
-    font-size: 18px;
-    left: 50%;
-  }
   .nav__search {
     width: 150px !important;
-  }
-  .nav__search-container {
-    top: 40px;
-    right: 0;
-    right: 25%;
   }
   .header__title {
     font-size: 36px;
@@ -2485,6 +2473,62 @@ html, body {
 }
 .last-section {
   margin-bottom: 0 !important;
+}
+
+.burger {
+  display: none;
+  background-color: #000;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .header__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    height: 75px;
+    background: #000000;
+    position: relative;
+  }
+  .nav__logo {
+    display: none;
+  }
+  .burger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav__search-container {
+    position: static;
+  }
+  .nav__search-container .nav__search {
+    width: 100px !important;
+  }
+  .list {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 35%;
+    height: 100vh;
+    background: #000000;
+    transition: right 0.3s;
+    z-index: 1000;
+    flex-direction: column;
+    align-items: start;
+    padding: 10px 20px 20px;
+  }
+  .nav ul {
+    align-items: start;
+  }
+  .list.active {
+    right: 0;
+  }
+  .list .nav__item {
+    padding: 10px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
