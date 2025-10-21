@@ -17,11 +17,26 @@
   }
 }
 
-
-@mixin flex-center {
+@mixin flex-center{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@mixin flex-center-full (
+ $display: flex,
+  $justify-content: center,
+   $align-items: center,
+   $flex-direction: null,
+    $flex-wrap: null,
+     $gap: null 
+    ) {
+  display: $display;
+  justify-content: $justify-content;
+  align-items: $align-items;  
+  flex-direction: $flex-direction;
+  flex-wrap: $flex-wrap;
+  gap: $gap;
 }
 
 @mixin MPnone{

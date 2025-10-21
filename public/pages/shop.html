@@ -32,13 +32,13 @@
           <div class="S_nav__container">
             <h1 class="S_nav__logo nav__logo"><a href="../index.html"><span class="nav__logo--highlight">Food</span>tuck</a></h1>            
             <ul>
-              <li class="nav__item"><a href="../index.html" class="nav__link section__title--highlight">Home</a></li>
-              <li class="nav__item"><a href="#menu" class="nav__link">Menu</a></li>
-              <li class="nav__item"><a href="#blog" class="nav__link">Blog</a></li>
-              <li class="nav__item nav__item--dropdown nav__link">Pages</li>
-              <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-              <li class="nav__item"><a href="./pages/shop.html" target="_blank" class="nav__link">Shop</a></li>
-              <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+              <li><a href="../index.html" class="S nav__link">Home</a></li>
+              <li><a href="#menu" class="S nav__link">Menu</a></li>
+              <li><a href="#blog" class="S nav__link">Blog</a></li>
+              <li class="S nav__item--dropdown nav__link">Pages</li>
+              <li><a href="#about" class="S nav__link">About</a></li>
+              <li><a href="./pages/shop.html" target="_blank" class="S nav__link nav__link section__title--highlight"">Shop</a></li>
+              <li><a href="#contact" class="S nav__link">Contact</a></li>
           </ul>
           <div class="icon__container">
             <a href="#"><img src="../../assets/icons/Group.png" alt="Icon"></a>
@@ -79,7 +79,7 @@
           </ul>
         </div>
 
-        <img style="width: 248px; height: 286px;" src="../../assets/img/shop/Banner.png" alt="Banner">
+        <a href="#"><img class="S_img_aside" src="../../assets/img/shop/Banner.png" alt="Banner"></a>
 
         <div class="filter-price">
           <h3 class="S_h3">Filter By Price</h3>
@@ -131,14 +131,14 @@
         <div class="product-tags">
           <h3 class="S_h3">Product Tags</h3>
           <ul>
-            <li>Services</li>
-            <li>Our Menu</li>
-            <li>Pizza</li>
-            <li>Cupcake</li>
-            <li style="color: #FF9F0D;">Burger</li>
-            <li>Cookies</li>
-            <li>Our Shop</li>
-            <li>Tandoori Chicken</li>
+            <a href="#"><li>Services</li></a>
+            <a href="#"><li>Our Menu</li></a>
+            <a href="#"><li>Pizza</li></a>
+            <a href="#"><li>Cupcake</li></a>
+            <a href="#"><li style="color: #FF9F0D;">Burger</li></a>
+            <a href="#"><li>Cookies</li></a>
+            <a href="#"><li>Our Shop</li></a>
+            <a href="#"><li>Tandoori Chicken</li></a>
           </ul>
         </div>
       </aside>
@@ -173,18 +173,9 @@
 
         <!--MAIN PART-->
 
-
-
-
-
-
-
-
-
-
-
-
-
+        <div class="products-container" id="productsContainer">
+            
+        </div>
 
         <!--/MAIN PART-->
 
@@ -207,12 +198,12 @@
           <div class="footer__container">
             <div class="footer-text">
               <h3 class="footer__title">
-                <span class="footer__title--highlight">St</span>ill You Need Our Support ?
+                <span class="footer__title--highlight">St</span>ill You Need Our Support?
               </h3>
               <p class="footer__subtitle">Don’t wait make a smart & logical quote here. Its pretty easy.</p>           
             </div>
             <form class="footer__form">
-              <input type="email" ame="email" placeholder="Enter Your Email" minlength="6" maxlength="50" class="footer__input">
+              <input type="email" name="email" placeholder="Enter Your Email" minlength="6" maxlength="50" class="footer__input">
               <button type="submit" onclick="return false"  class="button--secondary footer-help__button">Subscribe now</button><!--Return false до появления логики отправки!-->
             </form>
           </div>
