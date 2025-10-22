@@ -15,9 +15,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <!--/FONTS-->
 
-    <link rel="stylesheet" type="text/css" href="../../dist/css/main.css">
-    <link rel="icon" type="image/jpg" href="../../assets/icons/burger_icon.svg">
+    <link rel="stylesheet" type="text/css" href="/dist/css/main.css">
+    <link rel="icon" type="image/svg" href="/assets/icons/burger_icon.svg">
     <title>Foodtuck Shop</title>
+
+    <meta name="description" content="Order fresh food online from Foodtuck. Burgers, pizza, drinks and desserts. Fast delivery and great prices.">
+    <meta property="og:title" content="Foodtuck Shop - Order Food Online">
+    <meta property="og:description" content="Order fresh food online from Foodtuck. Fast delivery and great prices.">
   </head>
   <body>
     <button class="button-up" title="Навверх" onclick="scrollUp()" aria-label="Scroll to top">
@@ -41,9 +45,9 @@
               <li><a href="#contact" class="S nav__link">Contact</a></li>
           </ul>
           <div class="icon__container">
-            <a href="#"><img src="../../assets/icons/Group.png" alt="Icon"></a>
-            <a href="#"><img src="../../assets/icons/User.svg" alt="Icon"></a>
-            <a href="./shop.html"><img src="../../assets/icons/Handbag.svg" alt="Icon"></a>
+            <a href="#"><img src="/assets/icons/Group.png" alt="Icon"></a>
+            <a href="#"><img src="/assets/icons/User.svg" alt="Icon"></a>
+            <a href="./shop.html"><img src="/assets/icons/Handbag.svg" alt="Icon"></a>
           </div>
           </div>
         </nav>
@@ -51,7 +55,7 @@
           <h2>Our Shop</h2>
           <div class="S_block">
             <a href="../index.html" class="S_p p--standart">Home</a>
-            <img src="../../assets/icons/next_one_icon.svg" alt="arrow left" style="width: 16px; height: 16px;">
+            <img src="/assets/icons/next_one_icon.svg" alt="arrow left" style="width: 16px; height: 16px;">
             <a href="./shop.html" class="S_p p--standart"><span class="section__title--highlight">Shop</span></a>            
           </div>       
         </div>
@@ -61,8 +65,8 @@
       <aside class="S_aside">
 
         <form class="S_aside__form">
-          <input type="text" placeholder="Search Product" maxlength="25">
-          <button type="submit"><img src="../../assets/icons/Group.png" alt="icon"></button>          
+          <input type="search" name="search" placeholder="Search Product" maxlength="25" minlength="2" required class="aside__input">
+          <button type="submit"><img src="/assets/icons/Group.png" alt="icon"></button>          
         </form>
 
         <div class="filter-category">
@@ -79,11 +83,11 @@
           </ul>
         </div>
 
-        <a href="#"><img class="S_img_aside" src="../../assets/img/shop/Banner.png" alt="Banner"></a>
+        <a href="#"><img class="S_img_aside" src="/assets/img/shop/Banner.png" alt="Banner"></a>
 
         <div class="filter-price">
           <h3 class="S_h3">Filter By Price</h3>
-          <span>----------------------------------------</span>
+          <span>-------------</span>
           <div class="filter-price__text">
             <span>From $0 to $8000</span><span>Filter</span>
           </div>
@@ -94,34 +98,34 @@
 
           <div class="latest-products__cards">
             <div class="latest-products__card">
-              <img src="../../assets/img/shop/img_latest.png" alt="photo of food">
+              <img src="/assets/img/shop/img_latest.png" alt="photo of food">
               <div class="latest-products__text">
                 <span>Pizza</span>
-                <img src="../../assets/icons/two_stars.svg" alt="two stars">
+                <img src="/assets/icons/two_stars.svg" alt="two stars">
                 <span>$35.00</span>
               </div>
             </div>
             <div class="latest-products__card">
-              <img src="../../assets/img/shop/img_latest.png" alt="photo of food">
+              <img src="/assets/img/shop/img_latest.png" alt="photo of food">
               <div class="latest-products__text">
                 <span>Cupchake</span>
-                <img src="../../assets/icons/two_stars.svg" alt="two stars">
+                <img src="/assets/icons/two_stars.svg" alt="two stars">
                 <span>$35.00</span>
               </div>
             </div>
             <div class="latest-products__card">
-              <img src="../../assets/img/shop/img_latest.png" alt="photo of food">
+              <img src="/assets/img/shop/img_latest.png" alt="photo of food">
               <div class="latest-products__text">
                 <span>Cookies</span>
-                <img src="../../assets/icons/two_stars.svg" alt="two stars">
+                <img src="/assets/icons/two_stars.svg" alt="two stars">
                 <span>$35.00</span>
               </div>
             </div>
             <div class="latest-products__card">
-              <img src="../../assets/img/shop/img_latest.png" alt="photo of food">
+              <img src="/assets/img/shop/img_latest.png" alt="photo of food">
               <div class="latest-products__text">
                 <span>Burger</span>
-                <img src="../../assets/icons/two_stars.svg" alt="two stars">
+                <img src="/assets/icons/two_stars.svg" alt="two stars">
                 <span>$35.00</span>
               </div>
             </div>
@@ -180,11 +184,11 @@
         <!--/MAIN PART-->
 
         <div class="pag_panel">
-          <button><img src="../../assets/icons/back_two_icon.svg" alt=""></button>
+          <button><img src="/assets/icons/back_two_icon.svg" alt="Back arrow"></button>
           <button>1</button>
           <button>2</button>
           <button>3</button>
-          <button><img src="../../assets/icons/next_two_icon.svg" alt=""></button>
+          <button><img src="/assets/icons/next_two_icon.svg" alt="Next arrow"></button>
         </div>
       </main>
     </div>
@@ -223,7 +227,7 @@
                 service in major cities across World.
               </p>
               <div class="footer-card--bottom">
-                <div class="footer__sq sq"><img src="../../assets/icons/ClockClockwise.svg" alt="Clock"></div>
+                <div class="footer__sq sq"><img src="/assets/icons/ClockClockwise.svg" alt="Clock"></div>
                 <div class="footer-card__text--bottom">
                   <h6 class="p--standart">Opening Houres</h6>
                   <span class="p--standart footer-card__text-time">Mon - Sat(8.00 - 6.00)</span>
@@ -257,7 +261,7 @@
               <h4  class="p--bold">Recent Post</h4>
               <div class="footer-card__block-cards">
                 <div class="footer__block-card">
-                  <img src="../../assets/img/footer/img_footer1.jpg" alt="mini card footer">
+                  <img src="/assets/img/footer/img_footer1.jpg" alt="mini card footer">
                   <div class="footer-block__card-text">
                     <span class="p--standart">20 Feb 2022</span>
                     <span class="p--standart">Keep Your Business </span>                    
@@ -266,7 +270,7 @@
               </div>
               <div class="footer-card__block-cards">
                 <div class="footer__block-card">
-                  <img src="../../assets/img/footer/img_footer2.jpg" alt="mini card footer">
+                  <img src="/assets/img/footer/img_footer2.jpg" alt="mini card footer">
                   <div class="footer-block__card-text">
                     <span class="p--standart">20 Feb 2022</span>
                     <span class="p--standart">Keep Your Business </span>                    
@@ -275,7 +279,7 @@
               </div>
               <div class="footer-card__block-cards">
                 <div class="footer__block-card">
-                  <img src="../../assets/img/footer/img_footer3.jpg" alt="mini card footer">
+                  <img src="/assets/img/footer/img_footer3.jpg" alt="mini card footer">
                   <div class="footer-block__card-text">
                     <span class="p--standart">20 Feb 2022</span>
                     <span class="p--standart">Keep Your Business </span>                    
@@ -288,49 +292,49 @@
       </section>
 
       <!--FOOTER BOTTOM SECTION-->
-      <img class="img__footer" src="../../assets/img/plants/img_plant_footer.png" alt="Plant">
+      <img class="img__footer" src="/assets/img/plants/img_plant_footer.png" alt="Plant">
       <div class="shop-footer__bottom footer__bottom">
         <p class="footer__copyright">Copyright © 2022 by Ayeman. All Rights Reserved.</p>
         <ul class="footer__social">
           <li class="footer__social-item">
             <div class="footer-social__container-item">
               <a href="#" class="footer__social-link" aria-label="Facebook">
-                <img src="../../assets/icons/facebook.svg" alt="Facebook icon">
+                <img src="/assets/icons/facebook.svg" alt="Facebook icon">
               </a>              
             </div>
           </li>
           <li class="footer__social-item">
             <div class="footer-social__container-item">
               <a href="#" class="footer__social-link" aria-label="Twitter">
-                <img src="../../assets/icons/twitter.svg" alt="Twitter icon">
+                <img src="/assets/icons/twitter.svg" alt="Twitter icon">
               </a>              
             </div>
           </li>
           <li class="footer__social-item">
             <div class="footer-social__container-item">
               <a href="#" class="footer__social-link" aria-label="Instagram">
-                <img src="../../assets/icons/instagram.svg" alt="Instagram icon">
+                <img src="/assets/icons/instagram.svg" alt="Instagram icon">
               </a>              
             </div>
           </li>
           <li class="footer__social-item">
             <div class="footer-social__container-item">
             <a href="#" class="footer__social-link" aria-label="YouTube">
-              <img src="../../assets/icons/youtube.svg" alt="YouTube icon">
+              <img src="/assets/icons/youtube.svg" alt="YouTube icon">
             </a>
             </div>
           </li>
           <li class="footer__social-item">
             <div class="footer-social__container-item">
               <a href="#" class="footer__social-link" aria-label="Pinterest">
-                <img src="../../assets/icons/pinterest.svg" alt="Pinterest icon">
+                <img src="/assets/icons/pinterest.svg" alt="Pinterest icon">
               </a>              
             </div>
           </li>
         </ul>
       </div>
     </footer>
-    <script src="../../src/index.js"></script>
+    <script src="/src/index.js"></script>
     <noscript>It looks like you have javascript disabled. Please enable it. Thank you</noscript>
   </body>
 </html>

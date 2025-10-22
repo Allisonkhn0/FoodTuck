@@ -50,6 +50,7 @@ li {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 html,
@@ -132,6 +133,7 @@ body {
   border: none;
   border-radius: 30px;
   transition: all 0.15s ease;
+  cursor: pointer;
 }
 
 .button--secondary {
@@ -248,14 +250,14 @@ body {
     transform: translateY(-50%);
     width: 24px;
     height: 24px;
-    @include backgroundImage(url('../../assets/icons/Group.png'));
+    @include backgroundImage(url('/assets/icons/Group.png'));
     filter: invert(1) brightness(2);
   }
 }
 
 // ===== HEADER =====
 .image__background {
-  @include backgroundImage(url("../../assets/img/header/background_header.jpg"), linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)));
+  @include backgroundImage(url("/assets/img/header/background_header.jpg"), linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)));
   padding-bottom: 106px;
 }
 
@@ -571,7 +573,7 @@ body {
 .stats {
   margin-top: 75px;
   @include flex-center;
-  @include backgroundImage(url(../../assets/img/background/img_clients.jpg), linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)));
+  @include backgroundImage(url('/assets/img/background/img_clients.jpg'), linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)));
   height: 369px;
 }
 
@@ -812,7 +814,7 @@ body {
 }
 
 .recom__block {
-  width: 868px;
+  width: 100%;
   height: 450px;
   background-color: #fff;
 
@@ -820,10 +822,13 @@ body {
   text-align: center;
   position: relative;
 
-  img:first-child {
-    position: absolute;
-    top: -75px;
-    border-radius: 100%;
+  .recom__photos{
+    @include flex-center-full($flex-direction: column, $gap: 44px);
+    margin-bottom: 42.5px;
+  }
+
+  .recom__photo{
+    border-radius: 50%;
     width: 133px;
   }
 
@@ -860,6 +865,14 @@ body {
   }
 }
 
+.recom__stars{
+  width: 150px;
+}
+
+.recom__block--down{
+  margin-bottom: 32px;
+}
+
 .swipe-block {
   @include flex-center-full($align-items: start, $gap: 7px);
   margin-top: 56px;
@@ -885,7 +898,7 @@ body {
 
 // ===== PROGRESS SECTION =====
 .progress {
-  @include backgroundImage(url(../../assets/img/background/img_restaurant_progress.jpg));
+  @include backgroundImage(url('/assets/img/background/img_restaurant_progress.jpg'));
 }
 
 .progress__block-text {
@@ -1233,7 +1246,7 @@ body {
 // ===== HEADER =====
 .S__header {
   height: 410px;
-  @include backgroundImage(url('../../assets/img/background/shop_header_bachground.jpg'));
+  @include backgroundImage(url('/assets/img/background/shop_header_bachground.jpg'));
 }
 
 .S_header__block {
@@ -2402,7 +2415,6 @@ body {
   }
 
   .recom__block {
-    width: 80%;
 
     img:first-child {
       width: 100px;
@@ -2419,7 +2431,7 @@ body {
   }
 
   .recom__block-text {
-    width: 80%;
+    width: 99%;
   }
 
   .swipe-block {
@@ -2770,12 +2782,44 @@ body {
       }
     }
   }
+
+  .pag_panel button {
+    &:hover {
+      background-color: #f9f7f7;
+    }
+  }
 }
 
 
+.footer__input {
+  &:invalid {
+    border-color: #ff4444;
+    background-color: #e18c0e;
+  }
+  
+  &:valid {
+    border-color: #00C851;
+  }
+  
+  &:focus:invalid {
+    box-shadow: 0 0 5px rgba(255, 68, 68, 0.5);
+  }
+}
 
-
-
+.aside__input{
+  &:invalid {
+    border-color: #ff4444;
+    background-color: #f5f2ee;
+  }
+  
+  &:valid {
+    border-color: #00C851;
+  }
+  
+  &:focus:invalid {
+    box-shadow: 0 0 5px rgba(240, 153, 153, 0.5);
+  }
+}
 
 .last-section {
   margin-bottom: 0 !important;

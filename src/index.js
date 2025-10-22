@@ -1,10 +1,20 @@
+// Скрол вверх по странице
+function scrollUp() {
+  window.scroll({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
+
+
 // ИМИАЦИЯ ПОЛУЧЕНИЯ ДАННЫХ С СЕРВЕРА
 const products = [
   {
     "id": 1,
     "productName": "freshLime",
     "product": "Fresh Lime",
-    "imgCardURL": "../../assets/img/shop/img_shop1.png",
+    "category": ["Uncategorized"],
+    "imgCardURL": "/assets/img/shop/img_shop1.png",
     "isSale": false,
     "costs": {
       "price": 45.00,
@@ -16,7 +26,8 @@ const products = [
     "id": 2,
     "productName": "chocolateMuffin",
     "product": "Chocolate Muffin",
-    "imgCardURL": "../../assets/img/shop/img_shop2.png",
+    "category": ["Uncategorized"],
+    "imgCardURL": "/assets/img/shop/img_shop2.png",
     "isSale": true,
     "costs": {
       "price": 28.00,
@@ -28,7 +39,8 @@ const products = [
     "id": 3,
     "productName": "burger",
     "product": "Burger",
-    "imgCardURL": "../../assets/img/shop/img_shop3.png",
+    "category": ["Burger", "Non Veg"],
+    "imgCardURL": "/assets/img/shop/img_shop3.png",
     "isSale": false,
     "costs": {
       "price": 45.00,
@@ -40,7 +52,8 @@ const products = [
     "id": 4,
     "productName": "countryBurger",
     "product": "Country Burger",
-    "imgCardURL": "../../assets/img/shop/img_shop4.png",
+    "category": ["Burger", "Non Veg"],
+    "imgCardURL": "/assets/img/shop/img_shop4.png",
     "isSale": false,
     "costs": {
       "price": 45.00,
@@ -52,7 +65,8 @@ const products = [
     "id": 5,
     "productName": "drink",
     "product": "Drink",
-    "imgCardURL": "../../assets/img/shop/img_shop5.png",
+    "category": ["Drink"],
+    "imgCardURL": "/assets/img/shop/img_shop5.png",
     "isSale": false,
     "costs": {
       "price": 45.00,
@@ -64,7 +78,8 @@ const products = [
     "id": 6,
     "productName": "pizza",
     "product": "Pizza",
-    "imgCardURL": "../../assets/img/shop/img_shop6.png",
+    "category": ["Pizza", "Non Veg"],
+    "imgCardURL": "/assets/img/shop/img_shop6.png",
     "isSale": false,
     "costs": {
       "price": 43.00,
@@ -76,7 +91,8 @@ const products = [
     "id": 7,
     "productName": "cheeseButter",
     "product": "Cheese Butter",
-    "imgCardURL": "../../assets/img/shop/img_shop7.png",
+    "category": ["Uncategorized", "Non Veg"],
+    "imgCardURL": "/assets/img/shop/img_shop7.png",
     "isSale": false,
     "costs": {
       "price": 10.00,
@@ -88,7 +104,8 @@ const products = [
     "id": 8,
     "productName": "sandwiches",
     "product": "Sandwiches",
-    "imgCardURL": "../../assets/img/shop/img_shop8.png",
+    "category": ["Sandwich", "Non Veg"],
+    "imgCardURL": "/assets/img/shop/img_shop8.png",
     "isSale": false,
     "costs": {
       "price": 25.00,
@@ -100,7 +117,8 @@ const products = [
     "id": 9,
     "productName": "chickenChup",
     "product": "Chicken Chup",
-    "imgCardURL": "../../assets/img/shop/img_shop9.png",
+    "category": ["Chicken Chup", "Non Veg"],
+    "imgCardURL": "/assets/img/shop/img_shop9.png",
     "isSale": true,
     "costs": {
       "price": 12.00,
@@ -164,30 +182,73 @@ document.addEventListener('DOMContentLoaded', renderProducts);
 
 
 
-// Скрол вверх по странице
-function scrollUp() {
-  window.scroll({
-    top: 0,
-    behavior: 'smooth'
-  });
-}
+// BURGER MENU
+const burger = document.querySelector('.burger');
+const nav = document.querySelector('.list');
 
-
-
-
-let burger = document.querySelector('.burger');
-let list = document.querySelector('.list');
-
-burger.addEventListener('click', (e) => {
-  e.stopPropagation();
-  list.classList.toggle('active')
-})
-
-document.addEventListener('click', (e) => {
-
-	if (!list.contains(e.target)) {
-		list.classList.remove('active');
-	}
-
+burger.addEventListener('click', () => {
+    nav.classList.toggle('active');
+    burger.classList.toggle('active');
 });
 
+
+
+// SLIDER
+class Slider {
+  constructor() {
+    this.slides = document.querySelectorAll('.recom__slide');
+    this.currSlide = 0;
+    this.sliderContainer = document.querySelector('.recom__slider');
+    
+    this.init();
+  }
+  
+  init() {
+
+    this.showSlide(this.currSlide);
+    
+    this.sliderContainer.addEventListener('click', () => {
+      this.nextSlide();
+    });
+    
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') this.prevSlide();
+      if (e.key === 'ArrowRight') this.nextSlide();
+    });
+  }
+  
+  showSlide(index) {
+
+    this.slides.forEach(slide => {
+      slide.style.display = 'none';
+      slide.classList.remove('slide-active');
+    });
+    
+    this.slides[index].style.display = 'block';
+  }
+  
+  nextSlide() {
+    this.currSlide = (this.currSlide + 1) % this.slides.length;
+    this.showSlide(this.currSlide);
+    this.updatePagination();
+  }
+  
+  prevSlide() {
+    this.currSlide = (this.currSlide - 1 + this.slides.length) % this.slides.length;
+    this.showSlide(this.currSlide);
+    this.updatePagination();
+  }
+  
+  updatePagination() {
+    const dots = document.querySelectorAll('.recom-circle');
+    dots.forEach((dot, index) => {
+      if (index === this.currSlide) {
+        dot.style.backgroundColor = '#FF9F0D';
+      } else {
+        dot.style.backgroundColor = '#ff9e0d30';
+      }
+    });
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => new Slider());

@@ -46,6 +46,7 @@ li {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 html,
@@ -130,6 +131,7 @@ body {
   border: none;
   border-radius: 30px;
   transition: all 0.15s ease;
+  cursor: pointer;
 }
 
 .button--secondary {
@@ -257,7 +259,7 @@ body {
   transform: translateY(-50%);
   width: 24px;
   height: 24px;
-  background: url("../../assets/icons/Group.png");
+  background: url("/assets/icons/Group.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -265,7 +267,7 @@ body {
 }
 
 .image__background {
-  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("../../assets/img/header/background_header.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("/assets/img/header/background_header.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -605,7 +607,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(../../assets/img/background/img_clients.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("/assets/img/background/img_clients.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -855,7 +857,7 @@ body {
 }
 
 .recom__block {
-  width: 868px;
+  width: 100%;
   height: 450px;
   background-color: #fff;
   display: flex;
@@ -865,10 +867,16 @@ body {
   text-align: center;
   position: relative;
 }
-.recom__block img:first-child {
-  position: absolute;
-  top: -75px;
-  border-radius: 100%;
+.recom__block .recom__photos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 44px;
+  margin-bottom: 42.5px;
+}
+.recom__block .recom__photo {
+  border-radius: 50%;
   width: 133px;
 }
 .recom__block p {
@@ -900,6 +908,14 @@ body {
   text-align: center;
 }
 
+.recom__stars {
+  width: 150px;
+}
+
+.recom__block--down {
+  margin-bottom: 32px;
+}
+
 .swipe-block {
   display: flex;
   justify-content: center;
@@ -926,7 +942,7 @@ body {
 }
 
 .progress {
-  background: url(../../assets/img/background/img_restaurant_progress.jpg);
+  background: url("/assets/img/background/img_restaurant_progress.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1313,7 +1329,7 @@ body {
 
 .S__header {
   height: 410px;
-  background: url("../../assets/img/background/shop_header_bachground.jpg");
+  background: url("/assets/img/background/shop_header_bachground.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2298,9 +2314,6 @@ body {
   .choose-pick__nav ul {
     gap: 20px;
   }
-  .recom__block {
-    width: 80%;
-  }
   .recom__block img:first-child {
     width: 100px;
   }
@@ -2312,7 +2325,7 @@ body {
     margin-bottom: 100px;
   }
   .recom__block-text {
-    width: 80%;
+    width: 99%;
   }
   .swipe-block {
     margin-top: 0;
@@ -2563,7 +2576,32 @@ body {
   .S_aside__form button:hover {
     box-shadow: 0 0 3px rgb(255, 166, 0), 0 0 3px rgb(255, 166, 0), 0 0 3px rgb(255, 166, 0);
   }
+  .pag_panel button:hover {
+    background-color: #f9f7f7;
+  }
 }
+.footer__input:invalid {
+  border-color: #ff4444;
+  background-color: #e18c0e;
+}
+.footer__input:valid {
+  border-color: #00C851;
+}
+.footer__input:focus:invalid {
+  box-shadow: 0 0 5px rgba(255, 68, 68, 0.5);
+}
+
+.aside__input:invalid {
+  border-color: #ff4444;
+  background-color: #f5f2ee;
+}
+.aside__input:valid {
+  border-color: #00C851;
+}
+.aside__input:focus:invalid {
+  box-shadow: 0 0 5px rgba(240, 153, 153, 0.5);
+}
+
 .last-section {
   margin-bottom: 0 !important;
 }
