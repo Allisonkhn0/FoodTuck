@@ -66,7 +66,7 @@ body {
   max-width: 100vw;
 }
 
-// ===== ПЕРЕИСПОЛЬЗУЕМЫЕ КОМПОНЕНТЫ =====
+// ===== MAIN USED COMPONENTS =====
 .section__subtitle {
   font-family: Great Vibes;
   font-weight: 400;
@@ -176,7 +176,7 @@ body {
 }
 
 
-// ===== НАВИГАЦИЯ =====
+// ===== NAVIGATION =====
 .nav {
   @include flex-center-full($flex-direction: row);
   gap: 25%;
@@ -684,7 +684,7 @@ body {
   .ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* Две колонки */
+    // two columns
     gap: 32px;
   }
 }
@@ -1212,7 +1212,7 @@ body {
   color: #000;
 }
 
-// ===== NAV =====
+// ===== NAVIGATION =====
 .S_nav__logo {
   position: static;
   @include MPnone;
@@ -1537,18 +1537,13 @@ body {
   font-weight: bold;
 }
 
-
-
-
-
-
 // ===== FOOTER =====
 .shop-footer__bottom {
   background-color: #4F4F4F;
 }
 
 
-// ===== АДАПТИВНОСТЬ SHOP =====
+// ===== ADAPTATION SHOP =====
 
 
 @media (max-width: 1920px) {
@@ -1796,7 +1791,7 @@ body {
 
 
 
-// ===== АДАПТИВНОСТЬ MAIN =====
+// ===== ADAPTATION MAIN =====
 
 @media (max-width: 1820px) {
 

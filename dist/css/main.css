@@ -729,7 +729,6 @@ body {
 .choose-pick__list .ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* Две колонки */
   gap: 32px;
 }
 

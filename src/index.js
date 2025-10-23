@@ -1,4 +1,4 @@
-// Скрол вверх по странице
+// Scroll for Button Up
 function scrollUp() {
   window.scroll({
     top: 0,
@@ -7,7 +7,7 @@ function scrollUp() {
 }
 
 
-// ИМИАЦИЯ ПОЛУЧЕНИЯ ДАННЫХ С СЕРВЕРА
+// IMITATION GET DATA AT REAL SERVER
 const products = [
   {
     "id": 1,
@@ -128,6 +128,8 @@ const products = [
   }
 ];
 
+
+// Get all current products 
 const productsC = products.map(product => ({
   ...product,
   costs: {
@@ -137,6 +139,8 @@ const productsC = products.map(product => ({
 }));
 
 
+
+// Render app cards in DOM
 function renderProducts() {
     const container = document.getElementById('productsContainer');
     
@@ -145,10 +149,10 @@ function renderProducts() {
         return;
     }
     
-    // Очищаем контейнер
+    // Clear container
     container.innerHTML = '';
     
-    // Создаем карточки для каждого продукта
+    // Create card for every of products
     productsC.forEach(product => {
         const hasOldPrice = product.costs.priceChange !== 0;
         const isOnSale = product.isSale;
@@ -178,6 +182,7 @@ function renderProducts() {
     });
 }
 
+// App function after loading DOM Tree
 document.addEventListener('DOMContentLoaded', renderProducts);
 
 
@@ -211,12 +216,14 @@ class Slider {
       this.nextSlide();
     });
     
+    // Next and Back - "<-" and "->"
     document.addEventListener('keydown', (e) => {
       if (e.key === 'ArrowLeft') this.prevSlide();
       if (e.key === 'ArrowRight') this.nextSlide();
     });
   }
   
+  // Slide in next/back page. Main logic
   showSlide(index) {
 
     this.slides.forEach(slide => {
@@ -239,6 +246,7 @@ class Slider {
     this.updatePagination();
   }
   
+  // UI component 
   updatePagination() {
     const dots = document.querySelectorAll('.recom-circle');
     dots.forEach((dot, index) => {
@@ -251,4 +259,5 @@ class Slider {
   }
 }
 
+// App function after loading DOM Tree
 document.addEventListener('DOMContentLoaded', () => new Slider());

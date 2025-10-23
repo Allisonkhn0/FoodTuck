@@ -9,28 +9,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <!---->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <!--/FONTS-->
 
     <link rel="stylesheet" type="text/css" href="/dist/css/main.css">
-    <link rel="icon" type="image/jpg" href="/assets/icons/fartuk_icon.svg">
+    <link rel="icon" type="image/svg" href="/assets/icons/fartuk_icon.svg">
     <title>Foodtuck Restaurant</title>
 
     <meta name="description" content="Fresh ingredients, expert chefs. Order online or book a table. Burgers, pizza, desserts and more.">
 
-    <!-- Open Graph (обязательно для соцсетей) -->
+    <!-- Open Graph (for another sites) -->
     <meta property="og:title" content="Foodtuck Restaurant">
     <meta property="og:description" content="Fresh ingredients, expert chefs. Order online or book a table.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="/assets/img/og-preview.jpg">
 
+    <!-- primary color -->
     <meta name="theme-color" content="#FF9F0D">
     <link rel="canonical" href="https://yourdomain.com">
   </head>
   <body>
+
+    <!-- Custom Button Up -->
     <button class="button-up" title="Навверх" onclick="scrollUp()" aria-label="Scroll to top">
       <span class="button-up__arrow">↑</span>
     </button>
@@ -66,6 +69,7 @@
             </div>
           </nav> 
       </header>           
+
 
           <div class="header__content"  id="contact">
             <div class="header-img">
@@ -147,6 +151,7 @@
       </section>
       
       <!--FOOD CATEGORY SECTION-->
+      <!--Излишняя секция в контексте сайта, исчезает при width < 680px -->
       <section class="food-category">
         <div class="food-category__container">
           <h4 class="food-category__subtitle section__subtitle" style="text-align: center;">Food Category</h4>
@@ -400,9 +405,11 @@
               <p class="recom__title section__title">What our client are saying</p>
             </div> 
             <div class="recom__slider">
+
+              <!--Slider-->
               <div class="recom__block" id="reviewSlider">
 
-                <!-- Слайд 1 -->
+                <!-- Slide 1 -->
                 <div class="recom__slide" data-slide="1">
                   <div class="recom__photos">
                     <img src="/assets/img/recom/img_recom.jpg" alt="Man's photography" class="recom__photo">
@@ -421,7 +428,7 @@
                   </div>
                 </div>
 
-                <!-- Слайд 2 -->
+                <!-- Slide 2 -->
                 <div class="recom__slide" data-slide="2" style="display: none;">
                   <div class="recom__photos">
                     <img src="/assets/img/recom/img_noneImage.jpg" alt="Woman's photography" class="recom__photo">
@@ -440,7 +447,7 @@
                   </div>
                 </div>
 
-                <!-- Слайд 3 -->
+                <!-- Slide 3 -->
                 <div class="recom__slide" data-slide="3" style="display: none;">
                   <div class="recom__photos">
                     <img src="/assets/img/recom/img_noneImage.jpg" alt="Chef photography" class="recom__photo">
@@ -459,7 +466,7 @@
                   </div>
                 </div>
 
-                <!-- Слайд 4 -->
+                <!-- Slide 4 -->
                 <div class="recom__slide" data-slide="3" style="display: none;">
                   <div class="recom__photos">
                     <img src="/assets/img/recom/img_noneImage.jpg" alt="Chef photography" class="recom__photo">
@@ -482,6 +489,8 @@
           </div>
           <img src="/assets/img/plants/img_plant_recom.png" alt="Plant" class="recom__img-plant">
         </div>
+
+        <!-- Pagination part -->
         <div class="swipe-block">
           <div class="recom-circle" data-slide="0"></div>
           <div class="recom-circle" data-slide="1"></div>
@@ -733,6 +742,8 @@
         </ul>
       </div>
     </footer>
+
+    <!-- App JavaScript file and noscript for validation users without him-->
     <script src="/src/index.js"></script>
     <noscript>It looks like you have javascript disabled. Please enable it. Thank you</noscript>
   </body>

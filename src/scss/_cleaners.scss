@@ -1,4 +1,4 @@
-html,
+html,                                    // All Margin, Padding: 0
 body,
 ul,
 ol {
@@ -6,11 +6,11 @@ ol {
   padding: 0;
 }
 
-p {
+p {                                      // All standart font-size   
   font-size: 16px
 }
 
-body,
+body,                                    // All Background
 header,
 main {
   background-color: aliceblue;
