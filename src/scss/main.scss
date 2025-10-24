@@ -362,27 +362,9 @@ body {
 }
 
 .about__container {
-  @include flex-center-full($justify-content: start, $flex-direction: row, $gap: 98px);
+  @include flex-center-full($justify-content: center, $flex-direction: row, $gap: 98px);
   padding-left: 5%;
   width: 100%;
-}
-
-@media (min-width: 2000px) {
-  .about__container {
-    padding-left: 500px;
-  }
-}
-
-@media (min-width: 1900px) {
-  .about__container {
-    padding-left: 400px;
-  }
-}
-
-@media (min-width: 1800px) {
-  .about__container {
-    padding-left: 300px;
-  }
 }
 
 .about__item {
@@ -2298,11 +2280,6 @@ body {
   .about {
     margin-top: 20px;
     margin-bottom: 0;
-  }
-
-  .about__container {
-    justify-content: center;
-    align-items: center;
   }
 }
 
