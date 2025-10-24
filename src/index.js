@@ -261,3 +261,9 @@ class Slider {
 
 // App function after loading DOM Tree
 document.addEventListener('DOMContentLoaded', () => new Slider());
+
+
+// A feature for the future, the user liked
+function isLike() {
+  console.log('Пользователь поставил лайк');
+}

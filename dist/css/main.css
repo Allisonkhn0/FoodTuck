@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -224,6 +225,15 @@ body {
   justify-content: center;
   align-items: center;
   gap: 10px;
+}
+
+.nav__form {
+  position: relative;
+}
+.nav__form img {
+  position: absolute;
+  right: 26px;
+  top: 14px;
 }
 
 .nav__search {
@@ -840,6 +850,10 @@ body {
   margin-bottom: 123px;
 }
 
+.recom__slide {
+  position: relative;
+}
+
 .recom__block {
   width: 100%;
   height: 450px;
@@ -862,6 +876,13 @@ body {
 .recom__block .recom__photo {
   border-radius: 50%;
   width: 133px;
+  position: absolute;
+  top: -150px;
+}
+.recom__block .recom__img-plant {
+  position: absolute;
+  right: -150px;
+  top: 0;
 }
 .recom__block p {
   color: #000;
@@ -917,12 +938,6 @@ body {
 }
 .recom-circle:first-child {
   background-color: #FF9F0D;
-}
-
-.recom__img-plant {
-  position: absolute;
-  top: 250px;
-  right: 425px;
 }
 
 .progress {
@@ -1048,6 +1063,10 @@ body {
 .blog__icons img {
   width: 20px;
   height: 20px;
+}
+.blog__icons .blog__icons-button {
+  cursor: pointer;
+  background-color: #000;
 }
 
 .footer {
@@ -1263,6 +1282,11 @@ body {
   width: 36px;
   height: 36px;
   transition: all 0.1s ease;
+}
+
+.footer__social-link {
+  position: relative;
+  z-index: 1001;
 }
 
 .container {
@@ -2136,6 +2160,10 @@ body {
     left: 100px;
     font-size: 20px;
   }
+  .nav__form img {
+    top: 7px;
+    width: 20px;
+  }
   .nav__search-container {
     position: absolute;
     right: 30px;
@@ -2243,7 +2271,7 @@ body {
     height: 100%;
   }
   .section__title {
-    font-size: 20px;
+    font-size: 40px;
     margin: 0;
   }
   .section__subtitle {
@@ -2311,12 +2339,13 @@ body {
     margin-top: 0;
   }
   .progress__title {
-    font-size: 14px;
-    line-height: 20px;
-    margin-bottom: 10px;
+    font-size: 25px;
+    line-height: 32px;
+    margin-bottom: 20px;
   }
   .progress__section-text {
-    font-size: 12px;
+    font-size: 20px;
+    line-height: 32px;
   }
   .progress__block-text {
     width: 90%;
@@ -2361,7 +2390,10 @@ body {
 }
 @media (max-width: 480px) {
   .nav__search {
-    width: 150px !important;
+    width: 150px;
+  }
+  .nav__form img {
+    display: none;
   }
   .header__title {
     font-size: 36px;
@@ -2376,11 +2408,11 @@ body {
   .section__title {
     font-size: 16px;
   }
-  .section__description {
-    width: 300px;
+  .progress__block {
+    width: 100%;
   }
   .section__text {
-    font-size: 10px;
+    font-size: 14px;
   }
   .about__list {
     margin-top: 25px;
@@ -2421,9 +2453,6 @@ body {
   }
   .recom-name {
     font-size: 16px !important;
-  }
-  .progress__block {
-    width: 100%;
   }
   .progress__buttons-container {
     display: flex;

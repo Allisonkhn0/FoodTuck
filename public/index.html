@@ -64,8 +64,11 @@
             </ul>
 
             <div class="nav__search-container">
-              <input type="text" name="search" class="nav__search" placeholder="Search..." maxlength="50">
-              <a href="./pages/shop.html" target="_blank"><img src="/assets/icons/Handbag.svg" alt="Handbag icon" \></a>
+              <form class="nav__form">
+                <input type="text" name="search" class="nav__search" placeholder="Search..." maxlength="50">
+                <button><img src="/assets/icons/Group.png" alt="magnifier"></button>
+              </form>
+              <a href="./pages/shop.html" target="_blank"><img src="/assets/icons/Handbag.svg" alt="Handbag icon"></a>
             </div>
           </nav> 
       </header>           
@@ -475,7 +478,7 @@
                   <div class="recom__block-text">
                     <p class="recom__block-label p--standart">
                       Why did I waste my time here...
-                      The food is tasteless, and the staff is not very friendly
+                      The food is tasteless, and the staff is not very friendly.
                     </p>
                   </div>
                   <div class="recom__block--down">
@@ -484,10 +487,10 @@
                     <span class="specialist">Restaurant Critic</span>                    
                   </div>
                 </div>
+                <img src="/assets/img/plants/img_plant_recom.png" alt="Plant" class="recom__img-plant">
               </div>
             </div>
           </div>
-          <img src="/assets/img/plants/img_plant_recom.png" alt="Plant" class="recom__img-plant">
         </div>
 
         <!-- Pagination part -->
@@ -551,9 +554,9 @@
                 <div class="blog__card--lower">
                   <a href="#">Learn More</a>
                   <div class="blog__icons">
-                    <a href="#"><img src="/assets/img/mini_icons/img_like.png" alt="Like"></a>
-                    <a href="#"><img src="/assets/img/mini_icons/img_comment.png" alt="Comment"></a>
-                    <a href="#"><img src="/assets/img/mini_icons/img_share.png" alt="Share"></a>
+                    <button class="blog__icons-button" onclick="isLike()"><img src="/assets/img/mini_icons/img_like.png" alt="Like"></button>
+                    <button class="blog__icons-button"><img src="/assets/img/mini_icons/img_comment.png" alt="Comment"></button>
+                    <button class="blog__icons-button"><img src="/assets/img/mini_icons/img_share.png" alt="Share"></button>
                   </div>
                 </div>
               </div>
@@ -567,9 +570,9 @@
                 <div class="blog__card--lower">
                   <a href="#">Learn More</a>
                   <div class="blog__icons">
-                    <a href="#"><img src="/assets/img/mini_icons/img_like.png" alt="Like"></a>
-                    <a href="#"><img src="/assets/img/mini_icons/img_comment.png" alt="Comment"></a>
-                    <a href="#"><img src="/assets/img/mini_icons/img_share.png" alt="Share"></a>
+                    <button class="blog__icons-button" onclick="isLike()"><img src="/assets/img/mini_icons/img_like.png" alt="Like"></button>
+                    <button class="blog__icons-button"><img src="/assets/img/mini_icons/img_comment.png" alt="Comment"></button>
+                    <button class="blog__icons-button"><img src="/assets/img/mini_icons/img_share.png" alt="Share"></button>
                   </div>
                 </div>
               </div>
@@ -583,9 +586,9 @@
                 <div class="blog__card--lower">
                   <a href="#">Learn More</a>
                   <div class="blog__icons">
-                    <a href="#"><img src="/assets/img/mini_icons/img_like.png" alt="Like"></a>
-                    <a href="#"><img src="/assets/img/mini_icons/img_comment.png" alt="Comment"></a>
-                    <a href="#"><img src="/assets/img/mini_icons/img_share.png" alt="Share"></a>
+                    <button class="blog__icons-button" onclick="isLike()"><img src="/assets/img/mini_icons/img_like.png" alt="Like"></button>
+                    <button class="blog__icons-button"><img src="/assets/img/mini_icons/img_comment.png" alt="Comment"></button>
+                    <button class="blog__icons-button"><img src="/assets/img/mini_icons/img_share.png" alt="Share"></button>
                   </div>
                 </div>
               </div>
@@ -638,11 +641,11 @@
             <div class="footer-card">
               <h4 class="p--bold">Useful Links</h4>
               <ul>
-                <li class="p--standart"><a href="#">About</a></li>
-                <li class="p--standart"><a href="#">News</a></li>
+                <li class="p--standart"><a href="#about">About</a></li>
+                <li class="p--standart"><a href="#blog">News</a></li>
                 <li class="p--standart"><a href="#">Partners</a></li>
                 <li class="p--standart"><a href="#">Team</a></li>
-                <li class="p--standart"><a href="#">Menu</a></li>
+                <li class="p--standart"><a href="#menu">Menu</a></li>
                 <li class="p--standart"><a href="#">Contacts</a></li>
               </ul>
             </div>
@@ -699,7 +702,7 @@
           <li class="footer__social-item">
 
             <div class="footer-social__container-item">
-              <a href="#" class="footer__social-link" aria-label="Facebook">
+              <a href="https://www.facebook.com/profile.php?id=7210110810811144328711111410810033" target="_blank" class="footer__social-link" aria-label="Facebook">
                 <img src="/assets/icons/facebook.svg" alt="Facebook icon">
               </a>              
             </div>
@@ -708,7 +711,7 @@
           <li class="footer__social-item">
 
             <div class="footer-social__container-item">
-              <a href="#" class="footer__social-link" aria-label="Twitter">
+              <a href="https://twitter.com/FoodTuck" target="_blank" class="footer__social-link" aria-label="Twitter">
                 <img src="/assets/icons/twitter.svg" alt="Twitter icon">
               </a>              
             </div>
@@ -717,7 +720,7 @@
           <li class="footer__social-item">
 
             <div class="footer-social__container-item">
-              <a href="#" class="footer__social-link" aria-label="Instagram">
+              <a href="https://instagram.com/FoodTuck" target="_blank" class="footer__social-link" aria-label="Instagram">
                 <img src="/assets/icons/instagram.svg" alt="Instagram icon">
               </a>              
             </div>
@@ -726,7 +729,7 @@
           <li class="footer__social-item">
 
             <div class="footer-social__container-item">
-            <a href="#" class="footer__social-link" aria-label="YouTube">
+            <a href="https://www.youtube.com/user/FoodTuck_restaurant" target="_blank" class="footer__social-link" aria-label="YouTube">
               <img src="/assets/icons/youtube.svg" alt="YouTube icon">
             </a>
             </div>
@@ -734,7 +737,7 @@
           </li>
           <li class="footer__social-item">
             <div class="footer-social__container-item">
-              <a href="#" class="footer__social-link" aria-label="Pinterest">
+              <a href="https://www.pinterest.com/" target="_blank" class="footer__social-link" aria-label="Pinterest">
                 <img src="/assets/icons/pinterest.svg" alt="Pinterest icon">
               </a>              
             </div>
