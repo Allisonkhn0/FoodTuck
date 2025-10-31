@@ -1,1 +1,7 @@
 node_modules/
+/secrets
+/secret
+.env
+*.env
+secret.env
+data.js

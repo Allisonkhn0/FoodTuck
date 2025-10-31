@@ -26,8 +26,7 @@
   <body>
 
     <!-- Custom Button Up-->
-    <button class="button-up" title="Навверх" onclick="scrollUp()" aria-label="Scroll to top">
-      <span class="button-up__text"></span>
+    <button class="button-up" title="Навверх" aria-label="Scroll to top">
       <span class="button-up__arrow">↑</span>
     </button>
 
@@ -36,16 +35,17 @@
       <div class="S_header__container">
         <nav class="S_nav">
           <div class="S_nav__container">
-            <h1 class="S_nav__logo nav__logo"><a href="../index.html"><span class="nav__logo--highlight">Food</span>tuck</a></h1>            
-            <ul>
-              <li><a href="../index.html" class="S nav__link">Home</a></li>
-              <li><a href="#menu" class="S nav__link">Menu</a></li>
+            <button class="burger" id="navClose" aria-label="Toggle menu">☰</button>
+            <ul class="list">
+              <li class="nav__item"><a href="../index.html" class="S nav__link">Home</a></li>
+              <li class="nav__item"><a href="#menu" class="S nav__link">Menu</a></li>
               <li><a href="#blog" class="S nav__link">Blog</a></li>
               <li class="S nav__item--dropdown nav__link">Pages</li>
-              <li><a href="#about" class="S nav__link">About</a></li>
-              <li><a href="./pages/shop.html" target="_blank" class="S nav__link nav__link section__title--highlight"">Shop</a></li>
-              <li><a href="#contact" class="S nav__link">Contact</a></li>
+              <li class="nav__item"><a href="#about" class="S nav__link">About</a></li>
+              <li class="nav__item"><a href="./pages/shop.html" target="_blank" class="S nav__link nav__link section__title--highlight"">Shop</a></li>
+              <li class="nav__item"><a href="#contact" class="S nav__link">Contact</a></li>
           </ul>
+          <h1 class="S_nav__logo"><a href="../index.html"><span class="nav__logo--highlight">Food</span>tuck</a></h1>
           <div class="icon__container">
             <a href="#"><img src="/assets/icons/Group.png" alt="Icon"></a>
             <a href="#"><img src="/assets/icons/User.svg" alt="Icon"></a>
@@ -65,9 +65,10 @@
     </header>
     <div class="S_container">
       <aside class="S_aside">
+        <span class="close-aside">Close Aside Panel</span>
 
         <form class="S_aside__form">
-          <input type="search" name="search" placeholder="Search Product" maxlength="25" minlength="2" required class="aside__input">
+          <input type="search" name="search" placeholder="Search Product" maxlength="25" minlength="2" required class="aside-input">
           <button type="submit"><img src="/assets/icons/Group.png" alt="icon"></button>          
         </form>
 
@@ -150,40 +151,43 @@
       </aside>
 
       <main class="S_main">
-        <div class="sort__form">
-          <div class="sort__form-block">
-            <span>Sort By :</span>
-            <div class="select__container">
-              <select>
-                <optgroup label="Choose ones">
-                  <option>Newest</option>
-                  <option>*</option>
-                  <option>*</option>
-                </optgroup>
-              </select>
+        <div class="container-center">
+          <span class="open-aside">Open Aside Panel</span>
+          <div class="sort__form">
+            <div class="sort__form-block">
+              <span>Sort By :</span>
+              <div class="select__container">
+                <select>
+                  <optgroup label="Choose ones">
+                    <option>Newest</option>
+                    <option>*</option>
+                    <option>*</option>
+                  </optgroup>
+                </select>
+              </div>
+            </div>
+            <div class="sort__form-block">
+              <span>Show :</span>
+              <div class="select__container">
+                <select>
+                  <optgroup label="Choose ones">
+                    <option>Default</option>
+                    <option>*</option>
+                    <option>*</option>
+                  </optgroup>
+                </select>
+              </div>
             </div>
           </div>
-          <div class="sort__form-block">
-            <span>Show :</span>
-            <div class="select__container">
-              <select>
-                <optgroup label="Choose ones">
-                  <option>Default</option>
-                  <option>*</option>
-                  <option>*</option>
-                </optgroup>
-              </select>
-            </div>
+
+          <!--MAIN PART-->
+
+          <div class="products-container" id="productsContainer">
+            <!-- Elements app here after compilation in JavaScript -->
           </div>
+
+          <!--/MAIN PART-->
         </div>
-
-        <!--MAIN PART-->
-
-        <div class="products-container" id="productsContainer">
-          <!-- Elements app here after compilation in JavaScript -->
-        </div>
-
-        <!--/MAIN PART-->
 
         <!-- pagination part -->
         <div class="pag_panel">
@@ -337,7 +341,7 @@
         </ul>
       </div>
     </footer>
-    <script src="/src/index.js"></script>
+    <script src="/src/shop.js" type="module"></script>
     <noscript>It looks like you have javascript disabled. Please enable it. Thank you</noscript>
   </body>
 </html>
