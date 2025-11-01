@@ -1,3 +1,5 @@
+import { productsC, renderProductsList } from "./render.js";
+
 
 // Scroll for Button Up
 export function Scroll() {
@@ -13,6 +15,7 @@ export function Scroll() {
   }
 }
 
+
 // BURGER MENU
 export function Burger () {
   const burger = document.querySelector('.burger');
@@ -26,6 +29,7 @@ export function Burger () {
 }
 
 
+// OPEN ASIDE
 export function OpenAside() {
   const openButton = document.querySelector('.open-aside');
   const closeButton = document.querySelector('.close-aside');
@@ -39,7 +43,6 @@ export function OpenAside() {
     aside.classList.remove('active');
   })
 }
-
 
 
 // Hide/Show Loader
@@ -57,4 +60,56 @@ export function hideLoader() {
   if (document.body.contains(loader)) {
     document.body.removeChild(loader);
   }
+}
+
+
+// Filter/Sort cards
+
+// Initial values
+let currentSort = 'default';
+let currentFilter = 'all';
+
+// Function of sort cards
+export function setupSorting() {
+  const select1 = document.querySelector('.select-first');
+
+  if (!select1) return;
+
+  select1.addEventListener('change', (e) => {
+    currentSort = e.target.value;
+    complirelRenderCards();
+  });
+}
+
+// Function of filter cards
+export function setupFilter() {
+  const select2 = document.querySelector('.select-second');
+
+  if (!select2) return;
+
+  select2.addEventListener('change', (e) => {
+    currentFilter = e.target.value;
+    complirelRenderCards();
+  });
+}
+
+// Compiler function
+function complirelRenderCards() {
+  let result = [...productsC]
+
+  if (currentFilter === 'Vegan') {
+    result = result.filter((product) => !(product.category.includes('Non Veg')));
+  } else {
+    result = productsC
+  }
+
+  if (currentSort === 'Price') {
+    result = result.sort((a, b) => a.priceToday - b.priceToday);
+  } else if (currentSort === 'Discount') {
+    result = result.sort((a, b) => a.costs.priceChange - b.costs.priceChange);
+  } else if (currentSort === 'Discount'){
+    result = productsC
+  }
+
+  renderProductsList(result);
 }

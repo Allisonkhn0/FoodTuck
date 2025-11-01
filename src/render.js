@@ -1,37 +1,23 @@
 import GetData from './GetData.js';
-import { hideLoader, showLoader } from './feature.js';
+import { hideLoader, showLoader, setupFilter, setupSorting } from './feature.js';
 
-export async function RenderProductsCards() {
-  try {
-    showLoader()
+export let productsC = [];
 
-    const DATA = await GetData();
+// The card rendering itself
+export function renderProductsList(products) {
+  const container = document.getElementById('productsContainer');
+  if (!container) return;
 
-    if (!DATA || DATA.length === 0) {
-      return;
-    }
+  container.innerHTML = '';
 
-    const productsC = DATA.map(product => ({
-      ...product,
-      priceToday: product.costs.price + product.costs.priceChange
-    }));
+  products.forEach(product => {
+    const hasOldPrice = product.costs.priceChange !== 0;
+    const isOnSale = product.isSale;
 
-    const setupProductsC = structuredClone(productsC);
+    const productCard = document.createElement('div');
+    productCard.className = 'product-card';
 
-    function renderProductsList(products) {
-      const container = document.getElementById('productsContainer');
-      if (!container) return;
-
-      container.innerHTML = '';
-
-      products.forEach(product => {
-        const hasOldPrice = product.costs.priceChange !== 0;
-        const isOnSale = product.isSale;
-
-        const productCard = document.createElement('div');
-        productCard.className = 'product-card';
-
-        productCard.innerHTML = `
+    productCard.innerHTML = `
           <img src="${product.imgCardURL}" alt="${product.product}" class="product-image">
           <div class="product-name">${product.product}</div>
           <div class="price-container">
@@ -43,38 +29,36 @@ export async function RenderProductsCards() {
           </div>
         `;
 
-        container.appendChild(productCard);
-      });
+    container.appendChild(productCard);
+  });
+}
+
+
+export async function RenderProductsCards() {
+  try {
+    showLoader()
+
+    const DATA = await GetData();
+
+    // Validation for protect of null DATA
+    if (!DATA || DATA.length === 0) {
+      return;
     }
 
-    function setupSorting() {
-      const select1 = document.querySelector('.select-first');
-      if (!select1) return;
-
-      select1.addEventListener('change', (e) => {
-        const value = e.target.value;
-        let sortedProducts;
-
-        if (value === 'Price') {
-          sortedProducts = [...productsC].sort((a, b) => a.priceToday - b.priceToday);
-        } else if (value === 'Discount') {
-          sortedProducts = [...productsC].sort((a, b) => a.costs.priceChange - b.costs.priceChange);
-        } else if (value === 'Newest') {
-          sortedProducts = [...setupProductsC];
-        } else {
-          sortedProducts = [...productsC];
-        }
-
-        renderProductsList(sortedProducts);
-      });
-    }
+    // Adding a value for the current price
+    productsC = DATA.map(product => ({
+      ...product,
+      priceToday: product.costs.price + product.costs.priceChange
+    }));
 
     renderProductsList(productsC);
     setupSorting();
+    setupFilter();
 
   } catch (error) {
     console.error('Ошибка в рендера карточки:', error);
   } finally {
+    // At the end we hide the loader
     hideLoader()
   }
 }

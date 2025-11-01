@@ -129,8 +129,10 @@
   width: 46px;
   height: 46px;
   background-color: #FF9F0D;
-  transition: all 0.1s eas50 img;
-  transition-width: 20px;
+  transition: all 0.1s ease;
+}
+.S_aside__form button img {
+  width: 20px;
 }
 
 .S_img_aside {
