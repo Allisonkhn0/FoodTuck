@@ -39,3 +39,22 @@ export function OpenAside() {
     aside.classList.remove('active');
   })
 }
+
+
+
+// Hide/Show Loader
+const loader = document.createElement('div');
+loader.className = 'loader';
+loader.innerHTML = `
+  <div class="loader-spinner"></div>
+`;
+
+export function showLoader() {
+  document.body.appendChild(loader);
+}
+
+export function hideLoader() {
+  if (document.body.contains(loader)) {
+    document.body.removeChild(loader);
+  }
+}

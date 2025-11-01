@@ -1015,6 +1015,7 @@ body {
   .blog__icons-button{
     cursor: pointer;
     background-color: #000;
+    height: 20px;
   }
 }
 
@@ -1919,6 +1920,10 @@ body {
 }
 
 @media (max-width: 480px) {
+  .about__gap-text{
+    width: 90%;
+  }
+
   .nav__search {
     width: 150px;
   }
@@ -2066,6 +2071,12 @@ body {
     .footer__copyright {
       font-size: 10px;
     }
+  }
+}
+
+@media (max-width: 320px) {
+  .blog__card{
+    width: 250px;
   }
 }
 
