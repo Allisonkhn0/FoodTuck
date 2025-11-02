@@ -25,7 +25,6 @@ export function Burger () {
     nav.classList.toggle('active');
     burger.classList.toggle('active');
   });
-
 }
 
 
@@ -46,19 +45,25 @@ export function OpenAside() {
 
 
 // Hide/Show Loader
-const loader = document.createElement('div');
-loader.className = 'loader';
-loader.innerHTML = `
-  <div class="loader-spinner"></div>
-`;
+export class Loader {
+  static loader = null;
 
-export function showLoader() {
-  document.body.appendChild(loader);
-}
+  static showLoader() {
+    if (!this.loader) {
+      this.loader = document.createElement('div');
+      this.loader.className = 'loader';
+      this.loader.innerHTML = '<div class="loader-spinner"></div>';
+    }
+    
+    if (!document.body.contains(this.loader)) {
+      document.body.appendChild(this.loader);
+    }
+  }
 
-export function hideLoader() {
-  if (document.body.contains(loader)) {
-    document.body.removeChild(loader);
+  static hideLoader() {
+    if (document.body.contains(this.loader)) {
+      document.body.removeChild(this.loader);
+    }
   }
 }
 
@@ -66,8 +71,8 @@ export function hideLoader() {
 // Filter/Sort cards
 
 // Initial values
-let currentSort = 'default';
-let currentFilter = 'all';
+let currentSort = 'Newest';
+let currentFilter = 'All';
 
 // Function of sort cards
 export function setupSorting() {
@@ -99,17 +104,75 @@ function complirelRenderCards() {
 
   if (currentFilter === 'Vegan') {
     result = result.filter((product) => !(product.category.includes('Non Veg')));
-  } else {
-    result = productsC
   }
 
   if (currentSort === 'Price') {
     result = result.sort((a, b) => a.priceToday - b.priceToday);
   } else if (currentSort === 'Discount') {
     result = result.sort((a, b) => a.costs.priceChange - b.costs.priceChange);
-  } else if (currentSort === 'Discount'){
-    result = productsC
   }
 
   renderProductsList(result);
+}
+
+
+// SLIDER
+export class Slider {
+  constructor() {
+    this.slides = document.querySelectorAll('.recom__slide');
+    this.currSlide = 0;
+    this.sliderContainer = document.querySelector('.recom__slider');
+    
+    this.init();
+  }
+  
+  init() {
+
+    this.showSlide(this.currSlide);
+    
+    this.sliderContainer.addEventListener('click', () => {
+      this.nextSlide();
+    });
+    
+    // Next and Back - "<-" and "->"
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') this.prevSlide();
+      if (e.key === 'ArrowRight') this.nextSlide();
+    });
+  }
+  
+  // Slide in next/back page. Main logic
+  showSlide(index) {
+
+    this.slides.forEach(slide => {
+      slide.style.display = 'none';
+      slide.classList.remove('slide-active');
+    });
+    
+    this.slides[index].style.display = 'block';
+  }
+  
+  nextSlide() {
+    this.currSlide = (this.currSlide + 1) % this.slides.length;
+    this.showSlide(this.currSlide);
+    this.updatePagination();
+  }
+  
+  prevSlide() {
+    this.currSlide = (this.currSlide - 1 + this.slides.length) % this.slides.length;
+    this.showSlide(this.currSlide);
+    this.updatePagination();
+  }
+  
+  // UI component 
+  updatePagination() {
+    const dots = document.querySelectorAll('.recom-circle');
+    dots.forEach((dot, index) => {
+      if (index === this.currSlide) {
+        dot.style.backgroundColor = '#FF9F0D';
+      } else {
+        dot.style.backgroundColor = '#ff9e0d30';
+      }
+    });
+  }
 }

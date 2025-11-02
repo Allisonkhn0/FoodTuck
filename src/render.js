@@ -1,5 +1,5 @@
 import GetData from './GetData.js';
-import { hideLoader, showLoader, setupFilter, setupSorting } from './feature.js';
+import { setupFilter, setupSorting, Loader } from './feature.js';
 
 export let productsC = [];
 
@@ -36,7 +36,7 @@ export function renderProductsList(products) {
 
 export async function RenderProductsCards() {
   try {
-    showLoader()
+    Loader.showLoader()
 
     const DATA = await GetData();
 
@@ -59,6 +59,6 @@ export async function RenderProductsCards() {
     console.error('Ошибка в рендера карточки:', error);
   } finally {
     // At the end we hide the loader
-    hideLoader()
+    Loader.hideLoader()
   }
 }
