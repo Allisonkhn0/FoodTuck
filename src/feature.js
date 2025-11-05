@@ -70,74 +70,86 @@ export class Loader {
 
 // Filter/Sort/Search cards
 
-// Initial values
-let currentSort = 'Newest';
-let currentFilter = 'All';
-let searchTerm = '';
+// class SetupCards
+export class SetupCards{
 
-// Function of sort cards
-export function setupSorting() {
-  const select1 = document.querySelector('.select-first');
+  constructor(){
+    this.currentSort = 'Newest';
+    this.currentFilter = 'All';
+    this.searchTerm = '';
 
-  if (!select1) return;
+    this.init()
+  }
 
-  select1.addEventListener('change', (e) => {
-    currentSort = e.target.value;
-    complirelRenderCards();
-  });
-}
+  init(){
+    this.setupSorting()
+    this.setupFilter()
+    this.setupSearch()
+  }
 
-// Function of filter cards
-export function setupFilter() {
-  const select2 = document.querySelector('.select-second');
+  // Sorting
+  setupSorting() {
+    const select1 = document.querySelector('.select-first');
 
-  if (!select2) return;
+    if (!select1) return;
 
-  select2.addEventListener('change', (e) => {
-    currentFilter = e.target.value;
-    complirelRenderCards();
-  });
-}
+    select1.addEventListener('change', (e) => {
+      this.currentSort = e.target.value;
+      this.complirelRenderCards();
+    })
+  }
 
-// SEARCH
-export function setupSearch() {
-  const input = document.querySelector('#searchInput');
-  const form = document.querySelector('.S_aside__form');
+  // Filter
+  setupFilter() {
+    const select2 = document.querySelector('.select-second');
+
+    if (!select2) return;
+
+    select2.addEventListener('change', (e) => {
+      this.currentFilter = e.target.value;
+      this.complirelRenderCards();
+    })
+  }
+
+  // Search
+  setupSearch() {
+    const input = document.querySelector('#searchInput');
+    const form = document.querySelector('.S_aside__form');
+      
+    if (!input) return;
+
+    input.addEventListener('input', (e) => {
+      this.searchTerm = e.target.value.trim().toLowerCase()
+
+      this.complirelRenderCards();
+    });
+
+    form.addEventListener('submit', (e) => e.preventDefault())
+  }
+
+  // Compilation
+  complirelRenderCards() {
     
-  if (!input) return;
+    let result = [...productsC]
 
-  input.addEventListener('input', (e) => {
-    searchTerm = e.target.value.trim().toLowerCase()
+    if (this.searchTerm !== '') {
+      result = result.filter(product => 
+        product.product.trim().toLowerCase().includes(this.searchTerm)
+      );
+    }  
 
-    complirelRenderCards();
-  });
+    if (this.currentFilter === 'Vegan') {
+      result = result.filter((product) => !(product.category.includes('Non Veg')));
+    }
 
-  form.addEventListener('submit', (e) => e.preventDefault())
-}
+    if (this.currentSort === 'Price') {
+      result = result.sort((a, b) => a.priceToday - b.priceToday);
+    } else if (this.currentSort === 'Discount') {
+      result = result.sort((a, b) => a.costs.priceChange - b.costs.priceChange);
+    }
 
-
-
-// Compiler function
-function complirelRenderCards() {
-  let result = [...productsC]
-
-  if (searchTerm !== '') {
-    result = result.filter(product => 
-      product.product.trim().toLowerCase().includes(searchTerm)
-    );
-  }  
-
-  if (currentFilter === 'Vegan') {
-    result = result.filter((product) => !(product.category.includes('Non Veg')));
+    renderProductsList(result);
   }
-
-  if (currentSort === 'Price') {
-    result = result.sort((a, b) => a.priceToday - b.priceToday);
-  } else if (currentSort === 'Discount') {
-    result = result.sort((a, b) => a.costs.priceChange - b.costs.priceChange);
-  }
-
-  renderProductsList(result);
 }
 
 
@@ -186,7 +198,7 @@ export class Slider {
   prevSlide() {
     this.currSlide = (this.currSlide - 1 + this.slides.length) % this.slides.length;
     this.showSlide(this.currSlide);
-    this.updatePagination();
+    this.updatePagination();  
   }
   
   // UI component 

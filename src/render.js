@@ -1,5 +1,5 @@
 import GetData from './GetData.js';
-import { setupFilter, setupSorting, Loader, setupSearch } from './feature.js';
+import { Loader, SetupCards } from './feature.js';
 
 export let productsC = [];
 let currentProductId = null;
@@ -98,10 +98,8 @@ export async function RenderProductsCards() {
     }));
 
     renderProductsList(productsC);
-    setupSorting();
-    setupFilter();
-    setupSearch();
-
+    new SetupCards()
+    
   } catch (error) {
     console.error('Ошибка в рендера карточки:', error);
   } finally {
