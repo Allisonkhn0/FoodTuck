@@ -1,5 +1,7 @@
-import { Scroll, Burger, OpenAside } from './feature.js';
-import { RenderProductsCards } from './render.js';
+import { Burger } from './components/features/burgerMenu.js'
+import { Scroll } from './components/features/scroll.js'
+import { OpenAside } from './components/features/openAside.js'
+import { RenderProductsCards } from './components/render/render.js'
 
 function init() {
   Scroll()

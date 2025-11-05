@@ -1,5 +1,6 @@
-import GetData from './GetData.js';
-import { Loader, SetupCards } from './feature.js';
+import GetData from '../api/GetData.js'
+import { Loader } from '../features/loader.js'
+import { SetupCards } from '../setupCards.js';
 
 export let productsC = [];
 let currentProductId = null;
@@ -10,7 +11,6 @@ export function renderProductsList(products) {
   if (!container) return;
 
   container.innerHTML = '';
-
   products.forEach(product => {
     const hasOldPrice = product.costs.priceChange !== 0;
     const isOnSale = product.isSale;

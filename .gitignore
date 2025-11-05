@@ -6,3 +6,5 @@ node_modules/
 secret.env
 data.js
 GetData.js
+PostData.js
+api
