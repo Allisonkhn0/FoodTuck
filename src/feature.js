@@ -68,11 +68,12 @@ export class Loader {
 }
 
 
-// Filter/Sort cards
+// Filter/Sort/Search cards
 
 // Initial values
 let currentSort = 'Newest';
 let currentFilter = 'All';
+let searchTerm = '';
 
 // Function of sort cards
 export function setupSorting() {
@@ -98,9 +99,33 @@ export function setupFilter() {
   });
 }
 
+// SEARCH
+export function setupSearch() {
+  const input = document.querySelector('#searchInput');
+  const form = document.querySelector('.S_aside__form');
+    
+  if (!input) return;
+
+  input.addEventListener('input', (e) => {
+    searchTerm = e.target.value.trim().toLowerCase()
+
+    complirelRenderCards();
+  });
+
+  form.addEventListener('submit', (e) => e.preventDefault())
+}
+
+
+
 // Compiler function
 function complirelRenderCards() {
   let result = [...productsC]
+
+  if (searchTerm !== '') {
+    result = result.filter(product => 
+      product.product.trim().toLowerCase().includes(searchTerm)
+    );
+  }  
 
   if (currentFilter === 'Vegan') {
     result = result.filter((product) => !(product.category.includes('Non Veg')));
