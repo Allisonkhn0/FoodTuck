@@ -9,6 +9,7 @@ export class SetupCards{
     this.currentSort = 'Newest';
     this.currentFilter = 'All';
     this.searchTerm = '';
+    this.checkboxes = [];
 
     this.init()
   }
@@ -17,6 +18,7 @@ export class SetupCards{
     this.setupSorting()
     this.setupFilter()
     this.setupSearch()
+    this.setupCheckboxFilter()
   }
 
   // Sorting
@@ -59,6 +61,25 @@ export class SetupCards{
     form.addEventListener('submit', (e) => e.preventDefault())
   }
 
+  setupCheckboxFilter() {
+    const checkboxes = document.querySelectorAll('.checkboxes-filter');
+
+    if (!checkboxes) return;
+  
+    checkboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', (e) => {
+
+        const value = e.target.value
+        const isChecked = e.target.checked
+
+        if (isChecked) this.checkboxes.push(value)
+          else this.checkboxes = this.checkboxes.filter(item => item !== value);
+
+        this.complirelRenderCards()
+      })
+    })
+  }
+
   // Compilation
   complirelRenderCards() {
     
@@ -70,8 +91,12 @@ export class SetupCards{
       );
     }  
 
+    if (this.checkboxes.length > 0) {
+      result = result.filter((product) => this.checkboxes.some(value => product.category.includes(value)));
+    }
+
     if (this.currentFilter === 'Vegan') {
-      result = result.filter((product) => !(product.category.includes('Non Veg')));
+      result = result.filter((product) => !(product.category.includes('Non_Veg')));
     }
 
     if (this.currentSort === 'Price') {

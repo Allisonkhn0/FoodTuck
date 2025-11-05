@@ -262,14 +262,14 @@ body {
     transform: translateY(-50%);
     width: 24px;
     height: 24px;
-    @include backgroundImage(url('/assets/icons/Group.png'));
+    @include backgroundImage(url('/public/assets/icons/Group.png'));
     filter: invert(1) brightness(2);
   }
 }
 
 // ===== HEADER =====
 .image__background {
-  @include backgroundImage(url("/assets/img/header/background_header.jpg"), linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)));
+  @include backgroundImage(url("/public/assets/img/header/background_header.jpg"), linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)));
   padding-bottom: 106px;
 }
 
@@ -567,7 +567,7 @@ body {
 .stats {
   margin-top: 75px;
   @include flex-center-full;
-  @include backgroundImage(url('/assets/img/background/img_clients.jpg'), linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)));
+  @include backgroundImage(url('/public/assets/img/background/img_clients.jpg'), linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)));
   height: 369px;
 }
 
@@ -898,7 +898,7 @@ body {
 
 // ===== PROGRESS SECTION =====
 .progress {
-  @include backgroundImage(url('/assets/img/background/img_restaurant_progress.jpg'));
+  @include backgroundImage(url('/public/assets/img/background/img_restaurant_progress.jpg'));
 }
 
 .progress__block-text {

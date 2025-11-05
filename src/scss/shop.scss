@@ -48,7 +48,7 @@
 // ===== HEADER =====
 .S__header {
   height: 410px;
-  @include backgroundImage(url('/assets/img/background/shop_header_bachground.jpg'));
+  @include backgroundImage(url('/public/assets/img/background/shop_header_bachground.jpg'));
 }
 
 .S_header__block {

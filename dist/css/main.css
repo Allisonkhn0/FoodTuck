@@ -49,7 +49,7 @@
 
 .S__header {
   height: 410px;
-  background: url("/assets/img/background/shop_header_bachground.jpg");
+  background: url("/public/assets/img/background/shop_header_bachground.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -436,7 +436,7 @@
 .dop-product-image {
   width: 100%;
   height: 300px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 8px;
 }
 
@@ -1034,7 +1034,7 @@ body {
   transform: translateY(-50%);
   width: 24px;
   height: 24px;
-  background: url("/assets/icons/Group.png");
+  background: url("/public/assets/icons/Group.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1042,7 +1042,7 @@ body {
 }
 
 .image__background {
-  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("/assets/img/header/background_header.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("/public/assets/img/header/background_header.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1367,7 +1367,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("/assets/img/background/img_clients.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("/public/assets/img/background/img_clients.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1706,7 +1706,7 @@ body {
 }
 
 .progress {
-  background: url("/assets/img/background/img_restaurant_progress.jpg");
+  background: url("/public/assets/img/background/img_restaurant_progress.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
