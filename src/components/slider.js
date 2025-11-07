@@ -1,26 +1,27 @@
 // SLIDER
 export class Slider {
+
   constructor() {
     this.slides = document.querySelectorAll('.recom__slide');
     this.currSlide = 0;
     this.sliderContainer = document.querySelector('.recom__slider');
     
-    this.init();
+    this.init()
   }
   
   init() {
 
-    this.showSlide(this.currSlide);
+    this.showSlide(this.currSlide)
     
     this.sliderContainer.addEventListener('click', () => {
-      this.nextSlide();
-    });
+      this.nextSlide()
+    })
     
     // Next and Back - "<-" and "->"
     document.addEventListener('keydown', (e) => {
       if (e.key === 'ArrowLeft') this.prevSlide();
       if (e.key === 'ArrowRight') this.nextSlide();
-    });
+    })
   }
   
   // Slide in next/back page. Main logic

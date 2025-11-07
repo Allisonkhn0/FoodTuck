@@ -1,4 +1,5 @@
 import { productsC, renderProductsList } from './render/render.js';
+import GetData from './api/GetData.js';
 
 // Filter/Sort/Search cards
 
@@ -29,7 +30,8 @@ export class SetupCards{
 
     select1.addEventListener('change', (e) => {
       this.currentSort = e.target.value;
-      this.complirelRenderCards();
+      this.complirelRenderCards()
+
     })
   }
 
@@ -41,7 +43,8 @@ export class SetupCards{
 
     select2.addEventListener('change', (e) => {
       this.currentFilter = e.target.value;
-      this.complirelRenderCards();
+      this.complirelRenderCards()
+
     })
   }
 
@@ -54,13 +57,14 @@ export class SetupCards{
 
     input.addEventListener('input', (e) => {
       this.searchTerm = e.target.value.trim().toLowerCase()
+      this.complirelRenderCards()
 
-      this.complirelRenderCards();
-    });
+    })
 
     form.addEventListener('submit', (e) => e.preventDefault())
   }
 
+  // checkboxFilter
   setupCheckboxFilter() {
     const checkboxes = document.querySelectorAll('.checkboxes-filter');
 
@@ -69,13 +73,14 @@ export class SetupCards{
     checkboxes.forEach(checkbox => {
       checkbox.addEventListener('change', (e) => {
 
-        const value = e.target.value
-        const isChecked = e.target.checked
+        const value = e.target.value;
+        const isChecked = e.target.checked;
 
         if (isChecked) this.checkboxes.push(value)
           else this.checkboxes = this.checkboxes.filter(item => item !== value);
 
         this.complirelRenderCards()
+
       })
     })
   }
@@ -83,12 +88,10 @@ export class SetupCards{
   // Compilation
   complirelRenderCards() {
     
-    let result = [...productsC]
+    let result = [...productsC];
 
     if (this.searchTerm !== '') {
-      result = result.filter(product => 
-        product.product.trim().toLowerCase().includes(this.searchTerm)
-      );
+      result = result.filter((product) => product.product.trim().toLowerCase().includes(this.searchTerm));
     }  
 
     if (this.checkboxes.length > 0) {
@@ -96,7 +99,7 @@ export class SetupCards{
     }
 
     if (this.currentFilter === 'Vegan') {
-      result = result.filter((product) => !(product.category.includes('Non_Veg')));
+      result = result.filter((product) => product.vegan);
     }
 
     if (this.currentSort === 'Price') {
@@ -105,6 +108,6 @@ export class SetupCards{
       result = result.sort((a, b) => a.costs.priceChange - b.costs.priceChange);
     }
 
-    renderProductsList(result);
+    renderProductsList(result)
   }
 }

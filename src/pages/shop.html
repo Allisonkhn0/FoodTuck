@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Foodtuck Restaurant - Experience taste and quality food">
+    <meta name="description" content="Order fresh food online from Foodtuck. Burgers, pizza, drinks and desserts. Fast delivery and great prices.">
 
     <!--FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,7 +19,6 @@
     <link rel="icon" type="image/svg" href="/public/assets/icons/burger_icon.svg">
     <title>Foodtuck Shop</title>
 
-    <meta name="description" content="Order fresh food online from Foodtuck. Burgers, pizza, drinks and desserts. Fast delivery and great prices.">
     <meta property="og:title" content="Foodtuck Shop - Order Food Online">
     <meta property="og:description" content="Order fresh food online from Foodtuck. Fast delivery and great prices.">
   </head>
@@ -42,7 +41,7 @@
               <li><a href="#blog" class="S nav__link">Blog</a></li>
               <li class="S nav__item--dropdown nav__link">Pages</li>
               <li class="nav__item"><a href="#about" class="S nav__link">About</a></li>
-              <li class="nav__item"><a href="./shop.html" target="_blank" class="S nav__link nav__link section__title--highlight"">Shop</a></li>
+              <li class="nav__item"><a href="./shop.html" target="_blank" class="S nav__link nav__link section__title--highlight">Shop</a></li>
               <li class="nav__item"><a href="#contact" class="S nav__link">Contact</a></li>
           </ul>
           <h1 class="S_nav__logo"><a href="/index.html"><span class="nav__logo--highlight">Food</span>tuck</a></h1>
@@ -92,7 +91,7 @@
           <h3 class="S_h3">Filter By Price</h3>
           <span>-------------</span>
           <div class="filter-price__text">
-            <span>From $0 to $8000</span><span>Filter</span>
+            <span class="filter-price__text-first">From $0 to $8000</span><span>Filter</span>
           </div>
         </div>
 
@@ -181,13 +180,13 @@
 
           <!--MAIN PART-->
 
-        <div class="products-container">
-          <div class="some-card" id="productsContainer">
-            <!-- Elements app here after compilation in JavaScript -->
+        <div class="some-card" id="productsContainer">
+          <div class="no-cards">
+            <img class="no-image" src="/public/assets/img/another/def.png" alt="Photo of null">
+            <p class="p--standart" style="color: #000; font-size: 30px; line-height: 30px;">It looks like it's empty...</p>            
           </div>
-          <div class="product-dop-container" id="productsContainerDop">
-            <!-- Dop info will been here -->
-          </div>
+
+          <!-- Elements app here after compilation in JavaScript -->
         </div>
 
           <!--/MAIN PART-->
@@ -202,6 +201,10 @@
           <button><img src="/public/assets/icons/next_two_icon.svg" alt="Next arrow"></button>
         </div>
       </main>
+    </div>
+
+    <div class="dop__container_full" id="dopProductPageContainer">
+      <!-- Dop info will been here -->
     </div>
 
     <!--FOOTER-->
