@@ -50,12 +50,10 @@ export class Slider {
   // UI component 
   updatePagination() {
     const dots = document.querySelectorAll('.recom-circle');
+    
     dots.forEach((dot, index) => {
-      if (index === this.currSlide) {
-        dot.style.backgroundColor = '#FF9F0D';
-      } else {
-        dot.style.backgroundColor = '#ff9e0d30';
-      }
+      if (index === this.currSlide) dot.style.backgroundColor = '#FF9F0D'
+        else dot.style.backgroundColor = '#ff9e0d30';
     });
   }
 }

@@ -1,0 +1,132 @@
+@import '_vars';
+@import '_mixins';
+
+// LOADER
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loader-spinner {
+  width: 60px;
+  height: 60px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #FF9F0D;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// BURGER MENU
+
+.burger {
+  display: none;
+  background-color: #000;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media(max-width: 680px) {
+
+  .header__container {
+    @include flex-center-full;
+    justify-content: space-between;
+    padding: 20px;
+    height: 75px;
+    background: #000000;
+    position: relative;
+  }
+
+  .nav__logo {
+    display: none
+  }
+
+  .burger {
+    @include flex-center-full;
+  }
+
+  .nav__search-container {
+    position: static;
+  }
+
+  .list {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 35%;
+    height: 100vh;
+    background: #000000;
+    transition: right 0.3s;
+    z-index: 1000;
+    flex-direction: column;
+    align-items: start;
+    padding: 10px 20px 20px;
+  }
+
+  .nav ul {
+    align-items: start;
+  }
+
+  .list.active {
+    right: 0;
+  }
+
+  .list .nav__item {
+    padding: 10px;
+  }
+}
+
+
+// ASIDE PANEL
+
+@media (max-width: 480px) {
+  .S_aside {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 1000;
+    margin: 0;
+    padding: 10px 20px 20px;
+  }
+
+  .open-aside {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .close-aside {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  .S_aside.active {
+    display: block;
+    @include flex-center-full($justify-content: space-between);
+  }
+
+  .latest-products {
+    display: none;
+  }
+}

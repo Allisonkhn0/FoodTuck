@@ -4,6 +4,7 @@ import { SetupCards } from '../setupCards.js';
 
 export let productsC = [];
 let currentProductId = null;
+let setupCardsInstance = null;
 
 const mainShopContainer = document.querySelector('.S_container');
 const dopProductPageContainer = document.getElementById('dopProductPageContainer');
@@ -104,16 +105,16 @@ function renderDopInfo(product) {
   });
 }
 
-export async function RenderProductsCards() {
+export async function RenderProductsCards(isCurrentFilter, checkboxes, searchTerm) {
   try {
     Loader.showLoader();
+    
+    console.log(isCurrentFilter, checkboxes, searchTerm);
+    
+    const DATA = await GetData(isCurrentFilter, checkboxes, searchTerm);
 
-    const DATA = await GetData();
-
-    // Validation for protect of null DATA
-    if (!DATA || DATA.length === 0) {
-      return;
-    }
+    // Validation for protect of null DATA || Update, sometimes Not Found 404 status is needed.
+    if (!DATA || DATA.length === 0) console.warn('Cards With Filters Not Found 404 Status');
 
     // Adding a value for the current price
     productsC = DATA.map(product => ({
@@ -122,7 +123,11 @@ export async function RenderProductsCards() {
     }));
 
     renderProductsList(productsC);
-    new SetupCards();
+   
+    // For save data of curr-values
+    if (!setupCardsInstance) {
+      setupCardsInstance = new SetupCards();
+    }
     
   } catch (error) {
     console.error('Ошибка в рендера карточки:', error);
