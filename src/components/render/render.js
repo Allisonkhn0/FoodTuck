@@ -17,6 +17,15 @@ export function renderProductsList(products) {
 
   if (!container) return;
   container.innerHTML = '';
+
+  if (container.classList.contains('empty')) {
+    container.innerHTML = `
+      <div class='no-cards'>
+        <img class="no-image" src="/public/assets/img/another/def.png" alt="Photo of null">
+        <p class="p--standart" style="color: #000; font-size: 30px; line-height: 30px;">It looks like it's empty...</p>    
+      </div>
+    `
+  }
   
   products.forEach(product => {
     const hasOldPrice = product.costs.priceChange !== 0;
@@ -109,18 +118,23 @@ export async function RenderProductsCards(isCurrentFilter, checkboxes, searchTer
   try {
     Loader.showLoader();
     
-    console.log(isCurrentFilter, checkboxes, searchTerm);
-    
     const DATA = await GetData(isCurrentFilter, checkboxes, searchTerm);
 
     // Validation for protect of null DATA || Update, sometimes Not Found 404 status is needed.
-    if (!DATA || DATA.length === 0) console.warn('Cards With Filters Not Found 404 Status');
+    if (!DATA || DATA.length === 0) {
+      console.warn('Cards With Filters Not Found 404 Status');
+      document.getElementById('productsContainer').classList.add('empty')
+    } else document.getElementById('productsContainer').classList.remove('empty')
 
     // Adding a value for the current price
     productsC = DATA.map(product => ({
       ...product,
       priceToday: product.costs.price + product.costs.priceChange
     }));
+
+    if (setupCardsInstance) {
+      productsC = setupCardsInstance.logicSorting(productsC);
+    }
 
     renderProductsList(productsC);
    

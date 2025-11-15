@@ -4,10 +4,14 @@ import { OpenAside } from './components/features/openAside.js'
 import { RenderProductsCards } from './components/render/render.js'
 
 function init() {
-  Scroll()
-  Burger()
-  OpenAside()
-  RenderProductsCards()
+  try {
+    Scroll()
+    Burger()
+    OpenAside()
+    RenderProductsCards()    
+  } catch (error) {
+    console.error(`Ошибка загрузки JavaScript в shop.js: ${error}`);
+  }
 }
 
 // App function after loading DOM Tree

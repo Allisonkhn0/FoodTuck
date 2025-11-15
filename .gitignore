@@ -1,10 +1,28 @@
+===================
+NOTE_MODULES/
+DONT TOUCH
+
 node_modules/
+===================
+
+===================
+SECRETS_FILES_AND_ENV/
+DONT TOUCH
+
 /secrets
 /secret
 .env
 *.env
 secret.env
+===================
+
+===================
+API_AND_DATA/
+TOUCH WITH CAUTION
+
 data.js
 GetData.js
 PostData.js
 api
+api/
+===================

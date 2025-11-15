@@ -33,13 +33,22 @@ export class SetupCards{
 
     select1.addEventListener('change', (e) => {
       this.currentSort = e.target.value;
-      let result = [...productsC]
-
-      if (this.currentSort === 'Price') result = result.sort((a, b) => a.priceToday - b.priceToday);
-        else if (this.currentSort === 'Discount') result = result.sort((a, b) => a.costs.priceChange - b.costs.priceChange);
-
-      renderProductsList(result)
+      this.complirelRenderCards()
     })
+  }
+
+    // Sorting
+  logicSorting(products) {
+    let result = [...products];
+
+    switch (this.currentSort) {
+      case 'Price': result = result.sort((a, b) => a.priceToday - b.priceToday); break; // By price (top cost < bottom cost)
+      case 'Discount': result = result.sort((a, b) => a.costs.priceChange - b.costs.priceChange); break; // By discount (of biggest)
+      case 'Newest': result = result.sort((a, b) => b.id - a.id); break; // By id (Newest*)....Im forget this part in lasts commits
+      default: return result
+    }
+
+    return result;
   }
 
   // Filter
@@ -50,7 +59,6 @@ export class SetupCards{
     select2.addEventListener('change', (e) => {
       this.currentFilter = e.target.value;
       this.complirelRenderCards()
-
     })
   }
 
@@ -59,6 +67,7 @@ export class SetupCards{
     const input = document.querySelector('#searchInput');
     const form = document.querySelector('.S_aside__form');
     if (!input) return;
+    if (!form) return;
 
     form.addEventListener('submit', (e) => {
       e.preventDefault()

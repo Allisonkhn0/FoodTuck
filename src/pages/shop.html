@@ -9,10 +9,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <!--/FONTS-->
 
     <link rel="stylesheet" type="text/css" href="/dist/css/main.css">
@@ -89,7 +85,11 @@
 
         <div class="filter-price">
           <h3 class="S_h3">Filter By Price</h3>
-          <span>-------------</span>
+          
+          <div class="filter-range">
+            <input type="range" class="price-slider" min="0" max="8000" value="8000" step="100">
+          </div>
+
           <div class="filter-price__text">
             <span class="filter-price__text-first">From $0 to $8000</span><span>Filter</span>
           </div>
@@ -181,10 +181,6 @@
           <!--MAIN PART-->
 
         <div class="some-card" id="productsContainer">
-          <div class="no-cards">
-            <img class="no-image" src="/public/assets/img/another/def.png" alt="Photo of null">
-            <p class="p--standart" style="color: #000; font-size: 30px; line-height: 30px;">It looks like it's empty...</p>            
-          </div>
 
           <!-- Elements app here after compilation in JavaScript -->
         </div>
@@ -194,11 +190,11 @@
 
         <!-- pagination part -->
         <div class="pag_panel">
-          <button><img src="/public/assets/icons/back_two_icon.svg" alt="Back arrow"></button>
+          <button title="Prev Page"><img src="/public/assets/icons/back_two_icon.svg" alt="Back arrow"></button>
           <button>1</button>
           <button>2</button>
           <button>3</button>
-          <button><img src="/public/assets/icons/next_two_icon.svg" alt="Next arrow"></button>
+          <button title="Next Page"><img src="/public/assets/icons/next_two_icon.svg" alt="Next arrow"></button>
         </div>
       </main>
     </div>

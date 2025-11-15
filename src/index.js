@@ -3,9 +3,13 @@ import { Scroll } from './components/features/scroll.js'
 import { Slider } from './components/slider.js'
 
 function init(){
-  Burger()
-  Scroll()
-  new Slider
+  try {
+    Burger()
+    Scroll()
+    new Slider()
+  } catch (error) {
+    console.error(`Ошибка загрузки JavaScript в index.js: ${error}`);
+  }
 }
 
 // App function after loading DOM Tree
