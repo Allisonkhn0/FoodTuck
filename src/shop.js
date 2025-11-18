@@ -8,7 +8,7 @@ function init() {
     Scroll()
     Burger()
     OpenAside()
-    RenderProductsCards()    
+    RenderProductsCards()
   } catch (error) {
     console.error(`Ошибка загрузки JavaScript в shop.js: ${error}`);
   }

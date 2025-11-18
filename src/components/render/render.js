@@ -50,6 +50,7 @@ export function renderProductsList(products) {
 
     productCard.addEventListener('click', () => {
       renderDopInfo(product);
+      console.log(product.id);
     });
   });
 }
@@ -114,11 +115,11 @@ function renderDopInfo(product) {
   });
 }
 
-export async function RenderProductsCards(isCurrentFilter, checkboxes, searchTerm) {
+export async function RenderProductsCards(isCurrentFilter, checkboxes, searchTerm, currPage) {
   try {
     Loader.showLoader();
-    
-    const DATA = await GetData(isCurrentFilter, checkboxes, searchTerm);
+
+    const DATA = await GetData(isCurrentFilter, checkboxes, searchTerm, currPage);
 
     // Validation for protect of null DATA || Update, sometimes Not Found 404 status is needed.
     if (!DATA || DATA.length === 0) {
@@ -142,7 +143,32 @@ export async function RenderProductsCards(isCurrentFilter, checkboxes, searchTer
     if (!setupCardsInstance) {
       setupCardsInstance = new SetupCards();
     }
-    
+
+    const pagButtons = document.querySelectorAll('.pag_button');
+    const pagContainer = document.querySelector('.pag_container');
+    document.querySelector('.pag_info') && pagContainer.removeChild(document.querySelector('.pag_info'));
+
+    const pagInfo = document.createElement('p');
+    pagInfo.classList.add('pag_info')
+
+    !currPage ? currPage = 1 : currPage
+    pagInfo.textContent = `Page ${currPage}`
+
+    pagContainer.appendChild(pagInfo)
+
+    pagButtons.forEach((dot, index) => {
+      if (index === currPage) {
+        dot.style.backgroundColor = '#FF9F0D'
+        dot.style.color = '#fff'
+        dot.style.cursor = 'no-drop'
+        index === 1 ? document.querySelector('#prevPage').style.cursor = 'no-drop' : document.querySelector('#prevPage')
+      } else {
+        dot.style.backgroundColor = '#fff';
+        dot.style.color = '#FF9F0D'
+        dot.style.cursor = 'pointer'
+      }
+    });
+
   } catch (error) {
     console.error('Ошибка в рендера карточки:', error);
   } finally {

@@ -189,13 +189,18 @@
         </div>
 
         <!-- pagination part -->
-        <div class="pag_panel">
-          <button title="Prev Page"><img src="/public/assets/icons/back_two_icon.svg" alt="Back arrow"></button>
-          <button>1</button>
-          <button>2</button>
-          <button>3</button>
-          <button title="Next Page"><img src="/public/assets/icons/next_two_icon.svg" alt="Next arrow"></button>
-        </div>
+         <div class="pag_container">
+
+          <div class="pag_panel">
+            <button title="Prev Page" class="pag_button" id="prevPage"><img src="/public/assets/icons/back_two_icon.svg" alt="Back arrow"></button>
+            <button class="pag_button pag_button1">1</button>
+            <button class="pag_button pag_button2">2</button>
+            <button class="pag_button pag_button3">3</button>
+            <button title="Next Page" id="nextPage"><img src="/public/assets/icons/next_two_icon.svg" alt="Next arrow"></button>
+          </div>
+
+          <!-- <p class="pag_info">Page ${currPage}</p> -->
+         </div>
       </main>
     </div>
 
