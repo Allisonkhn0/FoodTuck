@@ -1,4 +1,4 @@
-import GetData from '../api/GetData.js'
+import GetData, { GetProductById } from '../api/GetData.js'
 import { Loader } from '../features/loader.js'
 import { SetupCards } from '../setupCards.js';
 
@@ -28,7 +28,7 @@ export function renderProductsList(products) {
   }
   
   products.forEach(product => {
-    const hasOldPrice = product.costs.priceChange !== 0;
+    const hasOldPrice = product.priceChange !== 0;
     const isOnSale = product.isSale;
 
     const productCard = document.createElement('div');
@@ -41,18 +41,32 @@ export function renderProductsList(products) {
             <span class="price-today" style="color: #FF9F0D">
               $${product.priceToday.toFixed(2)}
             </span>
-            ${hasOldPrice ? `<span class="old-price">$${product.costs.price.toFixed(2)}</span>` : ''}
+            ${hasOldPrice ? `<span class="old-price">$${product.price.toFixed(2)}</span>` : ''}
             ${isOnSale ? `<span class="sale-badge">Sell</span>` : ''}
           </div>
         `;
 
     container.appendChild(productCard);
 
-    productCard.addEventListener('click', () => {
-      renderDopInfo(product);
-      console.log(product.id);
+    productCard.addEventListener('click', async () => {
+      await RenderProductCard(product.id);
     });
   });
+}
+
+export async function RenderProductCard(productId) {
+  try {
+    Loader.showLoader();
+    
+    const productDetail = await GetProductById(productId);
+    
+    productDetail ? renderDopInfo(productDetail) : console.error('Card is not Found')
+    
+  } catch (error) {
+    console.error(`Error of render cards: ${error}`);
+  } finally {
+    Loader.hideLoader();
+  }
 }
 
 function renderDopInfo(product) {
@@ -60,7 +74,7 @@ function renderDopInfo(product) {
   if (!mainShopContainer || !dopProductPageContainer) return;
 
   currentProductId = product.id;
-  const hasOldPrice = product.costs.priceChange !== 0;
+  const hasOldPrice = product.priceChange !== 0;
   const isOnSale = product.isSale;
 
   mainShopContainer.style.display = 'none';
@@ -88,7 +102,7 @@ function renderDopInfo(product) {
         
         <div class="dop-price__container">
           <span class="dop-price-today">$${product.priceToday.toFixed(2)}</span>
-          ${hasOldPrice ? `<span class="dop-old-price">$${product.costs.price.toFixed(2)}</span>` : ''}
+          ${hasOldPrice ? `<span class="dop-old-price">$${product.price.toFixed(2)}</span>` : ''}
         </div>
         
         <p class="dop-description">${product.description}</p>
@@ -115,11 +129,11 @@ function renderDopInfo(product) {
   });
 }
 
-export async function RenderProductsCards(isCurrentFilter, checkboxes, searchTerm, currPage) {
+export async function RenderProductsCards(isCurrentFilter, checkboxes, searchTerm, currPage, currentSort) {
   try {
     Loader.showLoader();
 
-    const DATA = await GetData(isCurrentFilter, checkboxes, searchTerm, currPage);
+    const DATA = await GetData(isCurrentFilter, checkboxes, searchTerm, currPage, currentSort);
 
     // Validation for protect of null DATA || Update, sometimes Not Found 404 status is needed.
     if (!DATA || DATA.length === 0) {
@@ -127,19 +141,14 @@ export async function RenderProductsCards(isCurrentFilter, checkboxes, searchTer
       document.getElementById('productsContainer').classList.add('empty')
     } else document.getElementById('productsContainer').classList.remove('empty')
 
-    // Adding a value for the current price
+
     productsC = DATA.map(product => ({
       ...product,
-      priceToday: product.costs.price + product.costs.priceChange
+      priceToday: product.price + product.priceChange
     }));
-
-    if (setupCardsInstance) {
-      productsC = setupCardsInstance.logicSorting(productsC);
-    }
 
     renderProductsList(productsC);
    
-    // For save data of curr-values
     if (!setupCardsInstance) {
       setupCardsInstance = new SetupCards();
     }
@@ -172,7 +181,6 @@ export async function RenderProductsCards(isCurrentFilter, checkboxes, searchTer
   } catch (error) {
     console.error('Ошибка в рендера карточки:', error);
   } finally {
-    // At the end we hide the loader
     Loader.hideLoader();
   }
 }

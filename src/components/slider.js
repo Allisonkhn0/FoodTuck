@@ -17,14 +17,12 @@ export class Slider {
       this.nextSlide()
     })
     
-    // Next and Back - "<-" and "->"
     document.addEventListener('keydown', (e) => {
       if (e.key === 'ArrowLeft') this.prevSlide();
       if (e.key === 'ArrowRight') this.nextSlide();
     })
   }
   
-  // Slide in next/back page. Main logic
   showSlide(index) {
 
     this.slides.forEach(slide => {
@@ -47,7 +45,6 @@ export class Slider {
     this.updatePagination();  
   }
   
-  // UI component 
   updatePagination() {
     const dots = document.querySelectorAll('.recom-circle');
     

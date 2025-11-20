@@ -1,4 +1,3 @@
-// OPEN ASIDE
 export function OpenAside() {
   const openButton = document.querySelector('.open-aside');
   const closeButton = document.querySelector('.close-aside');

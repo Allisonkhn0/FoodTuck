@@ -4,9 +4,6 @@
 @import '_vars';
 @import '_mixins';
 
-// ========== MAIN PAGE ==========
-
-// ===== БАЗОВЫЕ СТИЛИ =====
 * {
   @include MPnone;
   letter-spacing: 0.5px;
@@ -670,7 +667,6 @@ body {
   .ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    // two columns
     gap: 32px;
   }
 }

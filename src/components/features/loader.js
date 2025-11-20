@@ -1,4 +1,3 @@
-// Hide/Show Loader
 export class Loader {
   static loader = null;
 

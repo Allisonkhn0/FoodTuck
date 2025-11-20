@@ -1,37 +1,38 @@
-@mixin flex-center-full (                // Flex block and position him
- $display: flex,
+@mixin flex-center-full ($display: flex,
   $justify-content: center,
-   $align-items: center,
-   $flex-direction: null,
-    $flex-wrap: null,
-     $gap: null 
-    ) {
+  $align-items: center,
+  $flex-direction: null,
+  $flex-wrap: null,
+  $gap: null) {
   display: $display;
   justify-content: $justify-content;
-  align-items: $align-items;  
+  align-items: $align-items;
   flex-direction: $flex-direction;
   flex-wrap: $flex-wrap;
   gap: $gap;
 }
 
-@mixin MPnone{                           // Margin, Padding, Border: 0
+@mixin MPnone {
   margin: 0;
   padding: 0;
   border: none;
 }
 
-@mixin backgroundImage($background, $gradient: null) {      // Background Image
+@mixin backgroundImage($background, $gradient: null) {
   @if $gradient {
     background: $gradient, $background;
-  } @else {
+  }
+
+  @else {
     background: $background;
   }
+
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-@mixin standartText{                     // Standart text
+@mixin standartText {
   font-family: $standart_font;
   font-weight: 400;
   font-style: Regular;
@@ -39,7 +40,7 @@
   line-height: 24px;
 }
 
-@mixin boldText{                         // Bold text
+@mixin boldText {
   font-family: $another_font;
   font-weight: 700;
   font-style: Bold;

@@ -1,8 +1,5 @@
 import { RenderProductsCards } from './render/render.js';
 
-// Filter/Sort/Search cards
-
-// class SetupCards
 export class SetupCards{
 
   constructor(){
@@ -28,7 +25,6 @@ export class SetupCards{
     this.complirelRenderCards();
   }
 
-  // Sorting
   setupSorting() {
     const select1 = document.querySelector('.select-first');
     if (!select1) return;
@@ -39,21 +35,6 @@ export class SetupCards{
     })
   }
 
-    // Sorting
-  logicSorting(products) {
-    let result = [...products];
-
-    switch (this.currentSort) {
-      case 'Price': result = result.sort((a, b) => a.priceToday - b.priceToday); break; // By price (top cost < bottom cost)
-      case 'Discount': result = result.sort((a, b) => a.costs.priceChange - b.costs.priceChange); break; // By discount (of biggest)
-      case 'Newest': result = result.sort((a, b) => b.id - a.id); break; // By id (Newest*)....Im forget this part in lasts commits
-      default: return result
-    }
-
-    return result;
-  }
-
-  // Filter
   setupFilter() {
     const select2 = document.querySelector('.select-second');
     if (!select2) return;
@@ -67,7 +48,6 @@ export class SetupCards{
     })
   }
 
-  // Search
   setupSearch() {
     const input = document.querySelector('#searchInput');
     const form = document.querySelector('.S_aside__form');
@@ -88,7 +68,6 @@ export class SetupCards{
     })
   }
 
-  // checkboxFilter
   setupCheckboxFilter() {
     const checkboxes = document.querySelectorAll('.checkboxes-filter');
     if (!checkboxes) return;
@@ -153,6 +132,6 @@ export class SetupCards{
   complirelRenderCards() {
 
     this.currentFilter === 'Vegan' ? this.isCurrentFilter = true : this.isCurrentFilter = false
-    RenderProductsCards(this.isCurrentFilter, this.checkboxes, this.searchTerm, this.currentPage)
+    RenderProductsCards(this.isCurrentFilter, this.checkboxes, this.searchTerm, this.currentPage, this.currentSort)
   }
 }

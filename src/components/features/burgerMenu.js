@@ -1,4 +1,3 @@
-// BURGER MENU
 export function Burger () {
   const burger = document.querySelector('.burger');
   const nav = document.querySelector('.list');
