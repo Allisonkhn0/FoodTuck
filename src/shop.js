@@ -14,5 +14,4 @@ function init() {
   }
 }
 
-// App function after loading DOM Tree
 document.addEventListener('DOMContentLoaded', init)

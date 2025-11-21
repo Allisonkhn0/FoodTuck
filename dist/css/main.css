@@ -2847,8 +2847,12 @@ body {
   }
 }
 @media (max-width: 320px) {
+  .blog__card-info p {
+    font-size: 14px;
+  }
   .blog__card {
-    width: 250px;
+    width: 90%;
+    margin-top: 0;
   }
 }
 @media (min-width: 1440px) {

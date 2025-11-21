@@ -63,7 +63,7 @@ body {
   max-width: 100vw;
 }
 
-// ===== MAIN USED COMPONENTS =====
+
 .section__subtitle {
   font-family: Great Vibes;
   font-weight: 400;
@@ -172,7 +172,6 @@ body {
 }
 
 
-// ===== NAVIGATION =====
 .nav {
   @include flex-center-full($flex-direction: row);
   gap: 25%;
@@ -260,7 +259,6 @@ body {
   }
 }
 
-// ===== HEADER =====
 .image__background {
   @include backgroundImage(url("/public/assets/img/header/background_header.jpg"), linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)));
   padding-bottom: 106px;
@@ -342,13 +340,11 @@ body {
   max-width: 100%;
 }
 
-// ===== SOCIAL =====
 .social {
   @include flex-center-full($flex-direction: column, $gap: 15px);
   width: 20px;
 }
 
-// ===== ABOUT SECTION =====
 .about {
   max-height: 562px;
   height: 100%;
@@ -405,7 +401,6 @@ body {
   }
 }
 
-// ===== FOOD CATEGORY SECTION =====
 .food-category {
   @include flex-center-full;
   position: relative;
@@ -464,7 +459,6 @@ body {
   }
 }
 
-// ===== WHY US SECTION =====
 .why-us {
   @include flex-center-full;
 }
@@ -553,7 +547,6 @@ body {
   width: 700px;
 }
 
-// ===== STATS SECTION =====
 .stats {
   margin-top: 75px;
   @include flex-center-full;
@@ -608,7 +601,6 @@ body {
   }
 }
 
-// ===== CHOOSE PICK SECTION =====
 .choose-pick__container {
   @include flex-center-full($flex-direction: column);
   text-align: center;
@@ -711,7 +703,6 @@ body {
 }
 
 
-// ===== CHEFS SECTION =====
 .chef__container {
   text-align: center;
   position: relative;
@@ -767,7 +758,6 @@ body {
   margin-bottom: 56px;
 }
 
-// ===== RECOM SECTION =====
 .recom__container {
   @include flex-center-full($align-items: start);
   position: relative;
@@ -881,7 +871,6 @@ body {
   }
 }
 
-// ===== PROGRESS SECTION =====
 .progress {
   @include backgroundImage(url('/public/assets/img/background/img_restaurant_progress.jpg'));
 }
@@ -939,7 +928,6 @@ body {
   font-size: 20px;
 }
 
-// ===== BLOG SECTION =====
 .blog__container {
   @include flex-center-full($flex-direction: column);
   text-align: center;
@@ -1004,7 +992,6 @@ body {
 }
 
 
-// ===== FOOTER =====
 .footer {
   position: relative;
 }
@@ -1056,7 +1043,6 @@ body {
   }
 }
 
-// ===== FOOTER MAIN =====
 .footer__main {
   @include flex-center-full;
   margin-bottom: -333px;
@@ -1150,7 +1136,6 @@ body {
   line-height: 22px;
 }
 
-// ===== FOOTER BOTTOM ===== 
 .img__footer {
   position: absolute;
   height: 306px;
@@ -1195,8 +1180,6 @@ body {
   z-index: 1001;
 }
 
-
-// ===== ADAPTATION MAIN =====
 
 @media (max-width: 1820px) {
 
@@ -2057,13 +2040,16 @@ body {
 }
 
 @media (max-width: 320px) {
+  .blog__card-info p {
+    font-size: 14px;
+  }
+
   .blog__card {
-    width: 250px;
+    width: 90%;
+    margin-top: 0;
   }
 }
 
-
-// ANIMATIONS
 
 @media (min-width: 1440px) {
   .btn {

@@ -2,7 +2,6 @@
 @import '_mixins';
 
 
-// ========= SHOP PAGE ==========
 .container {
   padding: 120px 31.25%;
 }
@@ -37,7 +36,6 @@
   display: flex !important;
 }
 
-// ===== NAVIGATION =====
 .S_nav__logo {
   position: static;
   @include MPnone;
@@ -69,7 +67,6 @@
 }
 
 
-// ===== HEADER =====
 .S__header {
   height: 410px;
   @include backgroundImage(url('/public/assets/img/background/shop_header_bachground.jpg'));
@@ -99,7 +96,6 @@
   font-size: 20px;
 }
 
-// ===== ASIDE =====
 
 .S_aside {
   @include flex-center-full($align-items: start, $flex-direction: column, $gap: 24px);
@@ -255,7 +251,6 @@
   }
 }
 
-// ===== MAIN =====
 .S_main {
   color: #000 !important;
   background-color: #fff;
@@ -522,13 +517,9 @@
 }
 
 
-// ===== FOOTER =====
 .shop-footer__bottom {
   background-color: #4F4F4F;
 }
-
-
-// ===== ADAPTATION SHOP =====
 
 
 @media (max-width: 1920px) {
@@ -751,7 +742,6 @@
 }
 
 
-// ANIMATIONS
 @media (min-width: 1440px) {
 
   .product-card:hover{

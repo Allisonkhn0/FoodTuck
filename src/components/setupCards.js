@@ -88,8 +88,8 @@ export class SetupCards{
   }
 
   setupPagination() {
-    const prevButton = document.querySelector('#prevPage')
-    const nextButton = document.querySelector('#nextPage')
+    const prevButton = document.getElementById('prevPage')
+    const nextButton = document.getElementById('nextPage')
     const pagButton1 = document.querySelector('.pag_button1')
     const pagButton2 = document.querySelector('.pag_button2')
     const pagButton3 = document.querySelector('.pag_button3')
@@ -97,21 +97,21 @@ export class SetupCards{
     pagButton1.addEventListener('click', () => {
       if (this.currentPage !== 1) {
         this.currentPage = 1
-        this.complirelRenderCards()        
+        this.complirelRenderCards()
       }
     })
 
     pagButton2.addEventListener('click', () => {
       if (this.currentPage !== 2) {
         this.currentPage = 2;
-        this.complirelRenderCards()        
+        this.complirelRenderCards()
       }
     })
 
     pagButton3.addEventListener('click', () => {
       if (this.currentPage !== 3) {
         this.currentPage = 3;
-        this.complirelRenderCards()        
+        this.complirelRenderCards()
       }
     })
 
@@ -128,10 +128,9 @@ export class SetupCards{
     })
   }
 
-  // Compilation
   complirelRenderCards() {
 
     this.currentFilter === 'Vegan' ? this.isCurrentFilter = true : this.isCurrentFilter = false
-    RenderProductsCards(this.isCurrentFilter, this.checkboxes, this.searchTerm, this.currentPage, this.currentSort)
+    RenderProductsCards(this.isCurrentFilter, this.checkboxes, this.searchTerm, this.currentPage, this.currentSort, this.currentCost)
   }
 }

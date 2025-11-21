@@ -11,7 +11,6 @@ const dopProductPageContainer = document.getElementById('dopProductPageContainer
 dopProductPageContainer.style.display = 'none';
 
 
-// The card rendering itself
 export function renderProductsList(products) {
   const container = document.getElementById('productsContainer');
 
@@ -135,7 +134,6 @@ export async function RenderProductsCards(isCurrentFilter, checkboxes, searchTer
 
     const DATA = await GetData(isCurrentFilter, checkboxes, searchTerm, currPage, currentSort);
 
-    // Validation for protect of null DATA || Update, sometimes Not Found 404 status is needed.
     if (!DATA || DATA.length === 0) {
       console.warn('Cards With Filters Not Found 404 Status');
       document.getElementById('productsContainer').classList.add('empty')
@@ -178,8 +176,9 @@ export async function RenderProductsCards(isCurrentFilter, checkboxes, searchTer
       }
     });
 
+
   } catch (error) {
-    console.error('Ошибка в рендера карточки:', error);
+    console.error(`Error of render cards: ${error}`);
   } finally {
     Loader.hideLoader();
   }
